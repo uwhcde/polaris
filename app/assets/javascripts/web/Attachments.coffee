@@ -52,17 +52,24 @@ Polaris.Form.Attachment = do ->
 
     _attachmentUpload.each ->
       $(this).fileupload
-        url: '/media/pictures?responseType=json&authenticity_token=' + $('[name="authenticity_token"]').val()
+        url: $('.cover-upload').attr('data-upload-url') + '?responseType=json&authenticity_token=' + $('[name="authenticity_token"]').val()
         timeout: TIMEOUT
+        type: "POST"
         previewMaxWidth: PREVIEW_MAX_WIDTH
         previewMaxHeight: PREVIEW_MAX_HEIGHT
         limitConcurrentUploads: LIMIT_CONCURRENT_UPLOADS
         uploadTemplateId: ""
         downloadTemplateId: ""
+        formData: (form) ->
+          formData = form.serializeArray();
+          newArr = formData.filter (el) ->
+            return el.name isnt "_method"
+
+          return newArr
+        singleFileUploads: true
         maxNumberOfFiles: MAX_NUMBER_OF_FILES
         autoUpload: true
         dropZone: $('.guide-new-header')
-        type: "POST"
 
     if _AttachmentId isnt 0
       _attachmentUpload.data("attachment-id", _AttachmentId)
