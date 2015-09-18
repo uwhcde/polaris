@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @guides = Guide.last(1).reverse
-    @events = [] #Event.last(5).reverse
-    @helps = [] #Help.last(5).reverse
+    @guides = Guide.last(5).reverse
+    @events = Event.last(5).reverse
+    @helps = Help.last(5).reverse
     @posts = []
     @guides.each_with_index do |guide, index|
       @posts.push({date: guide.created_at, value: guide})
