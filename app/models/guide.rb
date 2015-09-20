@@ -4,6 +4,7 @@ class Guide < ActiveRecord::Base
   accepts_nested_attributes_for :sections, reject_if: :all_blank, allow_destroy: true
   before_save :init
 
+  belongs_to :user
   belongs_to :picture, class_name: "Ckeditor::Picture"
 
 
