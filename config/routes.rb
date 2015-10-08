@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :helps
   resources :events
-  mount Ckeditor::Engine => '/media'
+  mount Ckeditor::Engine => '/media', as: "media"
   get 'home/index'
 
 
