@@ -1,0 +1,25 @@
+.author-card {
+  .author{
+    position: relative;
+    min-height: 60px;
+  }
+
+  .author-content {
+    padding: 10px 0 0 60px;
+    font-size: 17px;
+    font-weight: 200;
+  }
+
+
+  .author-img {
+    border-radius: 100%;
+    overflow: hidden;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}

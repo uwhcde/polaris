@@ -1,0 +1,17 @@
+.stats-card {
+  .vote-up, .vote-down {
+    font-size: 20px;
+    cursor: pointer;
+    i {
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      border-radius: 100%;
+      background: #efefea;
+      line-height: 50px;
+      text-align: center;
+      margin-right: 10px;
+      color: #888;
+    }
+  }
+}
