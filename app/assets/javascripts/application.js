@@ -16,4 +16,4 @@
 
 //= require bootstrap-mainfest
 
-//= require_tree .
+//= require_tree ./web
