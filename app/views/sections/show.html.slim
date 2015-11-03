@@ -1,0 +1,10 @@
+p#notice
+  = notice
+h1
+  = @section.title
+h4
+  = @section.description
+
+= link_to 'Edit', edit_post_section_path(@post, id: @section)
+= " | "
+= link_to 'Back', post_path(@post)

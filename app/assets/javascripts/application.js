@@ -16,4 +16,8 @@
 
 //= require bootstrap-mainfest
 
-//= require_tree ./web
+//= require ckeditor/init
+
+//= require cocoon
+
+//= require_tree .
