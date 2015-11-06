@@ -4,7 +4,16 @@ h1
   = @post.title
 h4
   = @post.short_description
+h3
+  | Sections
+  - @post.sections.each do |section|
+    h3 Title
+    = section.title
+    h3 Description
+    = section.description
 
+= link_to 'Add Section', new_post_section_path(@post)
+= " | "
 = link_to 'Edit', edit_post_path(@post)
 = " | "
 = link_to 'Back', posts_path

@@ -1,0 +1,8 @@
+.row
+  .col-md-8
+    = simple_form_for([@post, @section], html: { class: 'form-vertical' }) do |f|
+      = render "shared/errors", model: @post
+      = f.input :title
+      = f.input :description
+      .actions
+        = f.button :submit, 'Create'

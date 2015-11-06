@@ -30,6 +30,9 @@ gem 'devise'
 
 #UI
 gem 'simple_form'
+gem "cocoon"
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'paperclip'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

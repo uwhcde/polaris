@@ -4,6 +4,13 @@
       = render "shared/errors", model: @post
       = f.input :title
       = f.input :short_description
+      = f.hidden_field :user_id, :value => current_user.id
+      #sections
+        = f.simple_fields_for :sections do |b|
+          = render "section_fields", :f => b
+        .links
+          = link_to_add_association '+ Add new section', f, :sections, :class => "btn btn-info"
+        br
       .actions
         = f.button :submit
 

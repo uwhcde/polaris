@@ -28,7 +28,6 @@ class PostsController < ApplicationController
   def create
 
     postparams = post_params
-    postparams[:user_id] = current_user.id
 
     @post = Post.new(postparams)
 
@@ -75,6 +74,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :short_description, :user_id)
+      params.require(:post).permit(:title, :short_description, :user_id, sections_attributes: [:title, :description, :user_id, :_destroy])
     end
 end
