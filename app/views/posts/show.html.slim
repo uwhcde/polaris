@@ -1,19 +1,29 @@
 p#notice
   = notice
-h1
-  = @post.title
-h4
-  = @post.short_description
-h3
-  | Sections
-  - @post.sections.each do |section|
-    h3 Title
-    = section.title
-    h3 Description
-    = section.description
+.container
+  .row
+    .col-lg-8
+      .card
+        h1
+          = @post.title
+        p
+          == @post.short_description
 
-= link_to 'Add Section', new_post_section_path(@post)
-= " | "
-= link_to 'Edit', edit_post_path(@post)
-= " | "
-= link_to 'Back', posts_path
+      - @post.sections.each do |section|
+        .card
+          h3 = section.title
+          == section.description
+
+    .col-lg-4
+      .card
+        h2.card-title = "Author"
+        p
+          = current_user.email
+      .card
+        h2.card-title = "Colloborators"
+
+  = link_to 'Add Section', new_post_section_path(@post)
+  = " | "
+  = link_to 'Edit', edit_post_path(@post)
+  = " | "
+  = link_to 'Back', posts_path
