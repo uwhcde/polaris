@@ -1,4 +1,47 @@
-h1
-  | Home#index
-p
-  | Find me in app/views/home/index.html.erb
+.row
+  .col-lg-12
+    h1
+      | Welcome to Polaris
+#img-filters
+  .row
+    img.img-circle src=""
+    img.img-circle src=""
+    img.img-circle src=""
+    img.img-circle src=""
+    img.img-circle src=""
+    img.img-circle src=""
+    img.img-circle src=""
+    img.img-circle src=""
+    img.img-circle src=""
+    img.img-circle src=""
+.row
+  .sort
+    p
+      | Sort By
+    form.form-inline
+      select.form-control
+        option Newest
+        option Rating
+
+      select.form-control
+        option Guide
+        option Help
+        option All
+.post-container
+  .row
+    - @posts.each do |post|
+      .col-lg-3.col-md-4.col-sm-6.col-xs-12
+        .panel.panel-default
+          .panel-body
+            i.fa.fa-star-o.fa-lg
+            h4 = truncate(post.title, :length => 25)
+          .panel-footer
+            .postType
+              = post.postType
+            .rating
+              span.upVotes
+                i.fa.fa-thumbs-up.fa-lg
+                = post.upVotes
+              .downVotes
+                i.fa.fa-thumbs-down.fa-lg
+                = post.downVotes

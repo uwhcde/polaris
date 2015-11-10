@@ -1,3 +1,83 @@
-body {
-  padding-top: 55px;
+.row {
+  margin: 10px 0 10px 0;
+}
+h1 {
+  display: inline-block;
+}
+#img-filters {
+  img {
+    height: 50px;
+    width: 50px;
+    background-color: #26A69A;
+    margin: 0 25px;
+    border: none;
+  }
+  img:first-child {
+    margin-right: 25px;
+  }
+  img:last-child {
+    margin-left: 25px;
+  }
+}
+.sort {
+  float: right;
+  p {
+    display: inline-block;
+  }
+  form {
+    display: inline-block;
+  }
+  select {
+    margin: 0 10px;
+  }
+}
+.panel {
+  height: 200px;
+  margin: 0 0 30px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  //.panel-heading {
+  //  height: 20%;
+  //  background: none;
+  //  border-style: none;
+  //
+  //}
+  .panel-body {
+    background: url("/assets/Bank_image.jpg");
+    background-repeat: no-repeat;
+    background-size: 300px;
+    i {
+      float: right;
+    }
+    height: 80%;
+    text-align: center;
+    h4 {
+    }
+  }
+  .panel-footer {
+    height: 20%;
+    div {
+      display: inline-block;
+    }
+    .postType {
+
+    }
+    .rating {
+      margin: 0 10px 0 10px;
+      float: right;
+    }
+    .upVotes {
+      margin-right: 10px;
+    }
+    .downVotes {
+      margin-left: 10px;
+    }
+  }
+}
+
+.panel:first-child {
+  margin-left: 0;
+}
+
+.panel:last-child {
+  margin-right: 0;
 }
