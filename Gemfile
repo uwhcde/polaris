@@ -27,7 +27,6 @@ gem 'slim', :require => 'slim'
 gem 'slim_assets'
 gem 'devise'
 
-
 #UI
 gem 'simple_form'
 gem "cocoon"
