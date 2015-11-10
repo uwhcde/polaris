@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+
   mount Ckeditor::Engine => '/ckeditor'
   get 'home/index'
 
+
   resources :posts do
     resources :sections
+    resources :comments, :only => [:create]
   end
 
   devise_for :users
