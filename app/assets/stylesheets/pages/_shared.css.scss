@@ -1,4 +1,5 @@
 body {
+  font-family: 'Roboto', sans-serif;
   padding-top: 50px;
 }
 
@@ -7,9 +8,22 @@ body {
   margin-bottom: 20px;
 }
 
-i {
-  margin-right: 10px;
+.navbar-inverse {
+  background: #26A69A;
+  border: 0;
+  .navbar-brand {
+    color: white;
+  }
+  ul.navbar-nav {
+    a:first-child {
+      color: white;
+    }
+  }
 }
+
+//i {
+//  margin-right: 10px;
+//}
 
 //.navbar-inverse {
 //  background-color: #26A69A;

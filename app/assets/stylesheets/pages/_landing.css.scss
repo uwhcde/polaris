@@ -1,60 +1,153 @@
 .row {
   margin: 10px 0 10px 0;
 }
-h1 {
-  display: inline-block;
+#hero-img {
+  .row {
+    background: url("/assets/overlay.png") no-repeat;
+    background-size: 400px;
+  }
+}
+#recent {
+  margin: 25px 0;
+  p {
+    font-size: 20px;
+  }
+  .panel {
+    height: 165px;
+    .panel-body {
+      h5 {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        z-index: 999;
+      }
+    }
+    .panel-footer{
+      font-size: 12px;
+    }
+  }
 }
 #img-filters {
-  img {
-    height: 50px;
-    width: 50px;
-    background-color: #26A69A;
-    margin: 0 25px;
-    border: none;
-  }
-  img:first-child {
-    margin-right: 25px;
-  }
-  img:last-child {
-    margin-left: 25px;
+  .row {
+    .fil {
+      height: 80px;
+      margin: 10px 0;
+      display: table-cell;
+      text-align: center;
+      .filter {
+        height: 60px;
+        width: 60px;
+        background-color: #26A69A;
+        margin: 0 25px;
+        cursor: pointer;
+        border-radius: 50%;
+        i {
+          line-height: 60px;
+          color: white;
+          margin: 0;
+        }
+      }
+      p {
+        margin: 10px 0;
+      }
+    }
+    .filter:hover {
+      background-color: #00796A;
+    }
+    //img {
+    //  height: 60px;
+    //  width: 60px;
+    //  background-color: #26A69A;
+    //  margin: 0 25px;
+    //  display: inline-block;
+    //  cursor: pointer;
+    //}
+    //img:hover {
+    //  background-color: #00796A;
+    //}
+    //img:first-child {
+    //  margin-right: 25px;
+    //}
+    //img:last-child {
+    //  margin-left: 25px;
+    //}
   }
 }
-.sort {
-  float: right;
-  p {
-    display: inline-block;
-  }
-  form {
-    display: inline-block;
-  }
-  select {
-    margin: 0 10px;
+#sorting {
+  margin: 15px 0;
+  .sort {
+    float: right;
+    p {
+      display: inline-block;
+    }
+    form {
+      display: inline-block;
+    }
+    select {
+      margin: 0 10px;
+    }
   }
 }
+.post-container {
+  .panel {
+    height: 200px;
+    .panel-body {
+      h4 {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        z-index: 999;
+      }
+    }
+  }
+}
+// Panel
 .panel {
-  height: 200px;
+  height: 165px;
   margin: 0 0 30px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
-  //.panel-heading {
-  //  height: 20%;
-  //  background: none;
-  //  border-style: none;
-  //
-  //}
+  box-shadow: 0 0 10px #DDD;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  i {
+    margin-right: 5px;
+  }
   .panel-body {
     background: url("/assets/Bank_image.jpg");
     background-repeat: no-repeat;
     background-size: 300px;
+    height: 80%;
+    position: relative;
+    //border-radius: 2px;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
     i {
       float: right;
+      z-index: 999;
     }
-    height: 80%;
-    text-align: center;
-    h4 {
+    i:hover {
+      color: #26A69A;
     }
+  }
+  .panel-body:hover {
+    background-size: 350px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    height: 100%;
+    width: 100%;
+    opacity: 0.40;
+    z-index: 1;
   }
   .panel-footer {
     height: 20%;
+    font-size: 14px;
+    background-color: white;
     div {
       display: inline-block;
     }
@@ -73,11 +166,44 @@ h1 {
     }
   }
 }
-
 .panel:first-child {
   margin-left: 0;
 }
 
 .panel:last-child {
   margin-right: 0;
+}
+
+// 5 column layout
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.col-xs-15 {
+  width: 20%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
 }
