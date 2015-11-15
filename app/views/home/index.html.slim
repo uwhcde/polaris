@@ -1,40 +1,98 @@
-.row
-  .col-lg-12
-    h1
-      | Welcome to Polaris
+- if user_signed_in?
+  #recent
+    .row
+      .col-sm-12
+        p Recently Viewed
+    .row
+      - i = 0
+      - @posts.each do |post|
+        - i = i + 1
+        .col-lg-15.col-md-4
+          .panel.panel-default
+            .panel-body
+              i.fa.fa-star
+              h5 = truncate(post.title, :length => 25)
+              .overlay
+            .panel-footer
+              .postType
+                = post.postType
+              .rating
+                span.upVotes
+                  i.fa.fa-thumbs-up
+                  = post.upVotes
+                .downVotes
+                  i.fa.fa-thumbs-down
+                  = post.downVotes
+        - if i > 4 then break
+- else
+  #hero-img
+    .row
 #img-filters
   .row
-    img.img-circle src=""
-    img.img-circle src=""
-    img.img-circle src=""
-    img.img-circle src=""
-    img.img-circle src=""
-    img.img-circle src=""
-    img.img-circle src=""
-    img.img-circle src=""
-    img.img-circle src=""
-    img.img-circle src=""
-.row
-  .sort
-    p
-      | Sort By
-    form.form-inline
-      select.form-control
-        option Newest
-        option Rating
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+      .fil
+        .filter
+          i.fa.fa-home.fa-2x
+        p.invisible All
+      .fil
+        .filter
+          i.fa.fa-home.fa-2x
+        p.invisible Housing
+      .fil
+        .filter
+          i.fa.fa-medkit.fa-2x
+        p.invisible Health
+      .fil
+        .filter
+          i.fa.fa-graduation-cap.fa-2x
+        p.invisible Schooling
+      .fil
+        .filter
+          i.fa.fa-briefcase.fa-2x
+        p.invisible Jobs
+      .fil
+        .filter
+          i.fa.fa-car.fa-2x
+        p.invisible Transport
+      .fil
+        .filter
+          i.fa.fa-cutlery.fa-2x
+        p.invisible Food
+      .fil
+        .filter
+          i.fa.fa-usd.fa-2x
+        p.invisible Banking
+      .fil
+        .filter
+          i.fa.fa-gavel.fa-2x
+        p.invisible Legal
+      .fil
+        .filter
+          i.fa.fa-home.fa-2x
+        p.invisible Other
+#sorting
+  .row
+    .sort
+      form.form-inline
+        select.form-control
+          option Sort by
+          option Newest
+          option Rating
 
-      select.form-control
-        option Guide
-        option Help
-        option All
+        select.form-control
+          option Filter by
+          option Guide
+          option Help
+          option All
 .post-container
   .row
     - @posts.each do |post|
       .col-lg-3.col-md-4.col-sm-6.col-xs-12
         .panel.panel-default
           .panel-body
-            i.fa.fa-star-o.fa-lg
+            i.fa.fa-star.fa-lg.hide
             h4 = truncate(post.title, :length => 25)
+            .overlay
           .panel-footer
             .postType
               = post.postType
