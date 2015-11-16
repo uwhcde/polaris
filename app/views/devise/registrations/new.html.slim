@@ -1,11 +1,23 @@
 h2
   | Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f|
   = devise_error_messages!
+  .field
+    = f.label :picture
+    br
+    = f.file_field :picture
+  .field
+    = f.label :first_name
+    br
+    = f.text_field :first_name, autofocus: true
+  .field
+    = f.label :last_name
+    br
+    = f.text_field :last_name
   .field
     = f.label :email
     br
-    = f.email_field :email, autofocus: true
+    = f.email_field :email
   .field
     = f.label :password
     - if @validatable
@@ -19,6 +31,14 @@ h2
     = f.label :password_confirmation
     br
     = f.password_field :password_confirmation, autocomplete: "off"
+  .field
+    = f.label :description
+    br
+    = f.text_field :description
+  .field
+    = f.label :phone
+    br
+    = f.text_field :phone
   .actions
     = f.submit "Sign up"
 = render "devise/shared/links"

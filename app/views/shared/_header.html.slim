@@ -23,12 +23,13 @@ nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
               /  | Image&nbsp;
               /  span.caret
               ul.dropdown-menu
-                li.dropdown-header UserName
+                li.dropdown-header
+                = current_user.first_name
                 li.divider role="separator"
                 li id="profile"
                   .row
                     i.fa.fa-user.fa-lg
-                    = link_to "Profile"
+                    = link_to "Profile", current_user
                 li id="bookmarks"
                   .row
                     i.fa.fa-bookmark.fa-lg
