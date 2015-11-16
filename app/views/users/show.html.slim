@@ -1,0 +1,8 @@
+.profile
+  div
+    = link_to image_tag(@user.picture.url(:med)), @user.picture.url
+  h1
+    = @user.first_name
+  div
+    = @user.description
+  = @user.phone
