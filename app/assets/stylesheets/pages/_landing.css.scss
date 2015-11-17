@@ -2,9 +2,11 @@
   margin: 10px 0 10px 0;
 }
 #hero-img {
+  position: relative;
   .row {
-    background: url("/assets/overlay.png") no-repeat;
-    background-size: 400px;
+    //position: absolute;
+    //background: url("/assets/overlay.png") no-repeat;
+    //height: 300px;
   }
 }
 #recent {
@@ -28,6 +30,7 @@
   }
 }
 #img-filters {
+  display: table-cell;
   .row {
     .fil {
       height: 80px;
@@ -35,14 +38,14 @@
       display: table-cell;
       text-align: center;
       .filter {
-        height: 60px;
-        width: 60px;
+        height: 40px;
+        width: 40px;
         background-color: #26A69A;
         margin: 0 25px;
         cursor: pointer;
         border-radius: 50%;
         i {
-          line-height: 60px;
+          line-height: 40px;
           color: white;
           margin: 0;
         }
@@ -54,26 +57,10 @@
     .filter:hover {
       background-color: #00796A;
     }
-    //img {
-    //  height: 60px;
-    //  width: 60px;
-    //  background-color: #26A69A;
-    //  margin: 0 25px;
-    //  display: inline-block;
-    //  cursor: pointer;
-    //}
-    //img:hover {
-    //  background-color: #00796A;
-    //}
-    //img:first-child {
-    //  margin-right: 25px;
-    //}
-    //img:last-child {
-    //  margin-left: 25px;
-    //}
   }
 }
 #sorting {
+  display: table-cell;
   margin: 15px 0;
   .sort {
     float: right;
@@ -123,31 +110,35 @@
     color: white;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
+    text-align: center;
     i {
-      float: right;
+      position: absolute;
+      top: 10px;
+      right: 10px;
       z-index: 999;
     }
     i:hover {
       color: #26A69A;
     }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black;
+      height: 100%;
+      width: 100%;
+      opacity: 0.40;
+      z-index: 1;
+    }
   }
   .panel-body:hover {
     background-size: 350px;
-  }
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: black;
-    height: 100%;
-    width: 100%;
-    opacity: 0.40;
-    z-index: 1;
   }
   .panel-footer {
     height: 20%;
     font-size: 14px;
     background-color: white;
+    color: black;
     div {
       display: inline-block;
     }

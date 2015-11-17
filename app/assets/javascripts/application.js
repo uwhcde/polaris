@@ -23,15 +23,18 @@
 //= require_tree .
 
 $(document).ready(function(){
-    $('.panel-body').hover(function(){
-        $(this).find('i').removeClass("hide");
+    $('.panel').hover(function(){
+        $(this).find(".unbookmarked").removeClass("hide");
     }, function(){
-        $(this).find("i").addClass("hide");
-    });
+        $(this).find(".unbookmarked").addClass("hide");
+    })
     $('.filter').hover(function(){
         $(this).parent().find("p").removeClass("invisible");
     },function(){
         $(this).parent().find("p").addClass("invisible");
-    });
-
+    })
+    $('.fa-star').click(function(){
+        $(this).toggleClass("unbookmarked");
+        $(this).toggleClass("bookmarked");
+    })
 });

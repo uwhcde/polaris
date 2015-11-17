@@ -14,28 +14,29 @@ nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
       ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           li
-            a.fa.fa-bell.fa-lg href=""
+            a.fa.fa-bell.fa-2x href=""
           li
-            a.fa.fa-pencil.fa-lg href="/posts/new"
+            a.fa.fa-pencil.fa-2x href="/posts/new"
           li
-            .btn-group
-              a.fa.fa-user.fa-lg type="button" data-toggle="dropdown"
+            / .btn-group
+            a.fa.fa-user.fa-2x
+              /type="button" data-toggle="dropdown"
               /  | Image&nbsp;
               /  span.caret
-              ul.dropdown-menu
-                li.dropdown-header UserName
-                li.divider role="separator"
-                li id="profile"
-                  .row
-                    i.fa.fa-user.fa-lg
-                    = link_to "Profile"
-                li id="bookmarks"
-                  .row
-                    i.fa.fa-bookmark.fa-lg
-                    = link_to "Bookmarks"
-                li.divider
-                li
-                  = link_to "Log out", destroy_user_session_path, method: :delete
+              /ul.dropdown-menu
+              /  li.dropdown-header UserName
+              /  li.divider role="separator"
+              /  li id="profile"
+              /    .row
+              /      i.fa.fa-user.fa-lg
+              /      = link_to "Profile"
+              /  li id="bookmarks"
+              /    .row
+              /      i.fa.fa-bookmark.fa-lg
+              /      = link_to "Bookmarks"
+              /  li.divider
+              /  li
+              /    = link_to "Log out", destroy_user_session_path, method: :delete
         - else
           li
             = link_to "Sign in", new_user_session_path
