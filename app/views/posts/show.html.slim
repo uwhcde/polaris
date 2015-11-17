@@ -14,13 +14,38 @@ p#notice
           h3 = section.title
           == section.description
 
+
+      h2
+        = "Comments"
+      div#comments
+
+        = render :partial => @post.comments
+
+
+        = form_for [@post, Comment.new] do |f|
+          p
+            = f.label :body, "New comment"
+          br
+            = f.text_area :body
+
+          p
+            = f.submit "Add comment"
+
     .col-lg-4
       .card
-        h2.card-title = "Author"
+        h2.card-title Author
         p
           = current_user.email
       .card
-        h2.card-title = "Colloborators"
+        h2.card-title = "Contributors"
+        button.btn.btn-primary = "Be a contributor"
+
+      .card
+        h2.card-title = "Similar Guides"
+        p
+          = "No similar guides found"
+
+
 
   = link_to 'Add Section', new_post_section_path(@post)
   = " | "
