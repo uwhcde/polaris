@@ -8,16 +8,14 @@ body {
   margin-bottom: 20px;
 }
 
-.navbar-inverse {
+.navbar {
   background: #26A69A;
   border: 0;
   .navbar-brand {
     color: white;
   }
-  ul.navbar-nav {
-    a:first-child {
-      color: white;
-    }
+  ul.navbar-nav > li > a {
+    color: white;
   }
 }
 
@@ -38,7 +36,7 @@ body {
 
 .button-on-image{
   border: 1px solid #26A69A;
-  background-color: #26A69A; 
+  background-color: #26A69A;
 }
 
 // Panel
