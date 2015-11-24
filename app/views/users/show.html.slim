@@ -32,58 +32,16 @@
         .post-panel
           - @guides.each do |post|
             .col-lg-3.col-md-4.col-sm-6.col-xs-12
-              .panel.panel-default
-                .panel-body
-                  i.fa.fa-star
-                  h5 = truncate(post.title, :length => 25)
-                  .overlay
-                .panel-footer
-                  .postType
-                    = post.postType
-                  .rating
-                    span.upVotes
-                      i.fa.fa-thumbs-up
-                      = post.upVotes
-                    .downVotes
-                      i.fa.fa-thumbs-down
-                      = post.downVotes
+              = render :partial => "shared/panel", :locals => {:post => post}
       #helps.tab-pane.fade
         h2.title Help
         .post-panel
           - @helps.each do |post|
             .col-lg-3.col-md-4.col-sm-6.col-xs-12
-              .panel.panel-default
-                .panel-body
-                  i.fa.fa-star
-                  h5 = truncate(post.title, :length => 25)
-                  .overlay
-                .panel-footer
-                  .postType
-                    = post.postType
-                  .rating
-                    span.upVotes
-                      i.fa.fa-thumbs-up
-                      = post.upVotes
-                    .downVotes
-                      i.fa.fa-thumbs-down
-                      = post.downVotes
+              = render :partial => "shared/panel", :locals => {:post => post}
       #events.tab-pane.fade
         h2.title Events
         .post-panel
           - @events.each do |post|
             .col-lg-3.col-md-4.col-sm-6.col-xs-12
-              .panel.panel-default
-                .panel-body
-                  i.fa.fa-star
-                  h5 = truncate(post.title, :length => 25)
-                  .overlay
-                .panel-footer
-                  .postType
-                    = post.postType
-                  .rating
-                    span.upVotes
-                      i.fa.fa-thumbs-up
-                      = post.upVotes
-                    .downVotes
-                      i.fa.fa-thumbs-down
-                      = post.downVotes
+              = render :partial => "shared/panel", :locals => {:post => post}

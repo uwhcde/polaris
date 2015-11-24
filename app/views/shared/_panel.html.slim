@@ -1,0 +1,15 @@
+.panel.panel-default
+  .panel-body
+    i.fa.fa-star
+    h5 = truncate(post.title, :length => 25)
+    .overlay
+  .panel-footer
+    .postType
+      = post.postType
+    .rating
+      span.upVotes
+        i.fa.fa-thumbs-up
+        = post.upVotes
+      .downVotes
+        i.fa.fa-thumbs-down
+        = post.downVotes
