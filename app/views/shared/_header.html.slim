@@ -23,7 +23,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
               li
                 a href="/posts/new"
                   i.fa.fa-pencil.fa-lg
-                  = " Post"
+                  = " Guide"
               li
                 a href="#"
                   i.fa.fa-fw.fa-calendar
@@ -31,7 +31,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
               li
                 a href="#"
                   i.fa.fa-fw.fa-map-signs
-                  = " Guide"
+                  = " Help"
 
           li.dropdown
             a.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#"
@@ -47,11 +47,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
               li
                 a href="#"
                   i.fa.fa-fw.fa-envelope
-                  | Inbox
-              li
-                a href="#"
-                  i.fa.fa-fw.fa-gear
-                  | Settings
+                  | My Cards
               li.divider
               li
                 = link_to destroy_user_session_path, method: :delete do
