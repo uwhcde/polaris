@@ -4,6 +4,10 @@ h2
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f|
   = devise_error_messages!
   .field
+    = f.label :cover_image
+    br
+    = f.file_field :cover_image
+  .field
     = f.label :picture
     br
     = f.file_field :picture

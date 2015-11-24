@@ -1,8 +1,27 @@
 .profile
-  div
-    = link_to image_tag(@user.picture.url(:med)), @user.picture.url
-  h1
-    = @user.first_name
-  div
-    = @user.description
-  = @user.phone
+  .profile-cover
+    .cover-image.container.row
+      = link_to image_tag(@user.cover_image.url(:med)), @user.cover_image.url, :class => 'cover-link'
+    .cover-overlay
+    .profile-details.container.row
+      .profile-image
+        = link_to image_tag(@user.picture.url(:med)), @user.picture.url, :class => 'profile-link'
+      .name
+        span
+          = @user.first_name
+      .description
+        span
+          = @user.description
+      .contact
+        span
+          = @user.email + " | " + @user.phone
+      = button_tag "Edit Profile", :class => 'btn btn-primary edit-profile'
+
+  .post-type.navbar.navbar-inverse
+    ul.nav.navbar-nav
+      li
+        =link_to "Guide", "/posts/new", :class => "a.fa.fa-pencil.fa-lg"
+      li
+        =link_to "Help", "/posts/new", :class => "a.fa.fa-pencil.fa-lg"
+      li
+        =link_to "Events", "/posts/new", :class => "a.fa.fa-pencil.fa-lg"
