@@ -14,19 +14,11 @@ body {
   .navbar-brand {
     color: white;
   }
+
   ul.navbar-nav > li > a {
     color: white;
   }
 }
-
-//i {
-//  margin-right: 10px;
-//}
-
-//.navbar-inverse {
-//  background-color: #26A69A;
-//}
-
 
 .card {
   padding: 30px;
@@ -110,4 +102,17 @@ body {
 
 .panel:last-child {
   margin-right: 0;
+}
+.navbar-inverse {
+  background: #26A69A;
+  border: 0;
+  .navbar-brand {
+    color: white;
+  }
+  ul.navbar-nav {
+    li a {
+      margin: 0 10px;
+      color: white;
+    }
+  }
 }

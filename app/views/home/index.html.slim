@@ -6,14 +6,17 @@
           p Recently Viewed
       .row
         - i = 0
+        - path = "/posts/"
         - @posts.each do |post|
           - i = i + 1
           .col-lg-15.col-md-4
+            //a href="/posts/#{post.id}"
             .panel.panel-default
               .panel-body
-                i.fa.fa-star
+                i.fa.fa-star-o.fa-lg.unbookmarked
                 h5 = truncate(post.title, :length => 25)
-                .overlay
+                a href="/posts/#{post.id}"
+                  .overlay
               .panel-footer
                 .postType
                   = post.postType
@@ -33,44 +36,44 @@
       .col-lg-12.col-md-12.col-sm-12.col-xs-12
         .fil
           .filter
-            i.fa.fa-home.fa-2x
-          p.invisible All
+            i.fa.fa-home.fa-lg
+          p All
         .fil
           .filter
-            i.fa.fa-home.fa-2x
-          p.invisible Housing
+            i.fa.fa-home.fa-lg
+          p Housing
         .fil
           .filter
-            i.fa.fa-medkit.fa-2x
-          p.invisible Health
+            i.fa.fa-medkit.fa-lg
+          p Health
         .fil
           .filter
-            i.fa.fa-graduation-cap.fa-2x
-          p.invisible Schooling
+            i.fa.fa-graduation-cap.fa-lg
+          p Schooling
         .fil
           .filter
-            i.fa.fa-briefcase.fa-2x
-          p.invisible Jobs
+            i.fa.fa-briefcase.fa-lg
+          p Jobs
         .fil
           .filter
-            i.fa.fa-car.fa-2x
-          p.invisible Transport
+            i.fa.fa-car.fa-lg
+          p Transport
         .fil
           .filter
-            i.fa.fa-cutlery.fa-2x
-          p.invisible Food
+            i.fa.fa-cutlery.fa-lg
+          p Food
         .fil
           .filter
-            i.fa.fa-usd.fa-2x
-          p.invisible Banking
+            i.fa.fa-usd.fa-lg
+          p Banking
         .fil
           .filter
-            i.fa.fa-gavel.fa-2x
-          p.invisible Legal
+            i.fa.fa-gavel.fa-lg
+          p Legal
         .fil
           .filter
-            i.fa.fa-home.fa-2x
-          p.invisible Other
+            i.fa.fa-home.fa-lg
+          p Other
   #sorting
     .row
       .sort
@@ -86,21 +89,24 @@
             option Help
             option All
   .post-container
+    - path = "/posts/"
     .row
       - @posts.each do |post|
         .col-lg-3.col-md-4.col-sm-6.col-xs-12
+          /a href="/posts/#{post.id}"
           .panel.panel-default
             .panel-body
-              i.fa.fa-star.fa-lg.hide
+              i.fa.fa-star.fa-lg.unbookmarked.hide
               h4 = truncate(post.title, :length => 25)
-              .overlay
+              a href="/posts/#{post.id}"
+                .overlay
             .panel-footer
               .postType
                 = post.postType
               .rating
                 span.upVotes
-                  i.fa.fa-thumbs-up.fa-lg
+                  i.fa.fa-thumbs-up
                   = post.upVotes
                 .downVotes
-                  i.fa.fa-thumbs-down.fa-lg
+                  i.fa.fa-thumbs-down
                   = post.downVotes
