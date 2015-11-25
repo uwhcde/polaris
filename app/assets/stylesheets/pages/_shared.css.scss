@@ -35,7 +35,6 @@ body {
 .panel {
   height: 165px;
   margin: 0 0 30px;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
   box-shadow: 0 0 10px #DDD;
   border: 0;
   border-radius: 2px;
@@ -53,31 +52,35 @@ body {
     color: white;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
+    text-align: center;
     i {
-      float: right;
+      position: absolute;
+      top: 10px;
+      right: 10px;
       z-index: 999;
     }
     i:hover {
       color: #26A69A;
     }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black;
+      height: 100%;
+      width: 100%;
+      opacity: 0.40;
+      z-index: 1;
+    }
   }
   .panel-body:hover {
     background-size: 350px;
-  }
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: black;
-    height: 100%;
-    width: 100%;
-    opacity: 0.40;
-    z-index: 1;
   }
   .panel-footer {
     height: 20%;
     font-size: 14px;
     background-color: white;
+    color: black;
     div {
       display: inline-block;
     }
@@ -103,6 +106,7 @@ body {
 .panel:last-child {
   margin-right: 0;
 }
+
 .navbar-inverse {
   background: #26A69A;
   border: 0;
