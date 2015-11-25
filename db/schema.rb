@@ -44,14 +44,14 @@ ActiveRecord::Schema.define(version: 20151117001625) do
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "short_description"
-    t.integer  "user_id",                       null: false
+    t.integer  "user_id",           null: false
     t.text     "tagging_details"
     t.time     "publish_date"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "postType"
-    t.integer  "upVotes",           default: 0
-    t.integer  "downVotes",         default: 0
+    t.integer  "upVotes"
+    t.integer  "downVotes"
   end
 
   create_table "sections", force: :cascade do |t|
