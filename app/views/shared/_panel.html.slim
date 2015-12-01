@@ -1,8 +1,9 @@
 .panel.panel-default
   .panel-body
-    i.fa.fa-star
-    h5 = truncate(post.title, :length => 25)
-    .overlay
+    i.fa.fa-star.fa-lg.unbookmarked.hide
+    h4 = truncate(post.title, :length => 25)
+    a href="/posts/#{post.id}"
+      .overlay
   .panel-footer
     .postType
       = post.postType

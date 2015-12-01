@@ -17,7 +17,7 @@
       .contact
         span
           = @user.email + " | " + @user.phone
-      = button_tag "Edit Profile", :class => 'btn btn-primary edit-profile'
+      = link_to "Edit Profile", edit_user_registration_path(current_user), :class => 'btn btn-primary edit-profile'
 
   .post-container
     .post-type.navbar.navbar-inverse
@@ -30,19 +30,28 @@
           =link_to "Events", "#events", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
     .posts.tab-content
       #guides.tab-pane.fade.in.active
-        h2.title Guides
+        .filters.row.container
+          .sort
+            form.form-inline
+              = select_tag('guides_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
         .post-panel
           - @guides.each do |post|
             .col-lg-3.col-md-4.col-sm-6.col-xs-12
               = render :partial => "shared/panel", :locals => {:post => post}
       #helps.tab-pane.fade
-        h2.title Help
+        .filters.row.container
+          .sort
+            form.form-inline
+              = select_tag('helps_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
         .post-panel
           - @helps.each do |post|
             .col-lg-3.col-md-4.col-sm-6.col-xs-12
               = render :partial => "shared/panel", :locals => {:post => post}
       #events.tab-pane.fade
-        h2.title Events
+        .filters.row.container
+          .sort
+            form.form-inline
+              = select_tag('events_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
         .post-panel
           - @events.each do |post|
             .col-lg-3.col-md-4.col-sm-6.col-xs-12
