@@ -3,7 +3,7 @@ p#notice
 p
   strong
     | Name:
-  = @event.name
+  = @event.title
 p
   strong
     | From:
@@ -53,5 +53,5 @@ p
     | Cover:
   = @event.cover
 = link_to 'Edit', edit_event_path(@event)
-|  | 
+|  |
 = link_to 'Back', events_path
