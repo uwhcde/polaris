@@ -1,0 +1,41 @@
+p#notice
+  = notice
+p
+  strong
+    | Title:
+  = @help.title
+p
+  strong
+    | User:
+  = @help.user_id
+p
+  strong
+    | Location:
+  = @help.location
+p
+  strong
+    | Longitude:
+  = @help.longitude
+p
+  strong
+    | Latitude:
+  = @help.latitude
+p
+  strong
+    | Requiredby:
+  = @help.requiredby
+p
+  strong
+    | Description:
+  = @help.description
+p
+  strong
+    | Cover:
+  = @help.cover
+p
+  strong
+    | Date:
+  = @help.date
+= link_to 'Edit', edit_help_path(@help)
+|  | 
+= link_to 'Back', helps_path

@@ -1,0 +1,55 @@
+p#notice
+  = notice
+h1
+  | Listing Helps
+table
+  thead
+    tr
+      th
+        | Title
+      th
+        | User
+      th
+        | Location
+      th
+        | Longitude
+      th
+        | Latitude
+      th
+        | Requiredby
+      th
+        | Description
+      th
+        | Cover
+      th
+        | Date
+      th[colspan="3"]
+  tbody
+    - @helps.each do |help|
+      tr
+        td
+          = help.title
+        td
+          = help.user_id
+        td
+          = help.location
+        td
+          = help.longitude
+        td
+          = help.latitude
+        td
+          = help.requiredby
+        td
+          = help.description
+        td
+          = help.cover
+        td
+          = help.date
+        td
+          = link_to 'Show', help
+        td
+          = link_to 'Edit', edit_help_path(help)
+        td
+          = link_to 'Destroy', help, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Help', new_help_path
