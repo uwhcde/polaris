@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  post_id: 
+  guide_id: 
   body: MyText
 
 two:
-  post_id: 
+  guide_id: 
   body: MyText

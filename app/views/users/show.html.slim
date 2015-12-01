@@ -19,8 +19,8 @@
           = @user.email + " | " + @user.phone
       = link_to "Edit Profile", edit_user_registration_path(current_user), :class => 'btn btn-primary edit-profile'
 
-  .post-container
-    .post-type.navbar.navbar-inverse
+  .guide-container
+    .guide-type.navbar.navbar-inverse
       ul.nav.navbar-nav.nav-tabs role='tablist'
         li.active
           =link_to "Guide", "#guides", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
@@ -28,31 +28,31 @@
           =link_to "Help", "#helps", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
         li
           =link_to "Events", "#events", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
-    .posts.tab-content
+    .guides.tab-content
       #guides.tab-pane.fade.in.active
         .filters.row.container
           .sort
             form.form-inline
               = select_tag('guides_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
-        .post-panel
-          - @guides.each do |post|
+        .guide-panel
+          - @guides.each do |guide|
             .col-lg-3.col-md-4.col-sm-6.col-xs-12
-              = render :partial => "shared/panel", :locals => {:post => post}
+              = render :partial => "shared/panel", :locals => {:guide => guide}
       #helps.tab-pane.fade
         .filters.row.container
           .sort
             form.form-inline
               = select_tag('helps_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
-        .post-panel
-          - @helps.each do |post|
+        .guide-panel
+          - @helps.each do |guide|
             .col-lg-3.col-md-4.col-sm-6.col-xs-12
-              = render :partial => "shared/panel", :locals => {:post => post}
+              = render :partial => "shared/panel", :locals => {:guide => guide}
       #events.tab-pane.fade
         .filters.row.container
           .sort
             form.form-inline
               = select_tag('events_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
-        .post-panel
-          - @events.each do |post|
+        .guide-panel
+          - @events.each do |guide|
             .col-lg-3.col-md-4.col-sm-6.col-xs-12
-              = render :partial => "shared/panel", :locals => {:post => post}
+              = render :partial => "shared/panel", :locals => {:guide => guide}

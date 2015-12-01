@@ -1,7 +1,7 @@
 .row
   .col-md-8
-    = simple_form_for([@post, @section], html: { class: 'form-vertical' }) do |f|
-      = render "shared/errors", model: @post
+    = simple_form_for([@guide, @section], html: { class: 'form-vertical' }) do |f|
+      = render "shared/errors", model: @guide
       = f.input :title
       = f.input :description
       .actions

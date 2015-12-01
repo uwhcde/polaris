@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
 
-  resources :posts do
+  resources :guides do
     resources :sections
     resources :comments, :only => [:create]
   end
@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   #   resources :products do
   #     member do
   #       get 'short'
-  #       post 'toggle'
+  #       guide 'toggle'
   #     end
   #
   #     collection do
@@ -59,9 +59,9 @@ Rails.application.routes.draw do
 
   # Example resource route with concerns:
   #   concern :toggleable do
-  #     post 'toggle'
+  #     guide 'toggle'
   #   end
-  #   resources :posts, concerns: :toggleable
+  #   resources :guides, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:

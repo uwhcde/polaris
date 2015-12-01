@@ -1,4 +1,4 @@
-module PostsHelper
+module GuidesHelper
   # def link_to_remove_fields(name, f)
   #   f.hidden_field(:_destroy)
   # end

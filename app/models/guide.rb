@@ -1,6 +1,6 @@
-class Post < ActiveRecord::Base
+class Guide < ActiveRecord::Base
   has_many :comments
-  has_many :sections, inverse_of: :post, dependent: :destroy
+  has_many :sections, inverse_of: :guide, dependent: :destroy
   accepts_nested_attributes_for :sections, reject_if: :all_blank, allow_destroy: true
   before_save :init
 
@@ -16,6 +16,6 @@ class Post < ActiveRecord::Base
     def init
       self.upVotes ||= 0
       self.downVotes ||= 0
-      self.postType ||= "Guide"
+      self.guideType ||= "Guide"
     end
 end

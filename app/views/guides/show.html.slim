@@ -5,11 +5,11 @@ p#notice
     .col-lg-8
       .card
         h1
-          = @post.title
+          = @guide.title
         p
-          == @post.short_description
+          == @guide.short_description
 
-      - @post.sections.each do |section|
+      - @guide.sections.each do |section|
         .card
           h3 = section.title
           == section.description
@@ -19,10 +19,10 @@ p#notice
         = "Comments"
       div#comments
 
-        = render :partial => @post.comments
+        = render :partial => @guide.comments
 
 
-        = form_for [@post, Comment.new] do |f|
+        = form_for [@guide, Comment.new] do |f|
           p
             = f.label :body, "New comment"
           br
@@ -47,8 +47,8 @@ p#notice
 
 
 
-  = link_to 'Add Section', new_post_section_path(@post)
+  = link_to 'Add Section', new_guide_section_path(@guide)
   = " | "
-  = link_to 'Edit', edit_post_path(@post)
+  = link_to 'Edit', edit_guide_path(@guide)
   = " | "
-  = link_to 'Back', posts_path
+  = link_to 'Back', guides_path

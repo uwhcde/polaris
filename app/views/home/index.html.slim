@@ -6,27 +6,26 @@
           p Recently Viewed
       .row
         - i = 0
-        - path = "/posts/"
-        - @posts.each do |post|
+        - path = "/guides/"
+        - @guides.each do |guide|
           - i = i + 1
           .col-lg-15.col-md-4
-            //a href="/posts/#{post.id}"
             .panel.panel-default
               .panel-body
                 i.fa.fa-star-o.fa-lg.unbookmarked
-                h5 = truncate(post.title, :length => 25)
-                a href="/posts/#{post.id}"
+                h5 = truncate(guide.title, :length => 25)
+                a href="/guides/#{guide.id}"
                   .overlay
               .panel-footer
-                .postType
-                  = post.postType
+                .guideType
+                  = guide.guideType
                 .rating
                   span.upVotes
                     i.fa.fa-thumbs-up
-                    = post.upVotes
+                    = guide.upVotes
                   .downVotes
                     i.fa.fa-thumbs-down
-                    = post.downVotes
+                    = guide.downVotes
           - if i > 4 then break
   - else
     #hero-img
@@ -89,7 +88,7 @@
             option Help
             option All
 
-.post-container
+.guide-container
   .row
     - @entries.each do |entry|
       = render "shared/cards/#{entry[:value].class.name.downcase}_card", :entry => entry[:value]

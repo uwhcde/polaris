@@ -1,7 +1,7 @@
-# Migration file to create posts table
-class CreatePosts < ActiveRecord::Migration
+# Migration file to create guides table
+class CreateGuides < ActiveRecord::Migration
   def self.up
-    create_table :posts do |t|
+    create_table :guides do |t|
       t.string :title
       t.text :short_description
       t.integer :user_id, null: false
@@ -13,6 +13,6 @@ class CreatePosts < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :posts
+    drop_table :guides
   end
 end

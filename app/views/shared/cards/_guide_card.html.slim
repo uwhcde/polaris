@@ -1,15 +1,15 @@
 .col-lg-3.col-md-4.col-sm-6.col-xs-12
-  /a href="/posts/#{entry.id}"
-  - path = "/posts/"
+  /a href="/guides/#{entry.id}"
+  - path = "/guides/"
   .panel.panel-default
     .panel-body style="background: url(#{entry.cover.url(:med)})"
       i.fa.fa-star.fa-lg.unbookmarked.hide
       h4 = truncate(entry.title, :length => 25)
-      a href="/posts/#{entry.id}"
+      a href="/guides/#{entry.id}"
         .overlay
     .panel-footer
-      .postType
-        = entry.postType
+      .guideType
+        = entry.guideType
       .rating
         span.upVotes
           i.fa.fa-thumbs-up

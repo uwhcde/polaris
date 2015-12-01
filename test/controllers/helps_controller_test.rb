@@ -18,7 +18,7 @@ class HelpsControllerTest < ActionController::TestCase
 
   test "should create help" do
     assert_difference('Help.count') do
-      post :create, help: { cover: @help.cover, date: @help.date, description: @help.description, latitude: @help.latitude, location: @help.location, longitude: @help.longitude, requiredby: @help.requiredby, title: @help.title, user_id: @help.user_id }
+      guide :create, help: { cover: @help.cover, date: @help.date, description: @help.description, latitude: @help.latitude, location: @help.location, longitude: @help.longitude, requiredby: @help.requiredby, title: @help.title, user_id: @help.user_id }
     end
 
     assert_redirected_to help_path(assigns(:help))

@@ -1,0 +1,18 @@
+p#notice
+  = notice
+
+
+.row
+  - @guides.each do |guide|
+    .col-md-4.img-portfolio
+      a href="portfolio-item.html"
+        img.img-responsive.img-hover alt="" src=""
+      h3
+        = guide.title
+      p = guide.short_description
+      div.actions
+        = link_to 'Show', guide
+        '
+        = link_to 'Edit', edit_guide_path(guide)
+        '
+        = link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' }

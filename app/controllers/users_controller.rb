@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @guides = Post.all
-    @helps = Post.all
-    @events = Post.all
+    @guides = Guide.all
+    @helps = Guide.all
+    @events = Guide.all
   end
 end

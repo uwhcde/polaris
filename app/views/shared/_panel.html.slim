@@ -1,16 +1,16 @@
 .panel.panel-default
   .panel-body
     i.fa.fa-star.fa-lg.unbookmarked.hide
-    h4 = truncate(post.title, :length => 25)
-    a href="/posts/#{post.id}"
+    h4 = truncate(guide.title, :length => 25)
+    a href="/guides/#{guide.id}"
       .overlay
   .panel-footer
-    .postType
-      = post.postType
+    .guideType
+      = guide.guideType
     .rating
       span.upVotes
         i.fa.fa-thumbs-up
-        = post.upVotes
+        = guide.upVotes
       .downVotes
         i.fa.fa-thumbs-down
-        = post.downVotes
+        = guide.downVotes
