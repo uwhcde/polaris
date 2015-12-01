@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201085437) do
+ActiveRecord::Schema.define(version: 20151201092310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 20151201085437) do
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "short_description"
-    t.integer  "user_id",           null: false
+    t.integer  "user_id",            null: false
     t.text     "tagging_details"
     t.time     "publish_date"
     t.datetime "created_at"
@@ -84,6 +84,11 @@ ActiveRecord::Schema.define(version: 20151201085437) do
     t.string   "postType"
     t.integer  "upVotes"
     t.integer  "downVotes"
+    t.string   "cover"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
   create_table "sections", force: :cascade do |t|

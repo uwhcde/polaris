@@ -4,6 +4,7 @@
       = render "shared/errors", model: @post
       = f.input :title
       = f.input :short_description
+      = f.input :cover
       = f.hidden_field :user_id, :value => current_user.id
       #sections
         = f.simple_fields_for :sections do |b|
