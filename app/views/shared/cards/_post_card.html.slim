@@ -1,0 +1,19 @@
+.col-lg-3.col-md-4.col-sm-6.col-xs-12
+  /a href="/posts/#{entry.id}"
+  - path = "/posts/"
+  .panel.panel-default
+    .panel-body
+      i.fa.fa-star.fa-lg.unbookmarked.hide
+      h4 = truncate(entry.title, :length => 25)
+      a href="/posts/#{entry.id}"
+        .overlay
+    .panel-footer
+      .postType
+        = entry.postType
+      .rating
+        span.upVotes
+          i.fa.fa-thumbs-up
+          = entry.upVotes
+        .downVotes
+          i.fa.fa-thumbs-down
+          = entry.downVotes

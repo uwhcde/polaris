@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  from: 2015-11-30
+  to: 2015-11-30
+  user_id: 1
+  location: 
+  longitude: 1.5
+  latitude: 1.5
+  hostedby: MyString
+  description: MyText
+  intereted: 1.5
+  going: 1
+  invited: 1
+  cover: MyString
+
+two:
+  name: MyString
+  from: 2015-11-30
+  to: 2015-11-30
+  user_id: 1
+  location: 
+  longitude: 1.5
+  latitude: 1.5
+  hostedby: MyString
+  description: MyText
+  intereted: 1.5
+  going: 1
+  invited: 1
+  cover: MyString

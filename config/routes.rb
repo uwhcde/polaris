@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :events
   mount Ckeditor::Engine => '/ckeditor'
   get 'home/index'
 

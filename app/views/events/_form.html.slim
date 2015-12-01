@@ -1,0 +1,12 @@
+= simple_form_for(@event) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :name
+    = f.input :from
+    = f.input :to
+    = f.input :location
+    = f.input :hostedby
+    = f.input :description
+    = f.input :cover
+  .form-actions
+    = f.button :submit

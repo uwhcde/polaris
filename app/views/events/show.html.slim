@@ -1,0 +1,57 @@
+p#notice
+  = notice
+p
+  strong
+    | Name:
+  = @event.name
+p
+  strong
+    | From:
+  = @event.from
+p
+  strong
+    | To:
+  = @event.to
+p
+  strong
+    | User:
+  = @event.user_id
+p
+  strong
+    | Location:
+  = @event.location
+p
+  strong
+    | Longitude:
+  = @event.longitude
+p
+  strong
+    | Latitude:
+  = @event.latitude
+p
+  strong
+    | Hostedby:
+  = @event.hostedby
+p
+  strong
+    | Description:
+  = @event.description
+p
+  strong
+    | Intereted:
+  = @event.intereted
+p
+  strong
+    | Going:
+  = @event.going
+p
+  strong
+    | Invited:
+  = @event.invited
+p
+  strong
+    | Cover:
+  = @event.cover
+= link_to 'Edit', edit_event_path(@event)
+|  | 
+= link_to 'Back', events_path

@@ -88,25 +88,11 @@
             option Guide
             option Help
             option All
-  .post-container
-    - path = "/posts/"
-    .row
-      - @posts.each do |post|
-        .col-lg-3.col-md-4.col-sm-6.col-xs-12
-          /a href="/posts/#{post.id}"
-          .panel.panel-default
-            .panel-body
-              i.fa.fa-star.fa-lg.unbookmarked.hide
-              h4 = truncate(post.title, :length => 25)
-              a href="/posts/#{post.id}"
-                .overlay
-            .panel-footer
-              .postType
-                = post.postType
-              .rating
-                span.upVotes
-                  i.fa.fa-thumbs-up
-                  = post.upVotes
-                .downVotes
-                  i.fa.fa-thumbs-down
-                  = post.downVotes
+
+.post-container
+  .row
+    - @entries.each do |entry|
+      = render "shared/cards/#{entry[:value].class.name.downcase}_card", :entry => entry[:value]
+
+
+
