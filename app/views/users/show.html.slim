@@ -10,17 +10,21 @@
         = link_to image_tag(@user.picture.url(:med)), @user.picture.url, :class => 'profile-link'
       .name
         span
-          = @user.first_name
-      .description
-        span
-          = @user.description
+          = @user.first_name + " " + @user.last_name
+      - if !@user.description.nil?
+        .description
+          span
+            = @user.description
       .contact
         span
-          = @user.email + " | " + @user.phone
+          - if !@user.phone.nil?
+            = @user.email + " | " + @user.phone
+          - else
+            = @user.email
       = link_to "Edit Profile", edit_user_registration_path(current_user), :class => 'btn btn-primary edit-profile'
 
-  .guide-container
-    .guide-type.navbar.navbar-inverse
+  .post-container
+    .post-type.navbar.navbar-inverse
       ul.nav.navbar-nav.nav-tabs role='tablist'
         li.active
           =link_to "Guide", "#guides", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
@@ -28,31 +32,30 @@
           =link_to "Help", "#helps", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
         li
           =link_to "Events", "#events", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
-    .guides.tab-content
+        li.back
+          span
+    .posts.tab-content
       #guides.tab-pane.fade.in.active
         .filters.row.container
           .sort
             form.form-inline
               = select_tag('guides_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
-        .guide-panel
+        .post-panel
           - @guides.each do |guide|
-            .col-lg-3.col-md-4.col-sm-6.col-xs-12
-              = render :partial => "shared/panel", :locals => {:guide => guide}
+            = render "shared/cards/#{guide.class.name.downcase}_card", :post => guide
       #helps.tab-pane.fade
         .filters.row.container
           .sort
             form.form-inline
               = select_tag('helps_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
-        .guide-panel
-          - @helps.each do |guide|
-            .col-lg-3.col-md-4.col-sm-6.col-xs-12
-              = render :partial => "shared/panel", :locals => {:guide => guide}
+        .post-panel
+          - @helps.each do |help|
+            = render "shared/cards/#{help.class.name.downcase}_card", :post => help
       #events.tab-pane.fade
         .filters.row.container
           .sort
             form.form-inline
               = select_tag('events_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
-        .guide-panel
-          - @events.each do |guide|
-            .col-lg-3.col-md-4.col-sm-6.col-xs-12
-              = render :partial => "shared/panel", :locals => {:guide => guide}
+        .post-panel
+          - @events.each do |event|
+            = render "shared/cards/#{event.class.name.downcase}_card", :post => event

@@ -84,37 +84,50 @@
         margin: 9px 0 18px 0;
     }
 
-    .guide-type{
+    .post-type{
         margin-bottom:0
     }
 
-    .guide-type ul.navbar-nav{
+    .post-type ul.navbar-nav{
         width: 100%;
     }
 
-    .guide-type ul.navbar-nav li{
+    .post-type ul.navbar-nav li{
         width: 33.33333%;
         text-align: center;
         font-size: 26px
     }
 
-    .guide-container{
+    .post-container{
         .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
             background-color: #26A69A;
-            border: 0;
-            border-bottom: 5px solid white;
             margin: 0 85px 5px 85px
         }
 
-        .guides{
+        .navbar-nav .back{
+            border: 0;
+            border-bottom: 5px solid white;
+            bottom: 4px;
+            width: 20%;
+            position: absolute;
+
+            transition: left 0.5s ease;
+        }
+
+        .nav-tabs > li > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus,
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+            border: 0
+        }
+
+        .posts{
             padding-top: 12px
         }
 
-        .guides .title{
+        .posts .title{
             text-align: center
         }
 
-        .guides .guide-panel{
+        .posts .post-panel{
             padding: 10px 0;
         }
 

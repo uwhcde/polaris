@@ -5,7 +5,7 @@ class Guide < ActiveRecord::Base
   before_save :init
 
 
-  has_attached_file :cover, styles: { med: "400x150", large: "800x300" }, :default_url => "/images/:style/missing.jpg"
+  has_attached_file :cover, styles: { med: "400x150", large: "800x300" }, :default_url => ":style/missing.jpg"
   validates_attachment_content_type :cover, :content_type => [/\Aimage/, 'application/octet-stream']
   # Validate filename
   # validates_attachment_file_name :cover, matches: [/png\Z/, /jpe?g\Z/]

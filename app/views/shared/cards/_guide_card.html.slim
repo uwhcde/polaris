@@ -1,19 +1,17 @@
 .col-lg-3.col-md-4.col-sm-6.col-xs-12
-  /a href="/guides/#{entry.id}"
-  - path = "/guides/"
   .panel.panel-default
-    .panel-body style="background: url(#{entry.cover.url(:med)})"
+    .panel-body style="background: url(#{post.cover.url(:med)})"
       i.fa.fa-star.fa-lg.unbookmarked.hide
-      h4 = truncate(entry.title, :length => 25)
-      a href="/guides/#{entry.id}"
+      h4 = truncate(post.title, :length => 25)
+      a href="/guides/#{post.id}"
         .overlay
     .panel-footer
       .guideType
-        = entry.guideType
+        = post.guideType
       .rating
         span.upVotes
           i.fa.fa-thumbs-up
-          = entry.upVotes
+          = post.upVotes
         .downVotes
           i.fa.fa-thumbs-down
-          = entry.downVotes
+          = post.downVotes

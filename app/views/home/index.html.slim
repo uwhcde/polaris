@@ -17,7 +17,7 @@
                 a href="/guides/#{guide.id}"
                   .overlay
               .panel-footer
-                .guideType
+                .postType
                   = guide.guideType
                 .rating
                   span.upVotes
@@ -88,10 +88,7 @@
             option Help
             option All
 
-.guide-container
+.post-container
   .row
-    - @entries.each do |entry|
-      = render "shared/cards/#{entry[:value].class.name.downcase}_card", :entry => entry[:value]
-
-
-
+    - @posts.each do |post|
+      = render "shared/cards/#{post[:value].class.name.downcase}_card", :post => post[:value]
