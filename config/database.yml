@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: rails
-  username: comingtoamerica
+  database: polaris
+  username: postgres
   password: <%= ENV['POLARIS_DATABASE_PASSWORD'] %>

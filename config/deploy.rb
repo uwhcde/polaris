@@ -1,6 +1,6 @@
 # Change these
 
-server '159.203.125.45', roles: [:web, :app, :db], primary: true
+server '45.55.80.58', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:uwhcde/polaris.git'
 set :application,     'polaris'

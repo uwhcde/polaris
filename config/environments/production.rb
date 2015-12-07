@@ -71,6 +71,9 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
+  config.secret_token = ENV["SECRET_TOKEN"]
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
