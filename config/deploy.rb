@@ -25,6 +25,8 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads public/assets}
+set :linked_files, fetch(:linked_files, []).push('config/secrets.yml')
+
 ## Defaults:
 # set :scm,           :git
 # set :branch,        :master
@@ -75,40 +77,40 @@ namespace :deploy do
     end
   end
 
-  namespace :assets do
+  # namespace :assets do
 
-    Rake::Task['deploy:assets:precompile'].clear_actions
+  #   Rake::Task['deploy:assets:precompile'].clear_actions
 
-    desc 'Precompile assets locally and upload to servers'
-    task :precompile do
-      on roles(fetch(:assets_roles)) do
-        run_locally do
-          with rails_env: fetch(:rails_env) do
-            execute 'rake assets:precompile'
-            execute 'touch assets.zip && rm assets.zip'
-            execute 'zip -r assets.zip public/assets/'
-          end
-        end
+  #   desc 'Precompile assets locally and upload to servers'
+  #   task :precompile do
+  #     on roles(fetch(:assets_roles)) do
+  #       run_locally do
+  #         with rails_env: fetch(:rails_env) do
+  #           execute 'rake assets:precompile'
+  #           execute 'touch assets.zip && rm assets.zip'
+  #           execute 'zip -r assets.zip public/assets/'
+  #         end
+  #       end
 
-        within release_path do
-          with rails_env: fetch(:rails_env) do
-            # old_manifest_path = "#{shared_path}/public/assets/manifest*"
-            # execute :rm, old_manifest_path if test "[ -f #{old_manifest_path} ]"
-            upload!('assets.zip', "#{shared_path}/public/", recursive: true)
-            execute("rm -rf #{shared_path}/public/assets || true")
-            execute("cd #{shared_path}/public/; unzip -o assets.zip; cd ;")
-            execute("mv #{shared_path}/public/public/assets #{shared_path}/public/")
+  #       within release_path do
+  #         with rails_env: fetch(:rails_env) do
+  #           # old_manifest_path = "#{shared_path}/public/assets/manifest*"
+  #           # execute :rm, old_manifest_path if test "[ -f #{old_manifest_path} ]"
+  #           upload!('assets.zip', "#{shared_path}/public/", recursive: true)
+  #           execute("rm -rf #{shared_path}/public/assets || true")
+  #           execute("cd #{shared_path}/public/; unzip -o assets.zip; cd ;")
+  #           execute("mv #{shared_path}/public/public/assets #{shared_path}/public/")
 
-            # upload!('./public/assets/', "#{shared_path}/public/", recursive: true)
-          end
-        end
+  #           # upload!('./public/assets/', "#{shared_path}/public/", recursive: true)
+  #         end
+  #       end
 
-        run_locally { execute 'rm -rf public/assets' }
-        run_locally { execute 'rm assets.zip' }
-      end
-    end
+  #       run_locally { execute 'rm -rf public/assets' }
+  #       run_locally { execute 'rm assets.zip' }
+  #     end
+  #   end
 
-  end
+  # end
 
 
 
