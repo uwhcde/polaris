@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: comingtoamerica_production
-  username: comingtoamerica
-  password: <%= ENV['COMINGTOAMERICA_DATABASE_PASSWORD'] %>
+  username: rails
+  password: <%= ENV['POLARIS_DATABASE_PASSWORD'] %>
