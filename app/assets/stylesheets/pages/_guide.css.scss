@@ -3,10 +3,10 @@
 }
 
 .post-show {
+  @include card-shadow;
+
   background: $white;
   padding: 20px 40px;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.18);
-  border-radius: 3px;
   font-family: $font-family-serif;
   font-size: 16px;
   line-height: 1.7;
@@ -21,11 +21,8 @@
     background-size: cover;
     position: relative;
     color: $white;
-
-
     margin: -20px -40px 40px -40px;
     border-radius: 3px 3px 0 0;
-
 
     &::before {
       content: "";
@@ -38,43 +35,29 @@
     }
   }
 
-.post-title {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  padding: 0 30px;
+  .post-title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 0 30px;
 
-  h1 {
-    font-size: 35px;
-    font-weight: 300;
-    color: #fff;
-
-    line-height: 1.43;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    h1 {
+      font-size: 35px;
+      font-weight: 300;
+      color: #fff;
+      line-height: 1.43;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
   }
-}
-
 
   p {
     margin-bottom: 30px;
   }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-sans-serif;
     line-height: 1.45;
     color: $text-color;
   }
 }
-
-
-
-
-.nested-fields {
-  padding: 20px;
-  background: #f8f8f8;
-  box-shadow: 0 0 5px #888;
-  margin: 20px 0;
-}
-
-
-

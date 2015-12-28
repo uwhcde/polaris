@@ -1,0 +1,8 @@
+.page.new {
+  margin: 40px 0;
+}
+
+.new-card {
+  padding: 40px;
+  @include card-shadow();
+}

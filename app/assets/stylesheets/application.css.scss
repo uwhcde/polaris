@@ -3,13 +3,16 @@
 
 @import 'animate';
 @import 'icons';
+@import 'modules/utils';
 
 @import 'modules/header';
 @import 'modules/card';
 
 @import 'pages/home';
 @import 'pages/shared';
+@import 'pages/new';
 @import 'pages/guide';
+
 
 @import 'pages/users';
 @import 'pages/comments';
