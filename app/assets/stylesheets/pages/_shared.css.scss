@@ -1,29 +1,15 @@
 body {
-  font-family: 'Roboto', sans-serif;
   padding-top: 50px;
 }
+
+.container-fluid {
+  max-width: 1250px;
+}
+
 
 .container > h1 {
   font-size: 30px;
   margin-bottom: 20px;
-}
-
-.navbar {
-  background: #26A69A;
-  border: 0;
-  .navbar-brand {
-    color: white;
-  }
-
-  ul.navbar-nav > li > a {
-    color: white;
-  }
-}
-
-.card {
-  padding: 30px;
-  box-shadow: 0 0 5px #888;
-  margin: 30px 0;
 }
 
 .button-on-image{

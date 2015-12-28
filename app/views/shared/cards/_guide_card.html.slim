@@ -1,17 +1,28 @@
-.col-lg-3.col-md-4.col-sm-6.col-xs-12
-  .panel.panel-default
-    .panel-body style="background: url(#{post.cover.url(:med)})"
-      i.fa.fa-star.fa-lg.unbookmarked.hide
-      h4 = truncate(post.title, :length => 25)
-      a href="/guides/#{post.id}"
-        .overlay
-    .panel-footer
-      .guideType
-        = post.guideType
-      .rating
-        span.upVotes
-          i.fa.fa-thumbs-up
+.col-lg-4.col-md-4.col-sm-6.col-xs-12
+  .card.card-default
+    = link_to post do
+      span.card-type
+        = "guide"
+      .card-body style="background-image: url(#{post.cover.url(:large)})"
+        i.fa.fa-star.fa-lg.unbookmarked.hide
+        .card-title
+          h4 = post.title
+
+    .card-footer
+      .user-acted.pull-left
+        ul.users-list.pull-left
+          li
+            a href=""
+              img src="//s3.amazonaws.com/uifaces/faces/twitter/iannnnn/128.jpg" alt=""/
+          li
+            a href=""
+              img src="//s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt=""/
+        span
+          = "and 2 other upvoted"
+      .post-stats.pull-right
+        span.votes.up
+          i.i-arrow-up2
           = post.upVotes
-        .downVotes
-          i.fa.fa-thumbs-down
+        span.votes.down
+          i.i-arrow-down2
           = post.downVotes

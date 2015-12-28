@@ -1,25 +1,26 @@
 p#notice
   = notice
-.container
+.page.show-page
   .row
-    .col-lg-8
-      .card
-        h1
-          = @guide.title
-        p
+    .col-lg-9
+      .post-show
+        .post-header style="background-image: url(#{@guide.cover.url(:large)})"
+          .post-title
+            h1 == @guide.title
+        div.post-content
           == @guide.short_description
 
-      - @guide.sections.each do |section|
-        .card
-          h3 = section.title
-          == section.description
+        - @guide.sections.each do |section|
+          h3.seciton-heading = section.title
+          div.section-content
+            == section.description
 
 
       h2
         = "Comments"
       div#comments
 
-        = render :partial => @guide.comments
+        / = render :partial => @guide.comments
 
 
         = form_for [@guide, Comment.new] do |f|
@@ -31,7 +32,7 @@ p#notice
           p
             = f.submit "Add comment"
 
-    .col-lg-4
+    .col-lg-3
       .card
         h2.card-title Author
         p

@@ -1,120 +1,52 @@
-.home .row {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.page {
+  margin: 20px 0;
 }
-#hero-img {
-  position: relative;
+
+// Menu
+.filters {
+  padding: 0;
+  margin-bottom: 40px;
+  overflow: hidden;
+  border-bottom: solid 1px $gray-lighter;
 }
-#recent {
-  margin: 25px 0;
-  p {
-    font-size: 20px;
-  }
-  .panel {
-    height: 165px;
-    .panel-body {
-      h5 {
-        position: absolute;
-        bottom: 0;
-        left: 10px;
-        z-index: 999;
-      }
-    }
-    .panel-footer{
-      font-size: 12px;
-    }
-  }
-}
-#img-filters {
-  display: table-cell;
-  .row {
-    .fil {
-      height: 80px;
-      margin: 10px 0;
-      display: table-cell;
-      text-align: center;
-      .filter {
-        height: 40px;
-        width: 40px;
-        background-color: #26A69A;
-        margin: 0 25px;
-        cursor: pointer;
-        border-radius: 50%;
-        i {
-          line-height: 40px;
-          color: white;
-          margin: 0;
-        }
-      }
-      p {
-        margin: 10px 0;
-      }
-    }
-    .filter:hover {
-      background-color: #00796A;
-    }
-  }
-}
-#sorting {
-  display: table-cell;
-  margin: 15px 0;
-  .sort {
-    float: right;
-    p {
-      display: inline-block;
-    }
-    form {
-      display: inline-block;
-    }
-    select {
-      margin: 0 10px;
-    }
-  }
-}
-.post-container {
-  .panel {
-    height: 200px;
-    .panel-body {
-      h4 {
-        position: absolute;
-        bottom: 0;
-        left: 10px;
-        z-index: 999;
-      }
+
+.filter-menu {
+  list-style-type: none;
+  float: right;
+  padding: 20px 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 20px;
     }
   }
 }
 
-// 5 column layout
-.col-xs-15,
-.col-sm-15,
-.col-md-15,
-.col-lg-15 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
+.filter-menu-item {
+  display: inline-block;
+  text-transform: uppercase;
+  color: $gray-light;
 
-.col-xs-15 {
-  width: 20%;
-  float: left;
-}
-@media (min-width: 768px) {
-  .col-sm-15 {
-    width: 20%;
-    float: left;
+  &:hover, &:focus {
+    text-decoration: none;
   }
-}
-@media (min-width: 992px) {
-  .col-md-15 {
-    width: 20%;
-    float: left;
-  }
-}
-@media (min-width: 1200px) {
-  .col-lg-15 {
-    width: 20%;
-    float: left;
+
+  &.active {
+    font-weight: bold;
+    color: $gray-base;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -10px;
+      right: -10px;
+      height: 3px;
+      background: $brand-primary;
+      bottom: -20px;
+    }
   }
 }

@@ -1,0 +1,1633 @@
+{
+  "checksum": {
+    "previous": "4928a2939b21962d3e6af0b038d4baefd094eaae0691286dffa4bbdc0ebb9668",
+    "current": "4928a2939b21962d3e6af0b038d4baefd094eaae0691286dffa4bbdc0ebb9668"
+  },
+  "fonts": [
+    "app/assets/fonts/icons.ttf",
+    "app/assets/fonts/icons.svg",
+    "app/assets/fonts/icons.woff",
+    "app/assets/fonts/icons.eot"
+  ],
+  "glyphs": {
+    "accessibility": {
+      "codepoint": 61696,
+      "source": "app/assets/icons/accessibility.svg"
+    },
+    "address-book": {
+      "codepoint": 61697,
+      "source": "app/assets/icons/address-book.svg"
+    },
+    "aid-kit": {
+      "codepoint": 61698,
+      "source": "app/assets/icons/aid-kit.svg"
+    },
+    "airplane": {
+      "codepoint": 61699,
+      "source": "app/assets/icons/airplane.svg"
+    },
+    "alarm": {
+      "codepoint": 61700,
+      "source": "app/assets/icons/alarm.svg"
+    },
+    "amazon": {
+      "codepoint": 61701,
+      "source": "app/assets/icons/amazon.svg"
+    },
+    "angry": {
+      "codepoint": 61702,
+      "source": "app/assets/icons/angry.svg"
+    },
+    "angry2": {
+      "codepoint": 61703,
+      "source": "app/assets/icons/angry2.svg"
+    },
+    "arrow-down": {
+      "codepoint": 61704,
+      "source": "app/assets/icons/arrow-down.svg"
+    },
+    "arrow-down-left": {
+      "codepoint": 61705,
+      "source": "app/assets/icons/arrow-down-left.svg"
+    },
+    "arrow-down-left2": {
+      "codepoint": 61706,
+      "source": "app/assets/icons/arrow-down-left2.svg"
+    },
+    "arrow-down-right": {
+      "codepoint": 61707,
+      "source": "app/assets/icons/arrow-down-right.svg"
+    },
+    "arrow-down-right2": {
+      "codepoint": 61708,
+      "source": "app/assets/icons/arrow-down-right2.svg"
+    },
+    "arrow-down2": {
+      "codepoint": 61709,
+      "source": "app/assets/icons/arrow-down2.svg"
+    },
+    "arrow-left": {
+      "codepoint": 61710,
+      "source": "app/assets/icons/arrow-left.svg"
+    },
+    "arrow-left2": {
+      "codepoint": 61711,
+      "source": "app/assets/icons/arrow-left2.svg"
+    },
+    "arrow-right": {
+      "codepoint": 61712,
+      "source": "app/assets/icons/arrow-right.svg"
+    },
+    "arrow-right2": {
+      "codepoint": 61713,
+      "source": "app/assets/icons/arrow-right2.svg"
+    },
+    "arrow-up": {
+      "codepoint": 61714,
+      "source": "app/assets/icons/arrow-up.svg"
+    },
+    "arrow-up-left": {
+      "codepoint": 61715,
+      "source": "app/assets/icons/arrow-up-left.svg"
+    },
+    "arrow-up-left2": {
+      "codepoint": 61716,
+      "source": "app/assets/icons/arrow-up-left2.svg"
+    },
+    "arrow-up-right": {
+      "codepoint": 61717,
+      "source": "app/assets/icons/arrow-up-right.svg"
+    },
+    "arrow-up-right2": {
+      "codepoint": 61718,
+      "source": "app/assets/icons/arrow-up-right2.svg"
+    },
+    "arrow-up2": {
+      "codepoint": 61719,
+      "source": "app/assets/icons/arrow-up2.svg"
+    },
+    "attachment": {
+      "codepoint": 61720,
+      "source": "app/assets/icons/attachment.svg"
+    },
+    "backward": {
+      "codepoint": 61721,
+      "source": "app/assets/icons/backward.svg"
+    },
+    "backward2": {
+      "codepoint": 61722,
+      "source": "app/assets/icons/backward2.svg"
+    },
+    "baffled": {
+      "codepoint": 61723,
+      "source": "app/assets/icons/baffled.svg"
+    },
+    "baffled2": {
+      "codepoint": 61724,
+      "source": "app/assets/icons/baffled2.svg"
+    },
+    "barcode": {
+      "codepoint": 61725,
+      "source": "app/assets/icons/barcode.svg"
+    },
+    "bell": {
+      "codepoint": 61726,
+      "source": "app/assets/icons/bell.svg"
+    },
+    "bin": {
+      "codepoint": 61727,
+      "source": "app/assets/icons/bin.svg"
+    },
+    "bin2": {
+      "codepoint": 61728,
+      "source": "app/assets/icons/bin2.svg"
+    },
+    "binoculars": {
+      "codepoint": 61729,
+      "source": "app/assets/icons/binoculars.svg"
+    },
+    "blocked": {
+      "codepoint": 61730,
+      "source": "app/assets/icons/blocked.svg"
+    },
+    "blog": {
+      "codepoint": 61731,
+      "source": "app/assets/icons/blog.svg"
+    },
+    "bold": {
+      "codepoint": 61732,
+      "source": "app/assets/icons/bold.svg"
+    },
+    "book": {
+      "codepoint": 61733,
+      "source": "app/assets/icons/book.svg"
+    },
+    "bookmark": {
+      "codepoint": 61734,
+      "source": "app/assets/icons/bookmark.svg"
+    },
+    "bookmarks": {
+      "codepoint": 61735,
+      "source": "app/assets/icons/bookmarks.svg"
+    },
+    "books": {
+      "codepoint": 61736,
+      "source": "app/assets/icons/books.svg"
+    },
+    "box-add": {
+      "codepoint": 61737,
+      "source": "app/assets/icons/box-add.svg"
+    },
+    "box-remove": {
+      "codepoint": 61738,
+      "source": "app/assets/icons/box-remove.svg"
+    },
+    "briefcase": {
+      "codepoint": 61739,
+      "source": "app/assets/icons/briefcase.svg"
+    },
+    "brightness-contrast": {
+      "codepoint": 61740,
+      "source": "app/assets/icons/brightness-contrast.svg"
+    },
+    "bubble": {
+      "codepoint": 61741,
+      "source": "app/assets/icons/bubble.svg"
+    },
+    "bubble2": {
+      "codepoint": 61742,
+      "source": "app/assets/icons/bubble2.svg"
+    },
+    "bubbles": {
+      "codepoint": 61743,
+      "source": "app/assets/icons/bubbles.svg"
+    },
+    "bubbles2": {
+      "codepoint": 61744,
+      "source": "app/assets/icons/bubbles2.svg"
+    },
+    "bubbles3": {
+      "codepoint": 61745,
+      "source": "app/assets/icons/bubbles3.svg"
+    },
+    "bubbles4": {
+      "codepoint": 61746,
+      "source": "app/assets/icons/bubbles4.svg"
+    },
+    "bug": {
+      "codepoint": 61747,
+      "source": "app/assets/icons/bug.svg"
+    },
+    "bullhorn": {
+      "codepoint": 61748,
+      "source": "app/assets/icons/bullhorn.svg"
+    },
+    "calculator": {
+      "codepoint": 61749,
+      "source": "app/assets/icons/calculator.svg"
+    },
+    "calendar": {
+      "codepoint": 61750,
+      "source": "app/assets/icons/calendar.svg"
+    },
+    "camera": {
+      "codepoint": 61751,
+      "source": "app/assets/icons/camera.svg"
+    },
+    "cancel-circle": {
+      "codepoint": 61752,
+      "source": "app/assets/icons/cancel-circle.svg"
+    },
+    "cart": {
+      "codepoint": 61753,
+      "source": "app/assets/icons/cart.svg"
+    },
+    "checkbox-checked": {
+      "codepoint": 61754,
+      "source": "app/assets/icons/checkbox-checked.svg"
+    },
+    "checkbox-unchecked": {
+      "codepoint": 61755,
+      "source": "app/assets/icons/checkbox-unchecked.svg"
+    },
+    "checkmark": {
+      "codepoint": 61756,
+      "source": "app/assets/icons/checkmark.svg"
+    },
+    "checkmark2": {
+      "codepoint": 61757,
+      "source": "app/assets/icons/checkmark2.svg"
+    },
+    "circle-down": {
+      "codepoint": 61758,
+      "source": "app/assets/icons/circle-down.svg"
+    },
+    "circle-left": {
+      "codepoint": 61759,
+      "source": "app/assets/icons/circle-left.svg"
+    },
+    "circle-right": {
+      "codepoint": 61760,
+      "source": "app/assets/icons/circle-right.svg"
+    },
+    "circle-up": {
+      "codepoint": 61761,
+      "source": "app/assets/icons/circle-up.svg"
+    },
+    "clear-formatting": {
+      "codepoint": 61762,
+      "source": "app/assets/icons/clear-formatting.svg"
+    },
+    "clipboard": {
+      "codepoint": 61763,
+      "source": "app/assets/icons/clipboard.svg"
+    },
+    "clock": {
+      "codepoint": 61764,
+      "source": "app/assets/icons/clock.svg"
+    },
+    "clock2": {
+      "codepoint": 61765,
+      "source": "app/assets/icons/clock2.svg"
+    },
+    "cloud": {
+      "codepoint": 61766,
+      "source": "app/assets/icons/cloud.svg"
+    },
+    "cloud-check": {
+      "codepoint": 61767,
+      "source": "app/assets/icons/cloud-check.svg"
+    },
+    "cloud-download": {
+      "codepoint": 61768,
+      "source": "app/assets/icons/cloud-download.svg"
+    },
+    "cloud-upload": {
+      "codepoint": 61769,
+      "source": "app/assets/icons/cloud-upload.svg"
+    },
+    "clubs": {
+      "codepoint": 61770,
+      "source": "app/assets/icons/clubs.svg"
+    },
+    "cog": {
+      "codepoint": 61771,
+      "source": "app/assets/icons/cog.svg"
+    },
+    "cogs": {
+      "codepoint": 61772,
+      "source": "app/assets/icons/cogs.svg"
+    },
+    "coin-dollar": {
+      "codepoint": 61773,
+      "source": "app/assets/icons/coin-dollar.svg"
+    },
+    "coin-euro": {
+      "codepoint": 61774,
+      "source": "app/assets/icons/coin-euro.svg"
+    },
+    "coin-pound": {
+      "codepoint": 61775,
+      "source": "app/assets/icons/coin-pound.svg"
+    },
+    "coin-yen": {
+      "codepoint": 61776,
+      "source": "app/assets/icons/coin-yen.svg"
+    },
+    "command": {
+      "codepoint": 61777,
+      "source": "app/assets/icons/command.svg"
+    },
+    "compass": {
+      "codepoint": 61778,
+      "source": "app/assets/icons/compass.svg"
+    },
+    "compass2": {
+      "codepoint": 61779,
+      "source": "app/assets/icons/compass2.svg"
+    },
+    "confused": {
+      "codepoint": 61780,
+      "source": "app/assets/icons/confused.svg"
+    },
+    "confused2": {
+      "codepoint": 61781,
+      "source": "app/assets/icons/confused2.svg"
+    },
+    "connection": {
+      "codepoint": 61782,
+      "source": "app/assets/icons/connection.svg"
+    },
+    "contrast": {
+      "codepoint": 61783,
+      "source": "app/assets/icons/contrast.svg"
+    },
+    "cool": {
+      "codepoint": 61784,
+      "source": "app/assets/icons/cool.svg"
+    },
+    "cool2": {
+      "codepoint": 61785,
+      "source": "app/assets/icons/cool2.svg"
+    },
+    "copy": {
+      "codepoint": 61786,
+      "source": "app/assets/icons/copy.svg"
+    },
+    "credit-card": {
+      "codepoint": 61787,
+      "source": "app/assets/icons/credit-card.svg"
+    },
+    "crop": {
+      "codepoint": 61788,
+      "source": "app/assets/icons/crop.svg"
+    },
+    "cross": {
+      "codepoint": 61789,
+      "source": "app/assets/icons/cross.svg"
+    },
+    "crying": {
+      "codepoint": 61790,
+      "source": "app/assets/icons/crying.svg"
+    },
+    "crying2": {
+      "codepoint": 61791,
+      "source": "app/assets/icons/crying2.svg"
+    },
+    "ctrl": {
+      "codepoint": 61792,
+      "source": "app/assets/icons/ctrl.svg"
+    },
+    "database": {
+      "codepoint": 61793,
+      "source": "app/assets/icons/database.svg"
+    },
+    "diamonds": {
+      "codepoint": 61794,
+      "source": "app/assets/icons/diamonds.svg"
+    },
+    "dice": {
+      "codepoint": 61795,
+      "source": "app/assets/icons/dice.svg"
+    },
+    "display": {
+      "codepoint": 61796,
+      "source": "app/assets/icons/display.svg"
+    },
+    "download": {
+      "codepoint": 61797,
+      "source": "app/assets/icons/download.svg"
+    },
+    "download2": {
+      "codepoint": 61798,
+      "source": "app/assets/icons/download2.svg"
+    },
+    "download3": {
+      "codepoint": 61799,
+      "source": "app/assets/icons/download3.svg"
+    },
+    "drawer": {
+      "codepoint": 61800,
+      "source": "app/assets/icons/drawer.svg"
+    },
+    "drawer2": {
+      "codepoint": 61801,
+      "source": "app/assets/icons/drawer2.svg"
+    },
+    "drive": {
+      "codepoint": 61802,
+      "source": "app/assets/icons/drive.svg"
+    },
+    "droplet": {
+      "codepoint": 61803,
+      "source": "app/assets/icons/droplet.svg"
+    },
+    "earth": {
+      "codepoint": 61804,
+      "source": "app/assets/icons/earth.svg"
+    },
+    "eject": {
+      "codepoint": 61805,
+      "source": "app/assets/icons/eject.svg"
+    },
+    "embed": {
+      "codepoint": 61806,
+      "source": "app/assets/icons/embed.svg"
+    },
+    "embed2": {
+      "codepoint": 61807,
+      "source": "app/assets/icons/embed2.svg"
+    },
+    "enlarge": {
+      "codepoint": 61808,
+      "source": "app/assets/icons/enlarge.svg"
+    },
+    "enlarge2": {
+      "codepoint": 61809,
+      "source": "app/assets/icons/enlarge2.svg"
+    },
+    "enter": {
+      "codepoint": 61810,
+      "source": "app/assets/icons/enter.svg"
+    },
+    "envelop": {
+      "codepoint": 61811,
+      "source": "app/assets/icons/envelop.svg"
+    },
+    "equalizer": {
+      "codepoint": 61812,
+      "source": "app/assets/icons/equalizer.svg"
+    },
+    "equalizer2": {
+      "codepoint": 61813,
+      "source": "app/assets/icons/equalizer2.svg"
+    },
+    "evil": {
+      "codepoint": 61814,
+      "source": "app/assets/icons/evil.svg"
+    },
+    "evil2": {
+      "codepoint": 61815,
+      "source": "app/assets/icons/evil2.svg"
+    },
+    "exit": {
+      "codepoint": 61816,
+      "source": "app/assets/icons/exit.svg"
+    },
+    "eye": {
+      "codepoint": 61817,
+      "source": "app/assets/icons/eye.svg"
+    },
+    "eye-blocked": {
+      "codepoint": 61818,
+      "source": "app/assets/icons/eye-blocked.svg"
+    },
+    "eye-minus": {
+      "codepoint": 61819,
+      "source": "app/assets/icons/eye-minus.svg"
+    },
+    "eye-plus": {
+      "codepoint": 61820,
+      "source": "app/assets/icons/eye-plus.svg"
+    },
+    "eyedropper": {
+      "codepoint": 61821,
+      "source": "app/assets/icons/eyedropper.svg"
+    },
+    "feed": {
+      "codepoint": 61822,
+      "source": "app/assets/icons/feed.svg"
+    },
+    "file-empty": {
+      "codepoint": 61823,
+      "source": "app/assets/icons/file-empty.svg"
+    },
+    "file-excel": {
+      "codepoint": 61824,
+      "source": "app/assets/icons/file-excel.svg"
+    },
+    "file-music": {
+      "codepoint": 61825,
+      "source": "app/assets/icons/file-music.svg"
+    },
+    "file-openoffice": {
+      "codepoint": 61826,
+      "source": "app/assets/icons/file-openoffice.svg"
+    },
+    "file-pdf": {
+      "codepoint": 61827,
+      "source": "app/assets/icons/file-pdf.svg"
+    },
+    "file-picture": {
+      "codepoint": 61828,
+      "source": "app/assets/icons/file-picture.svg"
+    },
+    "file-play": {
+      "codepoint": 61829,
+      "source": "app/assets/icons/file-play.svg"
+    },
+    "file-text": {
+      "codepoint": 61830,
+      "source": "app/assets/icons/file-text.svg"
+    },
+    "file-text2": {
+      "codepoint": 61831,
+      "source": "app/assets/icons/file-text2.svg"
+    },
+    "file-video": {
+      "codepoint": 61832,
+      "source": "app/assets/icons/file-video.svg"
+    },
+    "file-word": {
+      "codepoint": 61833,
+      "source": "app/assets/icons/file-word.svg"
+    },
+    "file-zip": {
+      "codepoint": 61834,
+      "source": "app/assets/icons/file-zip.svg"
+    },
+    "files-empty": {
+      "codepoint": 61835,
+      "source": "app/assets/icons/files-empty.svg"
+    },
+    "film": {
+      "codepoint": 61836,
+      "source": "app/assets/icons/film.svg"
+    },
+    "filter": {
+      "codepoint": 61837,
+      "source": "app/assets/icons/filter.svg"
+    },
+    "fire": {
+      "codepoint": 61838,
+      "source": "app/assets/icons/fire.svg"
+    },
+    "first": {
+      "codepoint": 61839,
+      "source": "app/assets/icons/first.svg"
+    },
+    "flag": {
+      "codepoint": 61840,
+      "source": "app/assets/icons/flag.svg"
+    },
+    "floppy-disk": {
+      "codepoint": 61841,
+      "source": "app/assets/icons/floppy-disk.svg"
+    },
+    "folder": {
+      "codepoint": 61842,
+      "source": "app/assets/icons/folder.svg"
+    },
+    "folder-download": {
+      "codepoint": 61843,
+      "source": "app/assets/icons/folder-download.svg"
+    },
+    "folder-minus": {
+      "codepoint": 61844,
+      "source": "app/assets/icons/folder-minus.svg"
+    },
+    "folder-open": {
+      "codepoint": 61845,
+      "source": "app/assets/icons/folder-open.svg"
+    },
+    "folder-plus": {
+      "codepoint": 61846,
+      "source": "app/assets/icons/folder-plus.svg"
+    },
+    "folder-upload": {
+      "codepoint": 61847,
+      "source": "app/assets/icons/folder-upload.svg"
+    },
+    "font": {
+      "codepoint": 61848,
+      "source": "app/assets/icons/font.svg"
+    },
+    "font-size": {
+      "codepoint": 61849,
+      "source": "app/assets/icons/font-size.svg"
+    },
+    "forward": {
+      "codepoint": 61850,
+      "source": "app/assets/icons/forward.svg"
+    },
+    "forward2": {
+      "codepoint": 61851,
+      "source": "app/assets/icons/forward2.svg"
+    },
+    "forward3": {
+      "codepoint": 61852,
+      "source": "app/assets/icons/forward3.svg"
+    },
+    "frustrated": {
+      "codepoint": 61853,
+      "source": "app/assets/icons/frustrated.svg"
+    },
+    "frustrated2": {
+      "codepoint": 61854,
+      "source": "app/assets/icons/frustrated2.svg"
+    },
+    "gift": {
+      "codepoint": 61855,
+      "source": "app/assets/icons/gift.svg"
+    },
+    "glass": {
+      "codepoint": 61856,
+      "source": "app/assets/icons/glass.svg"
+    },
+    "glass2": {
+      "codepoint": 61857,
+      "source": "app/assets/icons/glass2.svg"
+    },
+    "grin": {
+      "codepoint": 61858,
+      "source": "app/assets/icons/grin.svg"
+    },
+    "grin2": {
+      "codepoint": 61859,
+      "source": "app/assets/icons/grin2.svg"
+    },
+    "hammer": {
+      "codepoint": 61860,
+      "source": "app/assets/icons/hammer.svg"
+    },
+    "hammer2": {
+      "codepoint": 61861,
+      "source": "app/assets/icons/hammer2.svg"
+    },
+    "happy": {
+      "codepoint": 61862,
+      "source": "app/assets/icons/happy.svg"
+    },
+    "happy2": {
+      "codepoint": 61863,
+      "source": "app/assets/icons/happy2.svg"
+    },
+    "headphones": {
+      "codepoint": 61864,
+      "source": "app/assets/icons/headphones.svg"
+    },
+    "heart": {
+      "codepoint": 61865,
+      "source": "app/assets/icons/heart.svg"
+    },
+    "heart-broken": {
+      "codepoint": 61866,
+      "source": "app/assets/icons/heart-broken.svg"
+    },
+    "hipster": {
+      "codepoint": 61867,
+      "source": "app/assets/icons/hipster.svg"
+    },
+    "hipster2": {
+      "codepoint": 61868,
+      "source": "app/assets/icons/hipster2.svg"
+    },
+    "history": {
+      "codepoint": 61869,
+      "source": "app/assets/icons/history.svg"
+    },
+    "home": {
+      "codepoint": 61870,
+      "source": "app/assets/icons/home.svg"
+    },
+    "home2": {
+      "codepoint": 61871,
+      "source": "app/assets/icons/home2.svg"
+    },
+    "home3": {
+      "codepoint": 61872,
+      "source": "app/assets/icons/home3.svg"
+    },
+    "hour-glass": {
+      "codepoint": 61873,
+      "source": "app/assets/icons/hour-glass.svg"
+    },
+    "image": {
+      "codepoint": 61874,
+      "source": "app/assets/icons/image.svg"
+    },
+    "images": {
+      "codepoint": 61875,
+      "source": "app/assets/icons/images.svg"
+    },
+    "indent-decrease": {
+      "codepoint": 61876,
+      "source": "app/assets/icons/indent-decrease.svg"
+    },
+    "indent-increase": {
+      "codepoint": 61877,
+      "source": "app/assets/icons/indent-increase.svg"
+    },
+    "infinite": {
+      "codepoint": 61878,
+      "source": "app/assets/icons/infinite.svg"
+    },
+    "info": {
+      "codepoint": 61879,
+      "source": "app/assets/icons/info.svg"
+    },
+    "insert-template": {
+      "codepoint": 61880,
+      "source": "app/assets/icons/insert-template.svg"
+    },
+    "italic": {
+      "codepoint": 61881,
+      "source": "app/assets/icons/italic.svg"
+    },
+    "key": {
+      "codepoint": 61882,
+      "source": "app/assets/icons/key.svg"
+    },
+    "key2": {
+      "codepoint": 61883,
+      "source": "app/assets/icons/key2.svg"
+    },
+    "keyboard": {
+      "codepoint": 61884,
+      "source": "app/assets/icons/keyboard.svg"
+    },
+    "lab": {
+      "codepoint": 61885,
+      "source": "app/assets/icons/lab.svg"
+    },
+    "laptop": {
+      "codepoint": 61886,
+      "source": "app/assets/icons/laptop.svg"
+    },
+    "last": {
+      "codepoint": 61887,
+      "source": "app/assets/icons/last.svg"
+    },
+    "leaf": {
+      "codepoint": 61888,
+      "source": "app/assets/icons/leaf.svg"
+    },
+    "library": {
+      "codepoint": 61889,
+      "source": "app/assets/icons/library.svg"
+    },
+    "libreoffice": {
+      "codepoint": 61890,
+      "source": "app/assets/icons/libreoffice.svg"
+    },
+    "lifebuoy": {
+      "codepoint": 61891,
+      "source": "app/assets/icons/lifebuoy.svg"
+    },
+    "ligature": {
+      "codepoint": 61892,
+      "source": "app/assets/icons/ligature.svg"
+    },
+    "ligature2": {
+      "codepoint": 61893,
+      "source": "app/assets/icons/ligature2.svg"
+    },
+    "link": {
+      "codepoint": 61894,
+      "source": "app/assets/icons/link.svg"
+    },
+    "list": {
+      "codepoint": 61895,
+      "source": "app/assets/icons/list.svg"
+    },
+    "list-numbered": {
+      "codepoint": 61896,
+      "source": "app/assets/icons/list-numbered.svg"
+    },
+    "list2": {
+      "codepoint": 61897,
+      "source": "app/assets/icons/list2.svg"
+    },
+    "location": {
+      "codepoint": 61898,
+      "source": "app/assets/icons/location.svg"
+    },
+    "location2": {
+      "codepoint": 61899,
+      "source": "app/assets/icons/location2.svg"
+    },
+    "lock": {
+      "codepoint": 61900,
+      "source": "app/assets/icons/lock.svg"
+    },
+    "loop": {
+      "codepoint": 61901,
+      "source": "app/assets/icons/loop.svg"
+    },
+    "loop2": {
+      "codepoint": 61902,
+      "source": "app/assets/icons/loop2.svg"
+    },
+    "ltr": {
+      "codepoint": 61903,
+      "source": "app/assets/icons/ltr.svg"
+    },
+    "magic-wand": {
+      "codepoint": 61904,
+      "source": "app/assets/icons/magic-wand.svg"
+    },
+    "magnet": {
+      "codepoint": 61905,
+      "source": "app/assets/icons/magnet.svg"
+    },
+    "mail": {
+      "codepoint": 61906,
+      "source": "app/assets/icons/mail.svg"
+    },
+    "mail2": {
+      "codepoint": 61907,
+      "source": "app/assets/icons/mail2.svg"
+    },
+    "mail3": {
+      "codepoint": 61908,
+      "source": "app/assets/icons/mail3.svg"
+    },
+    "mail4": {
+      "codepoint": 61909,
+      "source": "app/assets/icons/mail4.svg"
+    },
+    "make-group": {
+      "codepoint": 61910,
+      "source": "app/assets/icons/make-group.svg"
+    },
+    "man": {
+      "codepoint": 61911,
+      "source": "app/assets/icons/man.svg"
+    },
+    "man-woman": {
+      "codepoint": 61912,
+      "source": "app/assets/icons/man-woman.svg"
+    },
+    "map": {
+      "codepoint": 61913,
+      "source": "app/assets/icons/map.svg"
+    },
+    "map2": {
+      "codepoint": 61914,
+      "source": "app/assets/icons/map2.svg"
+    },
+    "menu": {
+      "codepoint": 61915,
+      "source": "app/assets/icons/menu.svg"
+    },
+    "menu2": {
+      "codepoint": 61916,
+      "source": "app/assets/icons/menu2.svg"
+    },
+    "menu3": {
+      "codepoint": 61917,
+      "source": "app/assets/icons/menu3.svg"
+    },
+    "menu4": {
+      "codepoint": 61918,
+      "source": "app/assets/icons/menu4.svg"
+    },
+    "meter": {
+      "codepoint": 61919,
+      "source": "app/assets/icons/meter.svg"
+    },
+    "meter2": {
+      "codepoint": 61920,
+      "source": "app/assets/icons/meter2.svg"
+    },
+    "mic": {
+      "codepoint": 61921,
+      "source": "app/assets/icons/mic.svg"
+    },
+    "minus": {
+      "codepoint": 61922,
+      "source": "app/assets/icons/minus.svg"
+    },
+    "mobile": {
+      "codepoint": 61923,
+      "source": "app/assets/icons/mobile.svg"
+    },
+    "mobile2": {
+      "codepoint": 61924,
+      "source": "app/assets/icons/mobile2.svg"
+    },
+    "move-down": {
+      "codepoint": 61925,
+      "source": "app/assets/icons/move-down.svg"
+    },
+    "move-up": {
+      "codepoint": 61926,
+      "source": "app/assets/icons/move-up.svg"
+    },
+    "mug": {
+      "codepoint": 61927,
+      "source": "app/assets/icons/mug.svg"
+    },
+    "music": {
+      "codepoint": 61928,
+      "source": "app/assets/icons/music.svg"
+    },
+    "neutral": {
+      "codepoint": 61929,
+      "source": "app/assets/icons/neutral.svg"
+    },
+    "neutral2": {
+      "codepoint": 61930,
+      "source": "app/assets/icons/neutral2.svg"
+    },
+    "new-tab": {
+      "codepoint": 61931,
+      "source": "app/assets/icons/new-tab.svg"
+    },
+    "newspaper": {
+      "codepoint": 61932,
+      "source": "app/assets/icons/newspaper.svg"
+    },
+    "next": {
+      "codepoint": 61933,
+      "source": "app/assets/icons/next.svg"
+    },
+    "next2": {
+      "codepoint": 61934,
+      "source": "app/assets/icons/next2.svg"
+    },
+    "notification": {
+      "codepoint": 61935,
+      "source": "app/assets/icons/notification.svg"
+    },
+    "office": {
+      "codepoint": 61936,
+      "source": "app/assets/icons/office.svg"
+    },
+    "omega": {
+      "codepoint": 61937,
+      "source": "app/assets/icons/omega.svg"
+    },
+    "opt": {
+      "codepoint": 61938,
+      "source": "app/assets/icons/opt.svg"
+    },
+    "pacman": {
+      "codepoint": 61939,
+      "source": "app/assets/icons/pacman.svg"
+    },
+    "page-break": {
+      "codepoint": 61940,
+      "source": "app/assets/icons/page-break.svg"
+    },
+    "pagebreak": {
+      "codepoint": 61941,
+      "source": "app/assets/icons/pagebreak.svg"
+    },
+    "paint-format": {
+      "codepoint": 61942,
+      "source": "app/assets/icons/paint-format.svg"
+    },
+    "paragraph-center": {
+      "codepoint": 61943,
+      "source": "app/assets/icons/paragraph-center.svg"
+    },
+    "paragraph-justify": {
+      "codepoint": 61944,
+      "source": "app/assets/icons/paragraph-justify.svg"
+    },
+    "paragraph-left": {
+      "codepoint": 61945,
+      "source": "app/assets/icons/paragraph-left.svg"
+    },
+    "paragraph-right": {
+      "codepoint": 61946,
+      "source": "app/assets/icons/paragraph-right.svg"
+    },
+    "paste": {
+      "codepoint": 61947,
+      "source": "app/assets/icons/paste.svg"
+    },
+    "pause": {
+      "codepoint": 61948,
+      "source": "app/assets/icons/pause.svg"
+    },
+    "pause2": {
+      "codepoint": 61949,
+      "source": "app/assets/icons/pause2.svg"
+    },
+    "pen": {
+      "codepoint": 61950,
+      "source": "app/assets/icons/pen.svg"
+    },
+    "pencil": {
+      "codepoint": 61951,
+      "source": "app/assets/icons/pencil.svg"
+    },
+    "pencil2": {
+      "codepoint": 61952,
+      "source": "app/assets/icons/pencil2.svg"
+    },
+    "phone": {
+      "codepoint": 61953,
+      "source": "app/assets/icons/phone.svg"
+    },
+    "phone-hang-up": {
+      "codepoint": 61954,
+      "source": "app/assets/icons/phone-hang-up.svg"
+    },
+    "pie-chart": {
+      "codepoint": 61955,
+      "source": "app/assets/icons/pie-chart.svg"
+    },
+    "pilcrow": {
+      "codepoint": 61956,
+      "source": "app/assets/icons/pilcrow.svg"
+    },
+    "play": {
+      "codepoint": 61957,
+      "source": "app/assets/icons/play.svg"
+    },
+    "play2": {
+      "codepoint": 61958,
+      "source": "app/assets/icons/play2.svg"
+    },
+    "play3": {
+      "codepoint": 61959,
+      "source": "app/assets/icons/play3.svg"
+    },
+    "plus": {
+      "codepoint": 61960,
+      "source": "app/assets/icons/plus.svg"
+    },
+    "podcast": {
+      "codepoint": 61961,
+      "source": "app/assets/icons/podcast.svg"
+    },
+    "point-down": {
+      "codepoint": 61962,
+      "source": "app/assets/icons/point-down.svg"
+    },
+    "point-left": {
+      "codepoint": 61963,
+      "source": "app/assets/icons/point-left.svg"
+    },
+    "point-right": {
+      "codepoint": 61964,
+      "source": "app/assets/icons/point-right.svg"
+    },
+    "point-up": {
+      "codepoint": 61965,
+      "source": "app/assets/icons/point-up.svg"
+    },
+    "power": {
+      "codepoint": 61966,
+      "source": "app/assets/icons/power.svg"
+    },
+    "power-cord": {
+      "codepoint": 61967,
+      "source": "app/assets/icons/power-cord.svg"
+    },
+    "previous": {
+      "codepoint": 61968,
+      "source": "app/assets/icons/previous.svg"
+    },
+    "previous2": {
+      "codepoint": 61969,
+      "source": "app/assets/icons/previous2.svg"
+    },
+    "price-tag": {
+      "codepoint": 61970,
+      "source": "app/assets/icons/price-tag.svg"
+    },
+    "price-tags": {
+      "codepoint": 61971,
+      "source": "app/assets/icons/price-tags.svg"
+    },
+    "printer": {
+      "codepoint": 61972,
+      "source": "app/assets/icons/printer.svg"
+    },
+    "profile": {
+      "codepoint": 61973,
+      "source": "app/assets/icons/profile.svg"
+    },
+    "pushpin": {
+      "codepoint": 61974,
+      "source": "app/assets/icons/pushpin.svg"
+    },
+    "qrcode": {
+      "codepoint": 61975,
+      "source": "app/assets/icons/qrcode.svg"
+    },
+    "question": {
+      "codepoint": 61976,
+      "source": "app/assets/icons/question.svg"
+    },
+    "quill": {
+      "codepoint": 61977,
+      "source": "app/assets/icons/quill.svg"
+    },
+    "quotes-left": {
+      "codepoint": 61978,
+      "source": "app/assets/icons/quotes-left.svg"
+    },
+    "quotes-right": {
+      "codepoint": 61979,
+      "source": "app/assets/icons/quotes-right.svg"
+    },
+    "radio-checked": {
+      "codepoint": 61980,
+      "source": "app/assets/icons/radio-checked.svg"
+    },
+    "radio-checked2": {
+      "codepoint": 61981,
+      "source": "app/assets/icons/radio-checked2.svg"
+    },
+    "radio-unchecked": {
+      "codepoint": 61982,
+      "source": "app/assets/icons/radio-unchecked.svg"
+    },
+    "redo": {
+      "codepoint": 61983,
+      "source": "app/assets/icons/redo.svg"
+    },
+    "redo2": {
+      "codepoint": 61984,
+      "source": "app/assets/icons/redo2.svg"
+    },
+    "reply": {
+      "codepoint": 61985,
+      "source": "app/assets/icons/reply.svg"
+    },
+    "road": {
+      "codepoint": 61986,
+      "source": "app/assets/icons/road.svg"
+    },
+    "rocket": {
+      "codepoint": 61987,
+      "source": "app/assets/icons/rocket.svg"
+    },
+    "rtl": {
+      "codepoint": 61988,
+      "source": "app/assets/icons/rtl.svg"
+    },
+    "sad": {
+      "codepoint": 61989,
+      "source": "app/assets/icons/sad.svg"
+    },
+    "sad2": {
+      "codepoint": 61990,
+      "source": "app/assets/icons/sad2.svg"
+    },
+    "scissors": {
+      "codepoint": 61991,
+      "source": "app/assets/icons/scissors.svg"
+    },
+    "search": {
+      "codepoint": 61992,
+      "source": "app/assets/icons/search.svg"
+    },
+    "section": {
+      "codepoint": 61993,
+      "source": "app/assets/icons/section.svg"
+    },
+    "share": {
+      "codepoint": 61994,
+      "source": "app/assets/icons/share.svg"
+    },
+    "share2": {
+      "codepoint": 61995,
+      "source": "app/assets/icons/share2.svg"
+    },
+    "shield": {
+      "codepoint": 61996,
+      "source": "app/assets/icons/shield.svg"
+    },
+    "shift": {
+      "codepoint": 61997,
+      "source": "app/assets/icons/shift.svg"
+    },
+    "shocked": {
+      "codepoint": 61998,
+      "source": "app/assets/icons/shocked.svg"
+    },
+    "shocked2": {
+      "codepoint": 61999,
+      "source": "app/assets/icons/shocked2.svg"
+    },
+    "shrink": {
+      "codepoint": 62000,
+      "source": "app/assets/icons/shrink.svg"
+    },
+    "shrink2": {
+      "codepoint": 62001,
+      "source": "app/assets/icons/shrink2.svg"
+    },
+    "shuffle": {
+      "codepoint": 62002,
+      "source": "app/assets/icons/shuffle.svg"
+    },
+    "sigma": {
+      "codepoint": 62003,
+      "source": "app/assets/icons/sigma.svg"
+    },
+    "sleepy": {
+      "codepoint": 62004,
+      "source": "app/assets/icons/sleepy.svg"
+    },
+    "sleepy2": {
+      "codepoint": 62005,
+      "source": "app/assets/icons/sleepy2.svg"
+    },
+    "smile": {
+      "codepoint": 62006,
+      "source": "app/assets/icons/smile.svg"
+    },
+    "smile2": {
+      "codepoint": 62007,
+      "source": "app/assets/icons/smile2.svg"
+    },
+    "sort-alpha-asc": {
+      "codepoint": 62008,
+      "source": "app/assets/icons/sort-alpha-asc.svg"
+    },
+    "sort-alpha-desc": {
+      "codepoint": 62009,
+      "source": "app/assets/icons/sort-alpha-desc.svg"
+    },
+    "sort-amount-asc": {
+      "codepoint": 62010,
+      "source": "app/assets/icons/sort-amount-asc.svg"
+    },
+    "sort-amount-desc": {
+      "codepoint": 62011,
+      "source": "app/assets/icons/sort-amount-desc.svg"
+    },
+    "sort-numberic-desc": {
+      "codepoint": 62012,
+      "source": "app/assets/icons/sort-numberic-desc.svg"
+    },
+    "sort-numeric-asc": {
+      "codepoint": 62013,
+      "source": "app/assets/icons/sort-numeric-asc.svg"
+    },
+    "spades": {
+      "codepoint": 62014,
+      "source": "app/assets/icons/spades.svg"
+    },
+    "spell-check": {
+      "codepoint": 62015,
+      "source": "app/assets/icons/spell-check.svg"
+    },
+    "sphere": {
+      "codepoint": 62016,
+      "source": "app/assets/icons/sphere.svg"
+    },
+    "spinner": {
+      "codepoint": 62017,
+      "source": "app/assets/icons/spinner.svg"
+    },
+    "spinner10": {
+      "codepoint": 62018,
+      "source": "app/assets/icons/spinner10.svg"
+    },
+    "spinner11": {
+      "codepoint": 62019,
+      "source": "app/assets/icons/spinner11.svg"
+    },
+    "spinner2": {
+      "codepoint": 62020,
+      "source": "app/assets/icons/spinner2.svg"
+    },
+    "spinner3": {
+      "codepoint": 62021,
+      "source": "app/assets/icons/spinner3.svg"
+    },
+    "spinner4": {
+      "codepoint": 62022,
+      "source": "app/assets/icons/spinner4.svg"
+    },
+    "spinner5": {
+      "codepoint": 62023,
+      "source": "app/assets/icons/spinner5.svg"
+    },
+    "spinner6": {
+      "codepoint": 62024,
+      "source": "app/assets/icons/spinner6.svg"
+    },
+    "spinner7": {
+      "codepoint": 62025,
+      "source": "app/assets/icons/spinner7.svg"
+    },
+    "spinner8": {
+      "codepoint": 62026,
+      "source": "app/assets/icons/spinner8.svg"
+    },
+    "spinner9": {
+      "codepoint": 62027,
+      "source": "app/assets/icons/spinner9.svg"
+    },
+    "spoon-knife": {
+      "codepoint": 62028,
+      "source": "app/assets/icons/spoon-knife.svg"
+    },
+    "stack": {
+      "codepoint": 62029,
+      "source": "app/assets/icons/stack.svg"
+    },
+    "star-empty": {
+      "codepoint": 62030,
+      "source": "app/assets/icons/star-empty.svg"
+    },
+    "star-full": {
+      "codepoint": 62031,
+      "source": "app/assets/icons/star-full.svg"
+    },
+    "star-half": {
+      "codepoint": 62032,
+      "source": "app/assets/icons/star-half.svg"
+    },
+    "stats-bars": {
+      "codepoint": 62033,
+      "source": "app/assets/icons/stats-bars.svg"
+    },
+    "stats-bars2": {
+      "codepoint": 62034,
+      "source": "app/assets/icons/stats-bars2.svg"
+    },
+    "stats-dots": {
+      "codepoint": 62035,
+      "source": "app/assets/icons/stats-dots.svg"
+    },
+    "stop": {
+      "codepoint": 62036,
+      "source": "app/assets/icons/stop.svg"
+    },
+    "stop2": {
+      "codepoint": 62037,
+      "source": "app/assets/icons/stop2.svg"
+    },
+    "stopwatch": {
+      "codepoint": 62038,
+      "source": "app/assets/icons/stopwatch.svg"
+    },
+    "strikethrough": {
+      "codepoint": 62039,
+      "source": "app/assets/icons/strikethrough.svg"
+    },
+    "subscript": {
+      "codepoint": 62040,
+      "source": "app/assets/icons/subscript.svg"
+    },
+    "subscript2": {
+      "codepoint": 62041,
+      "source": "app/assets/icons/subscript2.svg"
+    },
+    "sun": {
+      "codepoint": 62042,
+      "source": "app/assets/icons/sun.svg"
+    },
+    "superscript": {
+      "codepoint": 62043,
+      "source": "app/assets/icons/superscript.svg"
+    },
+    "superscript2": {
+      "codepoint": 62044,
+      "source": "app/assets/icons/superscript2.svg"
+    },
+    "switch": {
+      "codepoint": 62045,
+      "source": "app/assets/icons/switch.svg"
+    },
+    "tab": {
+      "codepoint": 62046,
+      "source": "app/assets/icons/tab.svg"
+    },
+    "table": {
+      "codepoint": 62047,
+      "source": "app/assets/icons/table.svg"
+    },
+    "table2": {
+      "codepoint": 62048,
+      "source": "app/assets/icons/table2.svg"
+    },
+    "tablet": {
+      "codepoint": 62049,
+      "source": "app/assets/icons/tablet.svg"
+    },
+    "target": {
+      "codepoint": 62050,
+      "source": "app/assets/icons/target.svg"
+    },
+    "terminal": {
+      "codepoint": 62051,
+      "source": "app/assets/icons/terminal.svg"
+    },
+    "text-color": {
+      "codepoint": 62052,
+      "source": "app/assets/icons/text-color.svg"
+    },
+    "text-height": {
+      "codepoint": 62053,
+      "source": "app/assets/icons/text-height.svg"
+    },
+    "text-width": {
+      "codepoint": 62054,
+      "source": "app/assets/icons/text-width.svg"
+    },
+    "ticket": {
+      "codepoint": 62055,
+      "source": "app/assets/icons/ticket.svg"
+    },
+    "tongue": {
+      "codepoint": 62056,
+      "source": "app/assets/icons/tongue.svg"
+    },
+    "tongue2": {
+      "codepoint": 62057,
+      "source": "app/assets/icons/tongue2.svg"
+    },
+    "tree": {
+      "codepoint": 62058,
+      "source": "app/assets/icons/tree.svg"
+    },
+    "trophy": {
+      "codepoint": 62059,
+      "source": "app/assets/icons/trophy.svg"
+    },
+    "truck": {
+      "codepoint": 62060,
+      "source": "app/assets/icons/truck.svg"
+    },
+    "tv": {
+      "codepoint": 62061,
+      "source": "app/assets/icons/tv.svg"
+    },
+    "underline": {
+      "codepoint": 62062,
+      "source": "app/assets/icons/underline.svg"
+    },
+    "undo": {
+      "codepoint": 62063,
+      "source": "app/assets/icons/undo.svg"
+    },
+    "undo2": {
+      "codepoint": 62064,
+      "source": "app/assets/icons/undo2.svg"
+    },
+    "ungroup": {
+      "codepoint": 62065,
+      "source": "app/assets/icons/ungroup.svg"
+    },
+    "unlocked": {
+      "codepoint": 62066,
+      "source": "app/assets/icons/unlocked.svg"
+    },
+    "upload": {
+      "codepoint": 62067,
+      "source": "app/assets/icons/upload.svg"
+    },
+    "upload2": {
+      "codepoint": 62068,
+      "source": "app/assets/icons/upload2.svg"
+    },
+    "upload3": {
+      "codepoint": 62069,
+      "source": "app/assets/icons/upload3.svg"
+    },
+    "user": {
+      "codepoint": 62070,
+      "source": "app/assets/icons/user.svg"
+    },
+    "user-check": {
+      "codepoint": 62071,
+      "source": "app/assets/icons/user-check.svg"
+    },
+    "user-minus": {
+      "codepoint": 62072,
+      "source": "app/assets/icons/user-minus.svg"
+    },
+    "user-plus": {
+      "codepoint": 62073,
+      "source": "app/assets/icons/user-plus.svg"
+    },
+    "user-tie": {
+      "codepoint": 62074,
+      "source": "app/assets/icons/user-tie.svg"
+    },
+    "users": {
+      "codepoint": 62075,
+      "source": "app/assets/icons/users.svg"
+    },
+    "video-camera": {
+      "codepoint": 62076,
+      "source": "app/assets/icons/video-camera.svg"
+    },
+    "volume-decrease": {
+      "codepoint": 62077,
+      "source": "app/assets/icons/volume-decrease.svg"
+    },
+    "volume-high": {
+      "codepoint": 62078,
+      "source": "app/assets/icons/volume-high.svg"
+    },
+    "volume-increase": {
+      "codepoint": 62079,
+      "source": "app/assets/icons/volume-increase.svg"
+    },
+    "volume-low": {
+      "codepoint": 62080,
+      "source": "app/assets/icons/volume-low.svg"
+    },
+    "volume-medium": {
+      "codepoint": 62081,
+      "source": "app/assets/icons/volume-medium.svg"
+    },
+    "volume-mute": {
+      "codepoint": 62082,
+      "source": "app/assets/icons/volume-mute.svg"
+    },
+    "volume-mute2": {
+      "codepoint": 62083,
+      "source": "app/assets/icons/volume-mute2.svg"
+    },
+    "warning": {
+      "codepoint": 62084,
+      "source": "app/assets/icons/warning.svg"
+    },
+    "wink": {
+      "codepoint": 62085,
+      "source": "app/assets/icons/wink.svg"
+    },
+    "wink2": {
+      "codepoint": 62086,
+      "source": "app/assets/icons/wink2.svg"
+    },
+    "woman": {
+      "codepoint": 62087,
+      "source": "app/assets/icons/woman.svg"
+    },
+    "wondering": {
+      "codepoint": 62088,
+      "source": "app/assets/icons/wondering.svg"
+    },
+    "wondering2": {
+      "codepoint": 62089,
+      "source": "app/assets/icons/wondering2.svg"
+    },
+    "wrench": {
+      "codepoint": 62090,
+      "source": "app/assets/icons/wrench.svg"
+    },
+    "zoom-in": {
+      "codepoint": 62091,
+      "source": "app/assets/icons/zoom-in.svg"
+    },
+    "zoom-out": {
+      "codepoint": 62092,
+      "source": "app/assets/icons/zoom-out.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "base64": true,
+    "config": "config/fontcustom.yml",
+    "css_selector": ".i-{{glyph}}",
+    "debug": true,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "icons",
+    "force": false,
+    "input": {
+      "templates": "app/assets/icons",
+      "vectors": "app/assets/icons"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "app/assets/stylesheets",
+      "fonts": "app/assets/fonts",
+      "preview": "app/assets/fonts"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "scss"
+    ]
+  },
+  "templates": [
+    "app/assets/stylesheets/_icons.scss"
+  ]
+}

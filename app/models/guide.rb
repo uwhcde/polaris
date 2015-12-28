@@ -16,6 +16,5 @@ class Guide < ActiveRecord::Base
     def init
       self.upVotes ||= 0
       self.downVotes ||= 0
-      self.guideType ||= "Guide"
     end
 end

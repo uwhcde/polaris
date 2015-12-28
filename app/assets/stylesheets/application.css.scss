@@ -1,10 +1,16 @@
 
-@import "bs/bootstrap";
+@import 'bs/bootstrap';
 
-@import "animate";
+@import 'animate';
+@import 'icons';
 
-@import "pages/shared";
-@import "pages/guide";
-@import "pages/home";
-@import "pages/users";
-@import "pages/comments";
+@import 'modules/header';
+@import 'modules/card';
+
+@import 'pages/home';
+@import 'pages/shared';
+@import 'pages/guide';
+
+@import 'pages/users';
+@import 'pages/comments';
+

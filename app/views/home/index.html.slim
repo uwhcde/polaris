@@ -1,94 +1,21 @@
-.home
-  - if user_signed_in?
-    #recent
-      .row
-        .col-sm-12
-          p Recently Viewed
-      .row
-        - i = 0
-        - path = "/guides/"
-        - @guides.each do |guide|
-          - i = i + 1
-          .col-lg-15.col-md-4
-            .panel.panel-default
-              .panel-body
-                i.fa.fa-star-o.fa-lg.unbookmarked
-                h5 = truncate(guide.title, :length => 25)
-                a href="/guides/#{guide.id}"
-                  .overlay
-              .panel-footer
-                .postType
-                  = guide.guideType
-                .rating
-                  span.upVotes
-                    i.fa.fa-thumbs-up
-                    = guide.upVotes
-                  .downVotes
-                    i.fa.fa-thumbs-down
-                    = guide.downVotes
-          - if i > 4 then break
-  - else
-    #hero-img
-      .row
-  #img-filters
-    .row
-      .col-lg-12.col-md-12.col-sm-12.col-xs-12
-        .fil
-          .filter
-            i.fa.fa-home.fa-lg
-          p All
-        .fil
-          .filter
-            i.fa.fa-home.fa-lg
-          p Housing
-        .fil
-          .filter
-            i.fa.fa-medkit.fa-lg
-          p Health
-        .fil
-          .filter
-            i.fa.fa-graduation-cap.fa-lg
-          p Schooling
-        .fil
-          .filter
-            i.fa.fa-briefcase.fa-lg
-          p Jobs
-        .fil
-          .filter
-            i.fa.fa-car.fa-lg
-          p Transport
-        .fil
-          .filter
-            i.fa.fa-cutlery.fa-lg
-          p Food
-        .fil
-          .filter
-            i.fa.fa-usd.fa-lg
-          p Banking
-        .fil
-          .filter
-            i.fa.fa-gavel.fa-lg
-          p Legal
-        .fil
-          .filter
-            i.fa.fa-home.fa-lg
-          p Other
-  #sorting
-    .row
-      .sort
-        form.form-inline
-          select.form-control
-            option Sort by
-            option Newest
-            option Rating
 
-          select.form-control
-            option Filter by
-            option Guide
-            option Help
-            option All
+.page
+  = render "shared/filter"
+  / #sorting
+  /   .row
+  /     .sort
+  /       form.form-inline
+  /         select.form-control
+  /           option Sort by
+  /           option Newest
+  /           option Rating
 
-.post-container
+  /         select.form-control
+  /           option Filter by
+  /           option Guide
+  /           option Help
+  /           option All
+
   .row
     - @posts.each do |post|
       = render "shared/cards/#{post[:value].class.name.downcase}_card", :post => post[:value]
