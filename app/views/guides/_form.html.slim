@@ -1,15 +1,23 @@
 = simple_form_for(@guide, html: { class: 'form-vertical' }) do |f|
+  .guide-new-header
+
   = render "shared/errors", model: @guide
-  = f.input :title
-  = f.input :short_description
+
+  = f.input :title, placeholder: 'Give a title to your guide..', autofocus: true, input_html: { :autocomplete => "off" }
+  = f.input :short_description, placeholder: 'Write a crisp description about your guide..'
   = f.input :cover
+
   = f.hidden_field :user_id, :value => current_user.id
-  #sections
+  #sections.guide-sections
     = f.simple_fields_for :sections do |b|
       = render "section_fields", :f => b
     .links
-      = link_to_add_association '+ Add new section', f, :sections, :class => "btn btn-info"
+      = link_to_add_association '+', f, :sections, :class => "add-new-section-btn"
     br
-  .actions
-    = f.button :submit
+  .form-actions
+    .pull-right
+      = link_to 'Cancel', guides_path
+      == "&nbsp;&nbsp;&nbsp;&nbsp;"
+      = f.button :submit, :class => "btn btn-primary"
+
 

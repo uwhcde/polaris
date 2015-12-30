@@ -20,21 +20,6 @@
 
 //= require cocoon
 
-//= require_tree .
+//= require jquery-fileupload/basic
 
-$(document).ready(function(){
-    $('.panel').hover(function(){
-        $(this).find(".unbookmarked").removeClass("hide");
-    }, function(){
-        $(this).find(".unbookmarked").addClass("hide");
-    })
-    $('.filter').hover(function(){
-        $(this).parent().find("p").removeClass("invisible");
-    },function(){
-        $(this).parent().find("p").addClass("invisible");
-    })
-    $('.fa-star').click(function(){
-        $(this).toggleClass("unbookmarked");
-        $(this).toggleClass("bookmarked");
-    })
-});
+//= require_tree .

@@ -1,6 +1,6 @@
 - if model.errors.any?
-  #error_explanation
-    h2
+  .errors
+    strong.text-muted
       = pluralize(model.errors.count, "error")
       |  prohibited this guide from being saved:
     ul

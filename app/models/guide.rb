@@ -12,6 +12,9 @@ class Guide < ActiveRecord::Base
   # Explicitly do not validate
   do_not_validate_attachment_file_type :cover
 
+  validates :title, presence: true
+  validates :short_description, presence: true
+
   private
     def init
       self.upVotes ||= 0

@@ -8,6 +8,8 @@
 @import 'modules/header';
 @import 'modules/card';
 
+@import 'pages/errors';
+
 @import 'pages/home';
 @import 'pages/shared';
 @import 'pages/new';
@@ -17,3 +19,5 @@
 @import 'pages/users';
 @import 'pages/comments';
 
+@import 'jquery.fileupload';
+@import 'jquery.fileupload-ui';

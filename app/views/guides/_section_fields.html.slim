@@ -1,5 +1,7 @@
 .nested-fields
-  = f.input :title
-  = f.input :description, :as => :ckeditor, :input_html => { :ckeditor => {}}
-  = f.hidden_field :user_id, :value => current_user.id
-  = link_to_remove_association "remove section", f
+  hr.divider
+  .section-form-fields
+    = f.input :title, autofocus: true, input_html: { :autocomplete => "off" }
+    = f.input :description, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'mini'}}
+    = f.hidden_field :user_id, :value => current_user.id
+    = link_to_remove_association "<i class='i-bin'></i>".html_safe, f
