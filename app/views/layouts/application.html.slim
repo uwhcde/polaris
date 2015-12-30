@@ -13,7 +13,7 @@ html
     link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700"
     link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700"
     = stylesheet_link_tag 'application'
-    = javascript_include_tag 'application'
+
     = csrf_meta_tags
   body
     = render "shared/header"
@@ -25,3 +25,5 @@ html
         p.alert.alert-danger.alert = alert
       end
       = yield
+
+    = javascript_include_tag 'application'

@@ -3,6 +3,7 @@ class Guide < ActiveRecord::Base
   has_many :sections, inverse_of: :guide, dependent: :destroy
   accepts_nested_attributes_for :sections, reject_if: :all_blank, allow_destroy: true
   before_save :init
+  has_one :picture
 
 
   has_attached_file :cover, styles: { med: "400x150", large: "800x300" }, :default_url => ":style/missing.jpg"

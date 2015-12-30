@@ -1,0 +1,34 @@
+
+# ## Templates
+# This class module loads all the templates into a dom
+#
+# Templates that are loaded
+
+@Templates = class Templates
+
+
+  _otherTemplates = ->
+    attachmentUploadTemplate: JST['templates/attachments/attachment_upload']()
+    attachmentDownloadTemplate: JST['templates/attachments/attachment_download']()
+
+
+  # ### loadTemplates
+  # Loads markup from templates from the string present in object values
+  # **containerId** - Id value to assign for container Id attribute
+  # **object**      - Object contains all the markup in its values
+  @loadMarkupIntoDom: (containerId, object) ->
+    markupString = ''
+    for key, value of object
+      markupString = "#{markupString} #{value}"
+    container = document.createElement('div')
+    container.setAttribute('id', containerId)
+    container.innerHTML = markupString
+    $('body').append(container)
+    return
+    # document.getElementsByTagName('body')[0].appendChild(container)
+
+  constructor: ->
+    # Inject the template into the DOM
+    Templates.loadMarkupIntoDom 'js_templates', _otherTemplates()
+
+new Templates()

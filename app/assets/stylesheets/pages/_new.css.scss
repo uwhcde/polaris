@@ -8,6 +8,13 @@
   @include card-shadow;
 }
 
+.cover-upload-button {
+  margin: 0 auto;
+  display: block;
+  width: 90px;
+  margin-top: 175px;
+}
+
 .guide-new-header {
   height: 300px;
   padding: 0;
@@ -19,6 +26,43 @@
   color: $white;
   margin: -40px -40px 30px;
   border-radius: 3px 3px 0 0;
+  position: relative;
+  .cu-status {
+    &:before {
+      content: "";
+      display: block;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      border: dashed 2px #C7C4C4;
+      position: absolute;
+    }
+    .loader {
+      position: absolute;
+      left: 50%;
+      margin-left: -10px;
+      top: 82px;
+      display: none;
+    }
+    &.fileupload-start {
+      .loader {
+        display: block;
+      }
+    }
+    &.fileupload-stop {
+      .loader {
+        display: none;
+      }
+      .cover-upload-button {
+        display: none;
+      }
+      &:before {
+        content: '';
+        border: 0;
+      }
+    }
+  }
 }
 
 .links {

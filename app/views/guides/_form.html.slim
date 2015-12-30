@@ -1,11 +1,18 @@
-= simple_form_for(@guide, html: { class: 'form-vertical' }) do |f|
-  .guide-new-header
+= simple_form_for(@guide, html: { class: 'form-vertical', multipart: true }) do |f|
+  .guide-new-header.cover-upload
+    .cu-status
+      .btn.btn-default.btn-file.cover-upload-button
+        = "Browse"
+        input type="file" name='upload'
+      .loader
+        = image_tag "loader.svg"
+      .files
 
   = render "shared/errors", model: @guide
 
   = f.input :title, placeholder: 'Give a title to your guide..', autofocus: true, input_html: { :autocomplete => "off" }
   = f.input :short_description, placeholder: 'Write a crisp description about your guide..'
-  = f.input :cover
+
 
   = f.hidden_field :user_id, :value => current_user.id
   #sections.guide-sections

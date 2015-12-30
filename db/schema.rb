@@ -70,11 +70,6 @@ ActiveRecord::Schema.define(version: 20151201092310) do
     t.string   "postType"
     t.integer  "upVotes"
     t.integer  "downVotes"
-    t.string   "cover"
-    t.string   "cover_file_name"
-    t.string   "cover_content_type"
-    t.integer  "cover_file_size"
-    t.datetime "cover_updated_at"
   end
 
   create_table "helps", force: :cascade do |t|
@@ -89,24 +84,6 @@ ActiveRecord::Schema.define(version: 20151201092310) do
     t.date     "date"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "short_description"
-    t.integer  "user_id",            null: false
-    t.text     "tagging_details"
-    t.time     "publish_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "postType"
-    t.integer  "upVotes"
-    t.integer  "downVotes"
-    t.string   "cover"
-    t.string   "cover_file_name"
-    t.string   "cover_content_type"
-    t.integer  "cover_file_size"
-    t.datetime "cover_updated_at"
   end
 
   create_table "sections", force: :cascade do |t|

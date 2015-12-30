@@ -20,6 +20,11 @@
 
 //= require cocoon
 
-//= require jquery-fileupload/basic
+//= require jquery-fileupload
 
-//= require_tree .
+//= require_tree ./templates/attachments
+//= require ./templates/Templates
+
+//= require web/Polaris
+
+//= require_tree ./web
