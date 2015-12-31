@@ -111,6 +111,8 @@ Polaris.Form.Attachment = do ->
     _attachmentUpload = $(event.target)
     $(".cu-status").attr('class', "cu-status fileupload-done")
     url = data.result.files[0].url
+    console.log(data.result.files[0].id)
+    $('.cover_id').attr('value', data.result.files[0].id)
     $(".guide-new-header").css
       'background-image': "url(#{url})"
 

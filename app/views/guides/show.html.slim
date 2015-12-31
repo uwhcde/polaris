@@ -2,7 +2,7 @@
   .row
     .col-lg-9
       .post-show
-        .post-header style="background-image: url(#{@guide.cover.url(:large)})"
+        .post-header style="background-image: url(#{@guide.picture.url(:original)})"
           .post-title
             h1 == @guide.title
         div.post-content
@@ -13,22 +13,6 @@
           div.section-content
             == section.description
 
-
-      h2
-        = "Comments"
-      div#comments
-
-        / = render :partial => @guide.comments
-
-
-        = form_for [@guide, Comment.new] do |f|
-          p
-            = f.label :body, "New comment"
-          br
-            = f.text_area :body
-
-          p
-            = f.submit "Add comment"
 
     .col-lg-3
       .card

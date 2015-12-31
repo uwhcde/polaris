@@ -8,6 +8,8 @@ class Ckeditor::Picture < Ckeditor::Asset
   validates_attachment_size :data, :less_than => 2.megabytes
   validates_attachment_content_type :data, :content_type => /\Aimage/
 
+  belongs_to :guide, class_name: "Guide"
+
   def url_content
     url(:content)
   end

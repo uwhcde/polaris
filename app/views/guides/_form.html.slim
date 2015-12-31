@@ -9,7 +9,7 @@
       .files
 
   = render "shared/errors", model: @guide
-
+  input.cover_id name="guide[picture_id]" type="hidden"
   = f.input :title, placeholder: 'Give a title to your guide..', autofocus: true, input_html: { :autocomplete => "off" }
   = f.input :short_description, placeholder: 'Write a crisp description about your guide..'
 

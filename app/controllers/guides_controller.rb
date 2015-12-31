@@ -29,6 +29,12 @@ class GuidesController < ApplicationController
 
     guideparams = guide_params
 
+    if params['guide']['picture_id'].present?
+      attachment = Ckeditor::Picture.find(params['guide'][:picture_id])
+    end
+
+    guideparams['picture'] = attachment
+
     @guide = Guide.new(guideparams)
 
     respond_to do |format|
@@ -74,6 +80,6 @@ class GuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
-      params.require(:guide).permit(:title, :short_description, :user_id, :cover, sections_attributes: [:title, :description, :user_id, :_destroy])
+      params.require(:guide).permit(:title, :short_description, :user_id, :picture_id, sections_attributes: [:title, :description, :user_id, :_destroy])
     end
 end

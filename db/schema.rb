@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201092310) do
+ActiveRecord::Schema.define(version: 20151201085213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,13 +33,13 @@ ActiveRecord::Schema.define(version: 20151201092310) do
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "post_id"
+    t.integer  "guide_id"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
+  add_index "comments", ["guide_id"], name: "index_comments_on_guide_id", using: :btree
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
@@ -62,14 +62,14 @@ ActiveRecord::Schema.define(version: 20151201092310) do
   create_table "guides", force: :cascade do |t|
     t.string   "title"
     t.text     "short_description"
-    t.integer  "user_id",            null: false
+    t.integer  "user_id",                       null: false
     t.text     "tagging_details"
     t.time     "publish_date"
+    t.integer  "picture_id",                    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "postType"
-    t.integer  "upVotes"
-    t.integer  "downVotes"
+    t.integer  "upVotes",           default: 0
+    t.integer  "downVotes",         default: 0
   end
 
   create_table "helps", force: :cascade do |t|
@@ -90,10 +90,10 @@ ActiveRecord::Schema.define(version: 20151201092310) do
     t.string   "title"
     t.text     "description"
     t.integer  "position"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
     t.integer  "guide_id",    null: false
     t.integer  "user_id",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
@@ -126,5 +126,5 @@ ActiveRecord::Schema.define(version: 20151201092310) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "guides"
 end

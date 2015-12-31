@@ -7,6 +7,7 @@ class CreateGuides < ActiveRecord::Migration
       t.integer :user_id, null: false
       t.text :tagging_details
       t.time :publish_date
+      t.integer :picture_id, null: false
 
       t.timestamps
     end

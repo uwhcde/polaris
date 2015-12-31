@@ -30,6 +30,7 @@ module Ckeditor
             # "size": 902604,
             "fileName" => asset.filename,
             "url" =>  asset.url,
+            "id" => asset.id,
             # "thumbnailUrl": "http:\/\/example.org\/files\/thumbnail\/picture1.jpg",
             "deleteUrl" =>  asset.url,
             "deleteType" => "DELETE"
@@ -49,6 +50,7 @@ module Ckeditor
     end
 
     def errors
+      p asset.errors.full_messages
       if json?
         {
           json: { "uploaded" => 0, "error" => { "message" => "Upload failed"} }.to_json
