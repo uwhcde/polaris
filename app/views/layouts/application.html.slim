@@ -17,14 +17,15 @@ html
     = csrf_meta_tags
   body
     = render "shared/header"
-    .main.container-fluid
-      - if notice
-        p.alert.alert-success.notice = notice
-      end
-      - if alert
-        p.alert.alert-danger.alert = alert
-      end
-      = yield
+    main
+      .main.container-fluid
+        - if notice
+          p.alert.alert-success.notice = notice
+        end
+        - if alert
+          p.alert.alert-danger.alert = alert
+        end
+        = yield
     = render "shared/footer"
 
     = javascript_include_tag 'application', :'data-turbolinks-eval' => false
