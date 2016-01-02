@@ -32,6 +32,7 @@ gem 'simple_form'
 gem "cocoon"
 gem 'paperclip'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'acts_as_votable'
 
 
 gem 'fontcustom'

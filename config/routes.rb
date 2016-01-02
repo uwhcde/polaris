@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/media', as: "media"
   get 'home/index'
 
-
   resources :guides do
     resources :sections
     resources :comments, :only => [:create]
+    member {
+      post :vote
+    }
   end
 
   devise_for :users, :controllers => { registrations: 'registrations' }

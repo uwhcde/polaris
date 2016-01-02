@@ -1,6 +1,6 @@
 class GuidesController < ApplicationController
 
-  before_action :set_guide, only: [:show, :edit, :update, :destroy]
+  before_action :set_guide, only: [:show, :edit, :update, :destroy, :vote]
   before_filter :authenticate_user!, :except => [:index, :show]
 
   # GET /guides
@@ -74,6 +74,13 @@ class GuidesController < ApplicationController
       format.html { redirect_to guides_url, notice: 'Guide was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def vote
+    value = params[:type] == "up" ? 'like' : 'bad'
+    # @guide.add_or_update_evaluation(:votes, value, current_user)
+    @guide.vote_by :voter => current_user, :vote => value
+    redirect_to :back, notice: "Thank you for voting"
   end
 
   private

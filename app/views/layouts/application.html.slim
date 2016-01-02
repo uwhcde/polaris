@@ -17,7 +17,7 @@ html
     = csrf_meta_tags
   body
     = render "shared/header"
-    .container-fluid
+    .main.container-fluid
       - if notice
         p.alert.alert-success.notice = notice
       end
@@ -25,5 +25,6 @@ html
         p.alert.alert-danger.alert = alert
       end
       = yield
+    = render "shared/footer"
 
     = javascript_include_tag 'application'

@@ -24,6 +24,19 @@ class SectionsController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @guide.update(guide_params)
+        format.html { redirect_to @guide, notice: 'Guide was successfully updated.' }
+        format.json { render :show, status: :ok, location: @guide }
+      else
+        format.html { render :edit }
+        format.json { render json: @guide.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
   def show
   end
 

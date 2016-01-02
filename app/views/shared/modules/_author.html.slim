@@ -1,0 +1,11 @@
+- user =  post.present? ? post.user : current_user
+
+.card
+  .side-card.author-card
+    h2.side-card-title Author
+    .author
+      .author-img
+        img src="#{user.picture.url(:medium)}" alt=""/
+      .author-content
+        = user.full_name
+

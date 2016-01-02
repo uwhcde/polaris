@@ -5,28 +5,32 @@
         .post-header style="background-image: url(#{@guide.picture.try(:url)})"
           .post-title
             h1 == @guide.title
-        div.post-meta
-          == @guide.tag_list
+        .post-meta.row
+          .col-lg-9
+            - if @guide.tag_list.present?
+              .tags
+                bdi.text-muted
+                  == "Posted under  &nbsp;&nbsp;"
+                - @guide.tag_list.each do |tag|
+                  span
+                    = tag.capitalize
+          .col-lg-3
+            .pull-right
+                = link_to 'Edit', edit_guide_path(@guide), :class => 'btn btn-primary btn-sm'
+        .clearfix
         div.post-content
           == @guide.short_description
 
-        - @guide.sections.each do |section|
-          h3.seciton-heading = section.title
-          div.section-content
-            == section.description
+          - @guide.sections.each do |section|
+            h3.seciton-heading = section.title
+            = section.id
+            // = link_to 'Edit', edit_guide_section_path(section), :class => 'btn btn-primary btn-sm'
+            div.section-content
+              == section.description
 
 
     .col-lg-3
-      .card
-        .side-card.author-card
-          h2.side-card-title Author
-          .author
-            .author-img
-              img src="#{@guide.user.picture.url(:medium)}" alt=""/
-            .author-content
-              = @guide.user.full_name
-
-
+      = render "shared/modules/author", :post => @guide
       .card
         .side-card.stats-card
           h2.side-card-title Votes
@@ -34,23 +38,17 @@
             .row
               .col-lg-6
                 .vote-up
-                  i.i-arrow-up2
-                  = @guide.upVotes
+                  = link_to vote_guide_path(@guide, type: "up"), method: "post"
+                    i.i-arrow-up2
+                  = @guide.get_upvotes.size
               .col-lg-6
                 .vote-down
-                  i.i-arrow-down2
-                  = @guide.upVotes
+                  = link_to vote_guide_path(@guide, type: "down"), method: "post"
+                    i.i-arrow-down2
+                  = "#{@guide.get_downvotes.size}"
 
       .card
         .side-card
           h2.side-card-title = "Similar Guides"
           p
             = "No similar guides found"
-
-
-
-  = link_to 'Add Section', new_guide_section_path(@guide)
-  = " | "
-  = link_to 'Edit', edit_guide_path(@guide)
-  = " | "
-  = link_to 'Back', guides_path

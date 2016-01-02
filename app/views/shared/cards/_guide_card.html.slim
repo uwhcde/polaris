@@ -22,7 +22,7 @@
       .post-stats.pull-right
         span.votes.up
           i.i-arrow-up2
-          = post.upVotes
+          = post.get_upvotes.size
         span.votes.down
           i.i-arrow-down2
-          = post.downVotes
+          = post.get_downvotes.size
