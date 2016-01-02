@@ -17,8 +17,8 @@
 
   = f.hidden_field :user_id, :value => current_user.id
   #sections.guide-sections
-    = f.simple_fields_for :sections do |b|
-      = render "section_fields", :f => b
+    = f.simple_fields_for :sections do |section|
+      = render "section_fields", :f => section
     .links
       = link_to_add_association '+', f, :sections, :class => "add-new-section-btn"
     br

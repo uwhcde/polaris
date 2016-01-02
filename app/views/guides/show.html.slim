@@ -23,8 +23,6 @@
 
           - @guide.sections.each do |section|
             h3.seciton-heading = section.title
-            = section.id
-            // = link_to 'Edit', edit_guide_section_path(section), :class => 'btn btn-primary btn-sm'
             div.section-content
               == section.description
 
