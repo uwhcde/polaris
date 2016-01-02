@@ -40,6 +40,7 @@ gem 'ejs'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem "jquery-fileupload-rails"
 gem "select2-rails"
+gem 'jquery-turbolinks'
 
 
 

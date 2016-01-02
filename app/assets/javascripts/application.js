@@ -12,9 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//  require turbolinks
+//= require jquery.turbolinks
+
 
 //= require bootstrap-mainfest
+
+
 
 //= require ckeditor/init
 
@@ -28,4 +31,7 @@
 
 //= require web/Polaris
 
+//= require turbolinks
 //= require_tree ./web
+
+
