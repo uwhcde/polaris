@@ -3,52 +3,14 @@
     .filters
       ul.filter-menu
         li
-          a.active.filter-menu-item href="#"
+          = link_to root_path, :class => "filter-menu-item #{'active' if params[:c] == nil}"
             span.icon
               i.fa.fa-home.fa-lg
-            = "All"
-        li
-          a.filter-menu-item href="#"
-            span.icon
-              i.fa.fa-home.fa-lg
-            = "Housing"
-        li
-          a.filter-menu-item href="#"
-            span.icon
-              i.fa.fa-medkit.fa-lg
-            = "Health"
-        li
-          a.filter-menu-item href="#"
-            span.icon
-              i.fa.fa-graduation-cap.fa-lg
-            = "Schooling"
-        li
-          a.filter-menu-item href="#"
-            span.icon
-              i.fa.fa-briefcase.fa-lg
-            = "Jobs"
-        li
-          a.filter-menu-item href="#"
-            span.icon
-              i.fa.fa-car.fa-lg
-            = "Transport"
-        li
-          a.filter-menu-item href="#"
-            span.icon
-              i.fa.fa-cutlery.fa-lg
-            = "Food"
-        li
-          a.filter-menu-item href="#"
-            span.icon
-              i.fa.fa-usd.fa-lg
-            = "Banking"
-        li
-          a.filter-menu-item href="#"
-            span.icon
-              i.fa.fa-gavel.fa-lg
-            = "Legal"
-        li
-          a.filter-menu-item href="#"
-            span.icon
-              i.fa.fa-home.fa-lg
-            = "Other"
+            = 'all'
+        - Polaris::Constants::Categories::DEFAULT.each do |cat|
+          li
+            = link_to root_path(:c =>  cat), :class => "filter-menu-item #{'active' if cat == params[:c]  }"
+              span.icon
+                i.fa.fa-home.fa-lg
+              = cat
+

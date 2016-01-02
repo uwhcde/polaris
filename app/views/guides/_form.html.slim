@@ -12,6 +12,7 @@
   input.cover_id name="guide[picture_id]" type="hidden"
   = f.input :title, placeholder: 'Give a title to your guide..', autofocus: true, input_html: { :autocomplete => "off" }
   = f.input :short_description, placeholder: 'Write a crisp description about your guide..'
+  = f.input :tag_list, placeholder: 'Select a category', input_html: { class: 'js-auto-complete', multiple: true }, collection: Polaris::Constants::Categories::DEFAULT, as: :select
 
 
   = f.hidden_field :user_id, :value => current_user.id

@@ -5,6 +5,8 @@
         .post-header style="background-image: url(#{@guide.picture.try(:url)})"
           .post-title
             h1 == @guide.title
+        div.post-meta
+          == @guide.tag_list
         div.post-content
           == @guide.short_description
 

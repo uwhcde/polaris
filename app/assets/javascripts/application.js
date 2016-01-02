@@ -21,6 +21,7 @@
 //= require cocoon
 
 //= require jquery-fileupload
+//= require select2
 
 //= require_tree ./templates/attachments
 //= require ./templates/Templates

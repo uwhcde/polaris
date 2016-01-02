@@ -30,11 +30,18 @@ gem 'devise'
 #UI
 gem 'simple_form'
 gem "cocoon"
-gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'paperclip'
+gem 'acts-as-taggable-on', '~> 3.4'
+
+
 gem 'fontcustom'
 gem 'ejs'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 gem "jquery-fileupload-rails"
+gem "select2-rails"
+
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

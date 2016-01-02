@@ -12,6 +12,7 @@ window.Polaris = do ->
   init: ->
     # $.extend(true, _config, top.cachedConfig, top.userDynamicConfig, top.userCachedConfig)
     Polaris.Form.Attachment.init()
+    Polaris.Autocomplete.init()
 
     return true
 

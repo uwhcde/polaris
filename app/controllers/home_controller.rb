@@ -1,9 +1,24 @@
 class HomeController < ApplicationController
   def index
-    @guides = Guide.last(5).reverse
-    @events = Event.last(5).reverse
-    @helps = Help.last(5).reverse
     @posts = []
+    @guides = []
+    @events = []
+    @helps = []
+
+    category = params[:c].try(:downcase)
+    if category.present?
+      if Polaris::Constants::Categories::DEFAULT.include?(category)
+        @guides = Guide.tagged_with(category).last(5).reverse
+        @events = Event.tagged_with(category).last(5).reverse
+        @helps = Help.tagged_with(category).last(5).reverse
+      end
+    else
+      @guides = Guide.last(5).reverse
+      @events = Event.last(5).reverse
+      @helps = Help.last(5).reverse
+    end
+
+
     @guides.each_with_index do |guide, index|
       @posts.push({date: guide.created_at, value: guide})
     end
