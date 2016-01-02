@@ -21,10 +21,8 @@ html
       .main.container-fluid
         - if notice
           p.alert.alert-success.notice = notice
-        end
         - if alert
           p.alert.alert-danger.alert = alert
-        end
         = yield
     = render "shared/footer"
 
