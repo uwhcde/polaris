@@ -1,6 +1,5 @@
 class Guide < ActiveRecord::Base
 
-  has_many :comments
   has_many :sections, inverse_of: :guide, dependent: :destroy
 
   belongs_to :user
@@ -12,7 +11,7 @@ class Guide < ActiveRecord::Base
   acts_as_taggable_on :tag_list
 
   acts_as_votable
-
+  acts_as_commentable
 
   validates :title, presence: true
   validates :short_description, presence: true

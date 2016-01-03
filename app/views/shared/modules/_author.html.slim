@@ -5,7 +5,7 @@
     h2.side-card-title Author
     .author
       .author-img
-        img src="#{user.picture.url(:medium)}" alt=""/
+        = image_tag user.picture.url(:medium), alt: user.full_name
       .author-content
         = user.full_name
 

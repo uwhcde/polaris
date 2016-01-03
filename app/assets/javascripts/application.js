@@ -14,10 +14,7 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 
-
 //= require bootstrap-mainfest
-
-
 
 //= require ckeditor/init
 
@@ -26,9 +23,11 @@
 //= require jquery-fileupload
 //= require select2
 
+//= require jquery.timeago
+
+
 //= require_tree ./templates/attachments
 //= require ./templates/Templates
-
 //= require web/Polaris
 
 //= require turbolinks

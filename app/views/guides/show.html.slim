@@ -26,24 +26,32 @@
             div.section-content
               == section.description
 
+      .post-comments
+        .main-card-title
+          h4 Comments
+        = render "comments/new", :post => @guide
+        - @comments.each do |comment|
+          = render "comments/comment", :comment => comment
 
     .col-lg-3
       = render "shared/modules/author", :post => @guide
       .card
-        .side-card.stats-card
+        .side-card.stats-card.js-votes
           h2.side-card-title Votes
           .votes
             .row
               .col-lg-6
                 .vote-up
-                  = link_to vote_guide_path(@guide, type: "up"), method: "post"
+                  = link_to vote_guide_path(@guide, type: "up"), class: 'js-poll-vote'
                     i.i-arrow-up2
-                  = @guide.get_upvotes.size
+                  span.js-upvotes
+                    = @guide.get_upvotes.size
               .col-lg-6
                 .vote-down
-                  = link_to vote_guide_path(@guide, type: "down"), method: "post"
+                  = link_to vote_guide_path(@guide, type: "down"), class: 'js-poll-vote'
                     i.i-arrow-down2
-                  = "#{@guide.get_downvotes.size}"
+                  span.js-downvotes
+                    = "#{@guide.get_downvotes.size}"
 
       .card
         .side-card

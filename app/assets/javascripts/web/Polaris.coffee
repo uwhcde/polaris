@@ -14,6 +14,7 @@ window.Polaris = do ->
     Polaris.Form.Attachment.init()
     Polaris.Autocomplete.init()
     Polaris.Bootstrap.init()
+    Polaris.Votes.init()
 
     return true
 

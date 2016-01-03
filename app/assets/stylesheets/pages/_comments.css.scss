@@ -1,3 +1,38 @@
-// Place all the styles related to the Comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.post-comments {
+  @include card-shadow;
+
+  padding: 20px 40px 60px;
+
+  .main-card-title {
+    text-transform: uppercase;
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: 14px;
+    color: #888;
+  }
+}
+
+.comment {
+  position: relative;
+  min-height: 50px;
+  margin: 20px 0 30px;
+
+  .comment-img {
+    position: absolute;
+
+    img {
+      height: 50px;
+      width: 50px;
+      border-radius: 100%;
+    }
+
+  }
+
+  .comment-body {
+    padding-left: 60px;
+    padding-top: 4px;
+  }
+  .comment-author-name {
+
+  }
+}

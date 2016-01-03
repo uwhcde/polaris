@@ -12,6 +12,7 @@ class GuidesController < ApplicationController
   # GET /guides/1
   # GET /guides/1.json
   def show
+    @comments = @guide.comment_threads
   end
 
   # GET /guides/new
@@ -78,9 +79,14 @@ class GuidesController < ApplicationController
 
   def vote
     value = params[:type] == "up" ? 'like' : 'bad'
-    # @guide.add_or_update_evaluation(:votes, value, current_user)
     @guide.vote_by :voter => current_user, :vote => value
-    redirect_to :back, notice: "Thank you for voting"
+
+    respond_to do |format|
+      format.html { redirect_to :back, notice: "Thank you for voting" }
+      format.json { render :vote, status: :ok, location: @guide }
+      # format.json { render :show, status: :ok, votesups: @guide.get_upvotes.size}
+    end
+
   end
 
   private
