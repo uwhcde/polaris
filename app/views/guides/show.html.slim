@@ -22,6 +22,7 @@
           == @guide.short_description
 
           - @guide.sections.each do |section|
+            hr
             h3.seciton-heading = section.title
             div.section-content
               == section.description
