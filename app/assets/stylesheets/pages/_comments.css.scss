@@ -21,18 +21,63 @@
     position: absolute;
 
     img {
-      height: 50px;
-      width: 50px;
-      border-radius: 100%;
+      @include profilepic-styles(45px);
     }
 
   }
 
   .comment-body {
-    padding-left: 60px;
+    padding-left: 70px;
     padding-top: 4px;
-  }
-  .comment-author-name {
 
   }
+
+  .comment-content {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  .comment-meta {
+    margin-bottom: 5px;
+    .timeago {
+      border: 0;
+      font-size: 12px;
+      color: #888;
+      margin-left: 15px;
+      font-weight: 300;
+    }
+  }
+
+  .comment-actions {
+    a {
+      margin-right: 10px;
+    }
+  }
+
+  .comment-author-name {
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  .comment-vote-up, .comment-vote-down {
+    font-size: 13px;
+    margin-right: 20px;
+    cursor: pointer;
+    i {
+      @include vote-button(24px);
+    }
+  }
+
+  .comment-reply-link {
+    &:before {
+      content: '|';
+      color: #ccc;
+    }
+    a {
+      margin-left: 18px;
+    }
+  }
+
 }

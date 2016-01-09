@@ -4,3 +4,25 @@
   border-radius: 3px;
   background: $white;
 }
+
+
+@mixin vote-button($size) {
+  display: inline-block;
+  height: $size;
+  width: $size;
+  border-radius: 100%;
+  background: #efefea;
+  line-height: $size;
+  text-align: center;
+  margin-right: 10px;
+  color: #888;
+}
+
+@mixin profilepic-styles($size) {
+  height: $size;
+  width: $size;
+  border-radius: 100%;
+  border: solid 1px #ccc;
+  padding: 1px;
+  background: #fff;
+}

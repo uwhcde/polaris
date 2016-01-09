@@ -1,6 +1,6 @@
 - @comment = Comment.new()
 - if current_user
-  = simple_form_for(@comment, html: { class: 'form-vertical' }) do |f|
+  = simple_form_for(@comment, html: { class: 'form-vertical js-new-comments-form' }) do |f|
     - if @comment.errors.any?
       #error_explanation
         h2
@@ -14,6 +14,8 @@
     = f.input :body, input_html: {:required => 'required'}
 
     = f.submit class: 'btn btn-primary'
+    br
+    br
 - else
   span.text-muted
     = "Please sign-in to comment"

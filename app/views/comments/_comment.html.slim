@@ -2,11 +2,21 @@
   .comment-img
     = image_tag comment.user.picture
   .comment-body
-    = link_to comment.user
-      strong
+    .comment-meta
+      = link_to comment.user, :class => "comment-author-name"
         = comment.user.full_name
-      == "&nbsp;&nbsp;"
-    span.text-muted
-      = timeago(comment.created_at)
+      span.text-muted
+        = timeago(comment.created_at)
     .comment-content
       == comment.body
+    .comment-actions
+      span.comment-vote-up
+        i.i-arrow-up2
+        span.js-comment-upvotes
+        = "0"
+      span.comment-vote-down
+        i.i-arrow-down2
+        span.js-comment-downvotes
+        = "0"
+      span.comment-reply-link
+        a href="" Reply
