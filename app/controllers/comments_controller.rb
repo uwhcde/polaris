@@ -28,8 +28,15 @@ class CommentsController < ApplicationController
     @post = Guide.find(comment_params[:post_id])
     @comment = Comment.build_from( @post, current_user.id, comment_params[:body])
 
+    @is_saved = @comment.save
+
+    if @is_saved and comment_params[:parent_id]
+      @parent_comment = Comment.find(comment_params[:parent_id])
+      @comment.move_to_child_of(@parent_comment)
+    end
+
     respond_to do |format|
-      if @comment.save
+      if @is_saved
         format.html { redirect_to @post, notice: 'comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
@@ -71,6 +78,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:post_id, :user_id, :body)
+      params.require(:comment).permit(:post_id, :user_id, :body, :parent_id)
     end
 end

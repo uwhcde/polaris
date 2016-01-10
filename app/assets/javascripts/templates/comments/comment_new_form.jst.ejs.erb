@@ -1,0 +1,23 @@
+<!-- The template to display files available for upload -->
+<script id="comment-reply-form" type="text/x-tmpl">
+<div class="comment">
+  <div class="comment-img"><img src="{%=o.picture%}" alt="{%=o.full_name%}"></div>
+  <div class="comment-body">
+    <form class="simple_form form-vertical js-new-comments-form" novalidate="novalidate" id="new_comment" action="{%=o.url%}" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="authenticity_token" value="{%=o.authenticity_token%}">
+      <div class="comment-content new">
+        <input value="{%=o.userid%}" type="hidden" name="comment[user_id]" id="comment_user_id">
+        <input value="{%=o.postid%}" type="hidden" name="comment[post_id]" id="comment_post_id">
+        <input value="{%=o.parentid%}" type="hidden" name="comment[parent_id]" id="comment_parent_id">
+        <div class="form-group text required comment_body">
+          <textarea class="text required js-comment-textarea new-comment-textarea form-control" placeholder="Join the discussion..." name="comment[body]" id="comment_body"></textarea>
+        </div>
+      </div>
+      <input type="submit" name="commit" value="Post" class="btn btn-primary">
+    </form>
+  </div>
+  <br>
+</div>
+
+</script>

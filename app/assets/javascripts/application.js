@@ -14,19 +14,24 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 
-//= require bootstrap-mainfest
+//= require bootstrap-manifest
 
 //= require ckeditor/init
 
 //= require cocoon
 
 //= require jquery-fileupload
+
 //= require select2
 
 //= require jquery.timeago
+//= require autosize/autosize
+
+//= require jqueryui-manifest
 
 
 //= require_tree ./templates/attachments
+//= require_tree ./templates/comments
 //= require ./templates/Templates
 //= require web/Polaris
 

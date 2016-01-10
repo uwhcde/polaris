@@ -1,0 +1,39 @@
+<!-- The template to display files available for upload -->
+<script id="comment-display" type="text/x-tmpl">
+<div class="comment">
+  <div class="comment-img">
+  <img src="{%=o.user.picture%}" />
+  </div>
+  <div class="comment-body">
+    <div class="comment-meta">
+      <a class="comment-author-name" href="/users/{%=o.user.id%}">{%=o.user.full_name%}</a>
+      <span class="text-muted">
+        {%#o.meta.timeago%}
+      </span>
+    </div>
+    <div class="comment-content">
+      {%=o.body%}
+    </div>
+
+    <div class="comment-actions">
+      <span class="comment-vote-up">
+        <i class="i-arrow-up2"></i>
+        <span class="js-comment-upvotes">
+          {%= o.stats.upvotes%}
+        </span>
+      </span>
+      <span class="comment-vote-down">
+        <i class="i-arrow-down2"></i>
+        <span class="js-comment-downvotes">
+          {%= o.stats.downvotes%}
+        </span>
+      </span>
+      <span class="comment-reply-link">
+        <a data-comment-parent="28" data-comment-url="/comments" data-post-id="6" data-user-id="1" href="">Reply</a>
+      </span>
+    </div>
+
+
+  </div>
+</div>
+</script>

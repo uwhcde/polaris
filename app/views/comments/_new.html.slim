@@ -1,20 +1,25 @@
 - @comment = Comment.new()
-- if current_user
-  = simple_form_for(@comment, html: { class: 'form-vertical js-new-comments-form' }) do |f|
-    - if @comment.errors.any?
-      #error_explanation
-        h2
-          = pluralize(@comment.errors.count, "error")
-          | prohibited this comment from being saved:
-        ul
-          - @comment.errors.full_messages.each do |msg|
-            li= msg
-    = f.hidden_field :user_id, :value => current_user.id
-    = f.hidden_field :post_id, :value => post.id
-    = f.input :body, input_html: {:required => 'required'}
 
-    = f.submit class: 'btn btn-primary'
-    br
+- if current_user
+  .comment
+    .comment-img
+      = image_tag current_user.picture
+    .comment-body
+      = simple_form_for(@comment, html: { class: 'form-vertical js-new-comments-form' }) do |f|
+        .comment-content.new
+          - if @comment.errors.any?
+            #error_explanation
+              h2
+                = pluralize(@comment.errors.count, "error")
+                | prohibited this comment from being saved:
+              ul
+                - @comment.errors.full_messages.each do |msg|
+                  li= msg
+          = f.hidden_field :user_id, :value => current_user.id
+          = f.hidden_field :post_id, :value => post.id
+          = f.input :body, :label => false, :placeholder => "Join the discussion...", input_html: { class: 'js-comment-textarea new-comment-textarea' }
+
+        = f.submit class: 'btn btn-primary', :value => "Post"
     br
 - else
   span.text-muted

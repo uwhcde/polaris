@@ -12,7 +12,7 @@ class GuidesController < ApplicationController
   # GET /guides/1
   # GET /guides/1.json
   def show
-    @comments = @guide.comment_threads
+    @comments = @guide.root_comments
   end
 
   # GET /guides/new

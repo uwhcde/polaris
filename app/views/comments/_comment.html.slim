@@ -1,22 +1,31 @@
-.comment
-  .comment-img
-    = image_tag comment.user.picture
-  .comment-body
-    .comment-meta
-      = link_to comment.user, :class => "comment-author-name"
-        = comment.user.full_name
-      span.text-muted
-        = timeago(comment.created_at)
-    .comment-content
-      == comment.body
-    .comment-actions
-      span.comment-vote-up
-        i.i-arrow-up2
-        span.js-comment-upvotes
-        = "0"
-      span.comment-vote-down
-        i.i-arrow-down2
-        span.js-comment-downvotes
-        = "0"
-      span.comment-reply-link
-        a href="" Reply
+li
+  .comment
+    .comment-img
+      = image_tag comment.user.picture
+    .comment-body
+      .comment-meta
+        = link_to comment.user, :class => "comment-author-name"
+          = comment.user.full_name
+        span.text-muted
+          = timeago(comment.created_at)
+      .comment-content
+        == comment.body
+      .comment-actions
+        span.comment-vote-up
+          i.i-arrow-up2
+          span.js-comment-upvotes
+          = "0"
+        span.comment-vote-down
+          i.i-arrow-down2
+          span.js-comment-downvotes
+          = "0"
+        span.comment-reply-link
+          a.js-reply-link href="" data-post-id="#{post[:id]}" data-user-id="#{current_user.id}" data-comment-parent="#{comment.id}" data-comment-url="#{comments_path}" data-picture="#{image_url(current_user.picture)}" data-user-name="#{current_user.full_name}" Reply
+  ul
+    .form
+    .js-child-comments
+      -if comment.has_children?
+        - comment.children.each do |child|
+          = render "comments/comment", :comment => child, :post => post
+
+

@@ -10,6 +10,8 @@
   _otherTemplates = ->
     attachmentUploadTemplate: JST['templates/attachments/attachment_upload']()
     attachmentDownloadTemplate: JST['templates/attachments/attachment_download']()
+    commentNewTemplate: JST['templates/comments/comment_new_form']()
+    commentDispalyTemplate: JST['templates/comments/comment']()
 
 
   # ### loadTemplates
@@ -29,6 +31,6 @@
 
   constructor: ->
     # Inject the template into the DOM
-    Templates.loadMarkupIntoDom 'js_templates', _otherTemplates()
+    Templates.loadMarkupIntoDom 'js-templates', _otherTemplates()
 
 new Templates()

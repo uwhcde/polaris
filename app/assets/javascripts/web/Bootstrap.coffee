@@ -2,10 +2,9 @@ Polaris.Bootstrap = do ->
 
   _init = ->
     _initPageTransitions()
-    _initTimeAgo()
 
 
-  _initTimeAgo = ->
+  initTimeAgo = ->
     $("abbr.timeago").timeago()
 
   _initPageTransitions = ->
@@ -15,5 +14,12 @@ Polaris.Bootstrap = do ->
     document.addEventListener 'page:fetch', ->
       document.querySelector('main').className = 'animated fadeOut'
 
+  highlight: (element) ->
+    element.effect( "highlight", "slow" );
+
+  initTimeAgo: ->
+    $("abbr.timeago").timeago()
+
   init: ->
     _init()
+    Polaris.Bootstrap.initTimeAgo()
