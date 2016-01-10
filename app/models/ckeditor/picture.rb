@@ -1,7 +1,7 @@
 class Ckeditor::Picture < Ckeditor::Asset
   has_attached_file :data,
-                    :url  => "/media/pictures/:id/:style_:basename.:extension",
-                    :path => ":rails_root/public/media/pictures/:id/:style_:basename.:extension",
+                    :url  => "/uploads/pictures/:id/:style_:basename.:extension",
+                    :path => ":rails_root/public/uploads/pictures/:id/:style_:basename.:extension",
                     :styles => { :content => '800>', :thumb => '118x100#' }
 
   validates_attachment_presence :data

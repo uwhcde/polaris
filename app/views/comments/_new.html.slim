@@ -23,5 +23,12 @@
         = f.submit class: 'btn btn-primary', :value => "Post"
     br
 - else
+  br
   span.text-muted
-    = "Please sign-in to comment"
+    = "Please "
+    = link_to new_user_session_path do
+      = "Sign-in"
+    = " to comment"
+  br
+  br
+

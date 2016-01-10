@@ -1,4 +1,7 @@
 class HelpsController < ApplicationController
+
+  load_and_authorize_resource
+
   before_action :set_help, only: [:show, :edit, :update, :destroy]
 
   # GET /helps

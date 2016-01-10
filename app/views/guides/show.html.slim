@@ -15,18 +15,18 @@
                   span
                     = tag.capitalize
           .col-lg-3
-            .pull-right
-                = link_to 'Edit', edit_guide_path(@guide), :class => 'btn btn-primary btn-sm'
+            - if can? :update, @guide
+              .pull-right
+                  = link_to 'Edit', edit_guide_path(@guide), :class => 'btn btn-primary btn-sm'
         .clearfix
         div.post-content
           == @guide.short_description
 
           - @guide.sections.each do |section|
             hr
-            h3.seciton-heading = section.title
+            h3.section-heading = section.title
             div.section-content
               == section.description
-
 
 
       .post-comments.js-comments

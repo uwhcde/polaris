@@ -26,3 +26,7 @@ html
     = render "shared/footer"
     script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places" data-turbolinks-eval="false"
     = javascript_include_tag 'application', :'data-turbolinks-eval' => false
+
+    - if signed_in?
+      = javascript_tag ":data-turbolinks-eval" => "always" do
+        | new Templates()

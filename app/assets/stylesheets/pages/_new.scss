@@ -169,7 +169,7 @@ hr.divider {
     counter-increment: section-counter;
     position: relative;
     &:before {
-      content: "Seciton "counter(section-counter);
+      content: "Section "counter(section-counter);
       position: absolute;
       height: 30px;
       width: 84px;

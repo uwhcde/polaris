@@ -26,7 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'slim', :require => 'slim'
 gem 'slim_assets'
+
 gem 'devise'
+gem "cancancan"
 
 #UI
 gem 'simple_form'

@@ -134,6 +134,7 @@ namespace :deploy do
   # before ':update_code', 'assets:precompile'
   # after 'deploy:create_symlink', 'assets:upload_assets'
 
+
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup

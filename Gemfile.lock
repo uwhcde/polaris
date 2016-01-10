@@ -59,6 +59,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (8.2.1)
+    cancancan (1.13.1)
     capistrano (3.4.0)
       i18n
       rake (>= 10.0.0)
@@ -261,6 +262,7 @@ DEPENDENCIES
   acts_as_votable
   awesome_nested_set (~> 3.0.2)
   byebug
+  cancancan
   capistrano
   capistrano-bundler
   capistrano-rails

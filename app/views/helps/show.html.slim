@@ -15,8 +15,9 @@
                     span
                       = tag.capitalize
             .col-lg-3
-              .pull-right
-                  = link_to 'Edit', edit_guide_path(@help), :class => 'btn btn-primary btn-sm'
+              - if can? :update, @help
+                .pull-right
+                    = link_to 'Edit', edit_help_path(@help), :class => 'btn btn-primary btn-sm'
           br
           .row
             .col-lg-6

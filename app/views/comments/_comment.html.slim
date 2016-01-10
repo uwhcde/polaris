@@ -21,8 +21,15 @@ li
             i.i-arrow-down2
           span.js-downvotes
             = comment.get_downvotes.size
-        span.comment-reply-link
-          a.js-reply-link href="" data-post-id="#{post[:id]}" data-user-id="#{current_user.id}" data-comment-parent="#{comment.id}" data-comment-url="#{comments_path}" data-picture="#{image_url(current_user.picture)}" data-user-name="#{current_user.full_name}" data-post-type="#{post.class}" Reply
+        -if current_user
+          span.comment-reply-link
+            a.js-reply-link href="" data-post-id="#{post[:id]}" data-user-id="#{current_user.id}" data-comment-parent="#{comment.id}" data-comment-url="#{comments_path}" data-picture="#{image_url(current_user.picture)}" data-user-name="#{current_user.full_name}" data-post-type="#{post.class}" Reply
+        - else
+          span.comment-reply-link
+            small.text-muted
+              = link_to new_user_session_path do
+                = "Sign-in"
+              = " to reply"
   ul
     .form
     .js-child-comments
