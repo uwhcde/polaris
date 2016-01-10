@@ -1,5 +1,6 @@
 <!-- The template to display files available for upload -->
 <script id="comment-display" type="text/x-tmpl">
+<li>
 <div class="comment">
   <div class="comment-img">
   <img src="{%=o.user.picture%}" />
@@ -29,11 +30,15 @@
         </span>
       </span>
       <span class="comment-reply-link">
-        <a data-comment-parent="28" data-comment-url="/comments" data-post-id="6" data-user-id="1" href="">Reply</a>
+        <a class="js-reply-link" data-comment-parent="{%=o.meta.parent%}" data-comment-url="{%=o.meta.url%}" data-picture="{%=o.user.picture%}" data-post-id="{%=o.meta.post_id%}" data-user-id="{%=o.user.id%}" data-user-name="{%=o.user.full_name%}" href="">Reply</a>
       </span>
     </div>
-
-
   </div>
 </div>
+<ul>
+  <div class="form">
+  </div>
+  <div class="js-child-comments">
+  </div>
+</li>
 </script>

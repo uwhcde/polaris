@@ -1,18 +1,21 @@
 Polaris.Votes = do ->
+  _thisVotes = null
 
   _init = ->
     $('.js-votes').on('click', '.js-poll-vote', _handleVoteUp)
 
   _handleVoteUp = (event) ->
     event.preventDefault()
-    url = $(this).attr('href')
+    _this = $(this)
+    url = _this.attr('href')
     $.ajax
       url: url
       type: 'POST'
       dataType: 'JSON'
       success: (data) ->
-        $('.js-upvotes').text(data.votes.upvotes)
-        $('.js-downvotes').text(data.votes.downvotes)
+        _thisVotes = _this.parents('.js-votes:first')
+        _thisVotes.find('.js-upvotes').text(data.votes.upvotes)
+        _thisVotes.find('.js-downvotes').text(data.votes.downvotes)
 
 
   init: ->

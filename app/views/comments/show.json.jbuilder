@@ -7,6 +7,9 @@ end
 
 json.meta do
   json.timeago timeago(@comment.created_at)
+  json.parent @comment.id
+  json.url comments_path
+  json.post_id @post.id
 end
 
 json.user do

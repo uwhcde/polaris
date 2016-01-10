@@ -12,7 +12,11 @@ Rails.application.routes.draw do
     }
   end
 
-  resources :comments
+  resources :comments do
+    member {
+      post :vote
+    }
+  end
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 

@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_comment, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /comments
   # GET /comments.json
@@ -20,6 +20,20 @@ class CommentsController < ApplicationController
   # GET /comments/1/edit
   def edit
   end
+
+
+  def vote
+    value = params[:type] == "up" ? 'like' : 'bad'
+    @comment.vote_by :voter => current_user, :vote => value
+
+    respond_to do |format|
+      format.html { redirect_to :back, notice: "Thank you for voting" }
+      format.json { render :vote, status: :ok, location: @guide }
+      # format.json { render :show, status: :ok, votesups: @guide.get_upvotes.size}
+    end
+
+  end
+
 
   # POST /comments
   # POST /comments.json

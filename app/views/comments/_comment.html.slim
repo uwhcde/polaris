@@ -10,15 +10,17 @@ li
           = timeago(comment.created_at)
       .comment-content
         == comment.body
-      .comment-actions
+      .comment-actions.js-votes
         span.comment-vote-up
-          i.i-arrow-up2
-          span.js-comment-upvotes
-          = "0"
+          = link_to vote_comment_path(comment, type: "up"), class: 'js-poll-vote'
+            i.i-arrow-up2
+          span.js-upvotes
+            = comment.get_upvotes.size
         span.comment-vote-down
-          i.i-arrow-down2
-          span.js-comment-downvotes
-          = "0"
+          = link_to vote_comment_path(comment, type: "down"), class: 'js-poll-vote'
+            i.i-arrow-down2
+          span.js-downvotes
+            = comment.get_downvotes.size
         span.comment-reply-link
           a.js-reply-link href="" data-post-id="#{post[:id]}" data-user-id="#{current_user.id}" data-comment-parent="#{comment.id}" data-comment-url="#{comments_path}" data-picture="#{image_url(current_user.picture)}" data-user-name="#{current_user.full_name}" Reply
   ul
