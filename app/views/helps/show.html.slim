@@ -1,23 +1,40 @@
-.page.show-page
+.page.show-page.help
   .row
     .col-lg-9
-      .post-show
-        .post-header
-          .post-title
-            h1 == @help.title
-        .post-meta.row
-          .col-lg-9
-            - if @help.tag_list.present?
-              .tags
-                bdi.text-muted
-                  == "Posted under  &nbsp;&nbsp;"
-                - @help.tag_list.each do |tag|
-                  span
-                    = tag.capitalize
-          .col-lg-3
-            .pull-right
-                = link_to 'Edit', edit_guide_path(@help), :class => 'btn btn-primary btn-sm'
+      .post-show.help-request
+        .post-item-title
+          h1 == @help.title
+        .post-meta
+          .row
+            .col-lg-9
+              - if @help.tag_list.present?
+                .tags
+                  bdi.text-muted
+                    == "Posted under  &nbsp;&nbsp;"
+                  - @help.tag_list.each do |tag|
+                    span
+                      = tag.capitalize
+            .col-lg-3
+              .pull-right
+                  = link_to 'Edit', edit_guide_path(@help), :class => 'btn btn-primary btn-sm'
+          br
+          .row
+            .col-lg-6
+              .info-box
+                .info-box-title
+                  = "Location"
+                .info-box-body
+                  == @help.location
+            .col-lg-6
+              .info-box
+                .info-box-title
+                  = "Time"
+                .info-box-body
+                  == @help.date
+          br
+
         .clearfix
+
         div.post-content
           == @help.description
 
@@ -56,49 +73,3 @@
           h2.side-card-title = "Similar posts"
           p
             = "No similar guides found"
-
-
-
-p#notice
-  = notice
-p
-  strong
-    | Title:
-  = @help.title
-p
-  strong
-    | User:
-  = @help.user_id
-p
-  strong
-    | Location:
-  = @help.location
-p
-  strong
-    | Longitude:
-  = @help.longitude
-p
-  strong
-    | Latitude:
-  = @help.latitude
-p
-  strong
-    | Requiredby:
-  = @help.requiredby
-p
-  strong
-    | Description:
-  = @help.description
-p
-  strong
-    | Cover:
-  = @help.cover
-p
-  strong
-    | Date:
-  = @help.date
-= link_to 'Destroy', @help, method: :delete, data: { confirm: 'Are you sure?' }
-
-= link_to 'Edit', edit_help_path(@help)
-|  |
-= link_to 'Back', helps_path
