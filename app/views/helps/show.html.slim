@@ -1,3 +1,64 @@
+.page.show-page
+  .row
+    .col-lg-9
+      .post-show
+        .post-header
+          .post-title
+            h1 == @help.title
+        .post-meta.row
+          .col-lg-9
+            - if @help.tag_list.present?
+              .tags
+                bdi.text-muted
+                  == "Posted under  &nbsp;&nbsp;"
+                - @help.tag_list.each do |tag|
+                  span
+                    = tag.capitalize
+          .col-lg-3
+            .pull-right
+                = link_to 'Edit', edit_guide_path(@help), :class => 'btn btn-primary btn-sm'
+        .clearfix
+        div.post-content
+          == @help.description
+
+      .post-comments.js-comments
+        .main-card-title
+          h4 Comments
+
+        ul.js-comments-list.comments-list
+          #js-new-comment
+            = render "comments/new", :post => @help
+          .js-child-comments
+            - @comments.each do |comment|
+              = render "comments/comment", :comment => comment, :post => @help
+
+    .col-lg-3
+      = render "shared/modules/author", :post => @help
+      .card
+        .side-card.stats-card.js-votes
+          h2.side-card-title Votes
+          .votes
+            .row
+              .col-lg-6
+                .vote-up
+                  = link_to vote_guide_path(@help, type: "up"), class: 'js-poll-vote'
+                    i.i-arrow-up2
+                  span.js-upvotes
+                    = @help.get_upvotes.size
+              .col-lg-6
+                .vote-down
+                  = link_to vote_guide_path(@help, type: "down"), class: 'js-poll-vote'
+                    i.i-arrow-down2
+                  span.js-downvotes
+
+      .card
+        .side-card
+          h2.side-card-title = "Similar posts"
+          p
+            = "No similar guides found"
+
+
+
 p#notice
   = notice
 p
@@ -36,6 +97,8 @@ p
   strong
     | Date:
   = @help.date
+= link_to 'Destroy', @help, method: :delete, data: { confirm: 'Are you sure?' }
+
 = link_to 'Edit', edit_help_path(@help)
-|  | 
+|  |
 = link_to 'Back', helps_path

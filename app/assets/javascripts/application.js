@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jqueryui-manifest
 //= require jquery.turbolinks
 
 //= require bootstrap-manifest
@@ -24,10 +25,10 @@
 
 //= require select2
 
+
 //= require jquery.timeago
 //= require autosize/autosize
-
-//= require jqueryui-manifest
+//= require placecomplete/geocomplete
 
 
 //= require_tree ./templates/attachments

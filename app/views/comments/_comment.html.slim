@@ -22,7 +22,7 @@ li
           span.js-downvotes
             = comment.get_downvotes.size
         span.comment-reply-link
-          a.js-reply-link href="" data-post-id="#{post[:id]}" data-user-id="#{current_user.id}" data-comment-parent="#{comment.id}" data-comment-url="#{comments_path}" data-picture="#{image_url(current_user.picture)}" data-user-name="#{current_user.full_name}" Reply
+          a.js-reply-link href="" data-post-id="#{post[:id]}" data-user-id="#{current_user.id}" data-comment-parent="#{comment.id}" data-comment-url="#{comments_path}" data-picture="#{image_url(current_user.picture)}" data-user-name="#{current_user.full_name}" data-post-type="#{post.class}" Reply
   ul
     .form
     .js-child-comments

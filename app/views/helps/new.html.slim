@@ -1,4 +1,13 @@
-h1
-  | New Help
-= render 'form'
-= link_to 'Back', helps_path
+.page.new
+  .row
+    .col-lg-9
+      .new-card
+        = render 'form'
+    .col-lg-3
+      = render "shared/modules/author", post: nil
+
+
+/ h1
+/   | New Help
+/ = render 'form'
+/ = link_to 'Back', helps_path

@@ -9,10 +9,10 @@ Polaris.Bootstrap = do ->
 
   _initPageTransitions = ->
     document.addEventListener 'page:change', ->
-      document.querySelector('main').className = 'animated fadeIn'
+      document.querySelector('main').className = 'animated half fadeIn'
 
     document.addEventListener 'page:fetch', ->
-      document.querySelector('main').className = 'animated fadeOut'
+      document.querySelector('main').className = 'animated half fadeOut'
 
   highlight: (element) ->
     element.effect( "highlight", "slow" );
@@ -20,6 +20,13 @@ Polaris.Bootstrap = do ->
   initTimeAgo: ->
     $("abbr.timeago").timeago()
 
+  initPlaceComplete: ->
+    options =
+      placeholderText: "Start typing the address.."
+    $('#gmaps-input-address').geocomplete()
+
+
   init: ->
     _init()
     Polaris.Bootstrap.initTimeAgo()
+    Polaris.Bootstrap.initPlaceComplete()

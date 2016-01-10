@@ -25,11 +25,11 @@ nav.navbar.navbar-default.navbar-fixed-top role="navigation"
                   i.fa.fa-pencil.fa-lg
                   = " Guide"
               li
-                a href="/events/new"
+                a href="/events/new" data-turbolinks="false"
                   i.fa.fa-fw.fa-calendar
                   = " Event"
               li
-                a href="/helps/new"
+                = link_to new_help_path, data: { no_turbolink: true }  do
                   i.fa.fa-fw.fa-map-signs
                   = " Help"
 

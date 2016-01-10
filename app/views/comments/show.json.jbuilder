@@ -10,6 +10,7 @@ json.meta do
   json.parent @comment.id
   json.url comments_path
   json.post_id @post.id
+  json.post_type @post.class.to_s
 end
 
 json.user do

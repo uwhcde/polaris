@@ -15,10 +15,10 @@ Polaris.Comments = do ->
       postid: target.data('post-id')
       userid: target.data('user-id')
       parentid: target.data('comment-parent')
-      full_name: target.data('full_name')
+      full_name: target.data('user-name')
       picture: target.data('picture')
       authenticity_token: $('[name="authenticity_token"]').val()
-
+      post_type: target.data('post-type')
     replyForm = $(tmpl('comment-reply-form', data))
     nestedList = $(this).parents('li:first').find("ul:first").find(".form:first")
     nestedList.html(replyForm)
@@ -47,7 +47,6 @@ Polaris.Comments = do ->
 
   _resetAutosize = (element) ->
     element.value = ''
-    element.style.height = 'auto'
     $(element).blur()
 
   _handleCommentSubmit = (event) ->
@@ -65,6 +64,7 @@ Polaris.Comments = do ->
         nestedList.prepend(newComment)
         Polaris.Bootstrap.initTimeAgo()
         _this.parents('ul:first').find(".form").html('')
+        _resetAutosize($('#js-new-comment').find('textarea')[0])
         Polaris.Bootstrap.highlight(newComment)
 
 

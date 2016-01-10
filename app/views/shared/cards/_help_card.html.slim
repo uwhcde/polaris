@@ -1,17 +1,19 @@
 .col-lg-3.col-md-4.col-sm-6.col-xs-12
-  .panel.panel-default
-    .panel-body
-      i.fa.fa-star.fa-lg.unbookmarked.hide
-      h4 = truncate(post.title, :length => 25)
-      a href="/helps/#{post.id}"
-        .overlay
-    .panel-footer
-      .guideType
-        = "Event"
-      / .rating
-      /   span.upVotes
-      /     i.fa.fa-thumbs-up
-      /     = post.upVotes
-      /   .downVotes
-      /     i.fa.fa-thumbs-down
-      /     = post.downVotes
+  .card.card-default
+    = link_to post do
+      span.card-type
+        = "help"
+      .card-body
+        i.fa.fa-star.fa-lg.unbookmarked.hide
+        .card-title
+          h4 = post.title
+
+    .card-footer
+      .user-acted.pull-left
+      .post-stats.pull-right
+        span.votes.up
+          i.i-arrow-up2
+
+        span.votes.down
+          i.i-arrow-down2
+

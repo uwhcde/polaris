@@ -16,6 +16,15 @@ Copyright (c) 2015 Daniel Eden
 
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
+  &.half {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
 }
 
 .animated.infinite {

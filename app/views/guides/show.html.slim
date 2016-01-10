@@ -27,14 +27,19 @@
             div.section-content
               == section.description
 
+
+
       .post-comments.js-comments
         .main-card-title
           h4 Comments
-        #js-new-comment
-        = render "comments/new", :post => @guide
+
         ul.js-comments-list.comments-list
-          - @comments.each do |comment|
-            = render "comments/comment", :comment => comment, :post => @guide
+          #js-new-comment
+            = render "comments/new", :post => @guide
+          .js-child-comments
+            - @comments.each do |comment|
+              = render "comments/comment", :comment => comment, :post => @guide
+
 
     .col-lg-3
       = render "shared/modules/author", :post => @guide

@@ -10,6 +10,7 @@ class HelpsController < ApplicationController
   # GET /helps/1
   # GET /helps/1.json
   def show
+    @comments = @help.root_comments
   end
 
   # GET /helps/new
