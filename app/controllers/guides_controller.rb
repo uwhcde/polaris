@@ -1,6 +1,7 @@
 class GuidesController < ApplicationController
 
   load_and_authorize_resource
+  skip_authorize_resource :only => :vote
 
   before_action :set_guide, only: [:show, :edit, :update, :destroy, :vote]
   before_filter :authenticate_user!, :except => [:index, :show]
@@ -58,8 +59,20 @@ class GuidesController < ApplicationController
   # PATCH/PUT /guides/1
   # PATCH/PUT /guides/1.json
   def update
+    guideparams = guide_params
+
+    if params['guide']['picture_id'].present?
+      attachment = Ckeditor::Picture.find(params['guide'][:picture_id])
+      guideparams['picture'] = attachment
+    end
+
+    if params['guide']['tag_list'].present?
+      tags = params['guide']['tag_list'].join(',')
+      guideparams['tag_list'] = tags
+    end
+
     respond_to do |format|
-      if @guide.update(guide_params)
+      if @guide.update(guideparams)
         format.html { redirect_to @guide, notice: 'Guide was successfully updated.' }
         format.json { render :show, status: :ok, location: @guide }
       else
@@ -84,9 +97,8 @@ class GuidesController < ApplicationController
     @guide.vote_by :voter => current_user, :vote => value
 
     respond_to do |format|
-      format.html { redirect_to :back, notice: "Thank you for voting" }
       format.json { render :vote, status: :ok, location: @guide }
-      # format.json { render :show, status: :ok, votesups: @guide.get_upvotes.size}
+      format.html { redirect_to :back, notice: "Thank you for voting" }
     end
 
   end

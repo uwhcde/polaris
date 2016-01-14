@@ -7,6 +7,8 @@ Polaris.Bootstrap = do ->
   initTimeAgo = ->
     $("abbr.timeago").timeago()
 
+
+
   _initPageTransitions = ->
     document.addEventListener 'page:change', ->
       document.querySelector('main').className = 'animated half fadeIn'
@@ -25,8 +27,11 @@ Polaris.Bootstrap = do ->
       placeholderText: "Start typing the address.."
     $('#gmaps-input-address').geocomplete()
 
+  initTimePicker: ->
+    $('.datetimepicker').datetimepicker();
 
   init: ->
     _init()
     Polaris.Bootstrap.initTimeAgo()
     Polaris.Bootstrap.initPlaceComplete()
+    Polaris.Bootstrap.initTimePicker()

@@ -1,10 +1,26 @@
 GIT
+  remote: git://github.com/derekprior/momentjs-rails.git
+  revision: eda1b74512db5844673bd4d37a6e4fe6127053b3
+  specs:
+    momentjs-rails (2.11.0)
+      railties (>= 3.1)
+
+GIT
   remote: git://github.com/galetahub/ckeditor.git
   revision: 0ebc23b5c512b1ceb6de58a2616cacf25ec5c2f6
   specs:
     ckeditor (4.1.5)
       cocaine
       orm_adapter (~> 0.5.0)
+
+GIT
+  remote: git://github.com/zpaulovics/datetimepicker-rails.git
+  revision: 36d21cec5da7f5b214925804f60e63c61c747023
+  branch: master
+  submodules: true
+  specs:
+    datetimepicker-rails (4.7.16)
+      momentjs-rails (>= 2.9.0)
 
 GEM
   remote: https://rubygems.org/
@@ -271,6 +287,7 @@ DEPENDENCIES
   ckeditor!
   cocoon
   coffee-rails (~> 4.1.0)
+  datetimepicker-rails!
   devise
   ejs
   fontcustom
@@ -279,6 +296,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   jquery-ui-sass-rails
+  momentjs-rails (~> 2.9)!
   paperclip
   pg
   puma

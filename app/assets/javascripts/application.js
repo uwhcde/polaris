@@ -30,6 +30,9 @@
 //= require autosize/autosize
 //= require placecomplete/geocomplete
 
+//= require moment
+//= require bootstrap-datetimepicker
+//= require pickers
 
 //= require_tree ./templates/attachments
 //= require_tree ./templates/comments

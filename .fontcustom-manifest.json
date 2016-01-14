@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "4928a2939b21962d3e6af0b038d4baefd094eaae0691286dffa4bbdc0ebb9668",
-    "current": "4928a2939b21962d3e6af0b038d4baefd094eaae0691286dffa4bbdc0ebb9668"
+    "previous": "afd4448150a8f5e4dd43dd09fbc0526a6cac0fe110f1d567b3f033862552e3c4",
+    "current": "afd4448150a8f5e4dd43dd09fbc0526a6cac0fe110f1d567b3f033862552e3c4"
   },
   "fonts": [
     "app/assets/fonts/icons.ttf",
@@ -14,6 +14,10 @@
       "codepoint": 61696,
       "source": "app/assets/icons/accessibility.svg"
     },
+    "add-to-list": {
+      "codepoint": 62093,
+      "source": "app/assets/icons/add-to-list.svg"
+    },
     "address-book": {
       "codepoint": 61697,
       "source": "app/assets/icons/address-book.svg"
@@ -25,14 +29,6 @@
     "airplane": {
       "codepoint": 61699,
       "source": "app/assets/icons/airplane.svg"
-    },
-    "alarm": {
-      "codepoint": 61700,
-      "source": "app/assets/icons/alarm.svg"
-    },
-    "amazon": {
-      "codepoint": 61701,
-      "source": "app/assets/icons/amazon.svg"
     },
     "angry": {
       "codepoint": 61702,
@@ -258,6 +254,70 @@
       "codepoint": 61757,
       "source": "app/assets/icons/checkmark2.svg"
     },
+    "chevron-down": {
+      "codepoint": 62094,
+      "source": "app/assets/icons/chevron-down.svg"
+    },
+    "chevron-left": {
+      "codepoint": 62095,
+      "source": "app/assets/icons/chevron-left.svg"
+    },
+    "chevron-right": {
+      "codepoint": 62096,
+      "source": "app/assets/icons/chevron-right.svg"
+    },
+    "chevron-small-down": {
+      "codepoint": 62097,
+      "source": "app/assets/icons/chevron-small-down.svg"
+    },
+    "chevron-small-left": {
+      "codepoint": 62098,
+      "source": "app/assets/icons/chevron-small-left.svg"
+    },
+    "chevron-small-right": {
+      "codepoint": 62099,
+      "source": "app/assets/icons/chevron-small-right.svg"
+    },
+    "chevron-small-up": {
+      "codepoint": 62100,
+      "source": "app/assets/icons/chevron-small-up.svg"
+    },
+    "chevron-thin-down": {
+      "codepoint": 62101,
+      "source": "app/assets/icons/chevron-thin-down.svg"
+    },
+    "chevron-thin-left": {
+      "codepoint": 62102,
+      "source": "app/assets/icons/chevron-thin-left.svg"
+    },
+    "chevron-thin-right": {
+      "codepoint": 62103,
+      "source": "app/assets/icons/chevron-thin-right.svg"
+    },
+    "chevron-thin-up": {
+      "codepoint": 62104,
+      "source": "app/assets/icons/chevron-thin-up.svg"
+    },
+    "chevron-up": {
+      "codepoint": 62105,
+      "source": "app/assets/icons/chevron-up.svg"
+    },
+    "chevron-with-circle-down": {
+      "codepoint": 62106,
+      "source": "app/assets/icons/chevron-with-circle-down.svg"
+    },
+    "chevron-with-circle-left": {
+      "codepoint": 62107,
+      "source": "app/assets/icons/chevron-with-circle-left.svg"
+    },
+    "chevron-with-circle-right": {
+      "codepoint": 62108,
+      "source": "app/assets/icons/chevron-with-circle-right.svg"
+    },
+    "chevron-with-circle-up": {
+      "codepoint": 62109,
+      "source": "app/assets/icons/chevron-with-circle-up.svg"
+    },
     "circle-down": {
       "codepoint": 61758,
       "source": "app/assets/icons/circle-down.svg"
@@ -413,6 +473,26 @@
     "display": {
       "codepoint": 61796,
       "source": "app/assets/icons/display.svg"
+    },
+    "dot-single": {
+      "codepoint": 62110,
+      "source": "app/assets/icons/dot-single.svg"
+    },
+    "dots-three-horizontal": {
+      "codepoint": 62111,
+      "source": "app/assets/icons/dots-three-horizontal.svg"
+    },
+    "dots-three-vertical": {
+      "codepoint": 62112,
+      "source": "app/assets/icons/dots-three-vertical.svg"
+    },
+    "dots-two-horizontal": {
+      "codepoint": 62113,
+      "source": "app/assets/icons/dots-two-horizontal.svg"
+    },
+    "dots-two-vertical": {
+      "codepoint": 62114,
+      "source": "app/assets/icons/dots-two-vertical.svg"
     },
     "download": {
       "codepoint": 61797,
@@ -1450,6 +1530,14 @@
       "codepoint": 62055,
       "source": "app/assets/icons/ticket.svg"
     },
+    "time": {
+      "codepoint": 62120,
+      "source": "app/assets/icons/time.svg"
+    },
+    "today": {
+      "codepoint": 62119,
+      "source": "app/assets/icons/today.svg"
+    },
     "tongue": {
       "codepoint": 62056,
       "source": "app/assets/icons/tongue.svg"
@@ -1461,6 +1549,22 @@
     "tree": {
       "codepoint": 62058,
       "source": "app/assets/icons/tree.svg"
+    },
+    "triangle-down": {
+      "codepoint": 62115,
+      "source": "app/assets/icons/triangle-down.svg"
+    },
+    "triangle-left": {
+      "codepoint": 62116,
+      "source": "app/assets/icons/triangle-left.svg"
+    },
+    "triangle-right": {
+      "codepoint": 62117,
+      "source": "app/assets/icons/triangle-right.svg"
+    },
+    "triangle-up": {
+      "codepoint": 62118,
+      "source": "app/assets/icons/triangle-up.svg"
     },
     "trophy": {
       "codepoint": 62059,

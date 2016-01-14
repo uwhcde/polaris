@@ -15,6 +15,7 @@ window.Polaris = do ->
     Polaris.Autocomplete.init()
     Polaris.Bootstrap.init()
     Polaris.Votes.init()
+    Polaris.Forms.init()
     Polaris.Comments.init()
 
     return true

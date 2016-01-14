@@ -1,15 +1,31 @@
 = simple_form_for(@help) do |f|
   = f.error_notification
   .form-inputs
+    .help-type
+      / = f.input :help_type, as: :radio_buttons, checked_value: true, unchecked_value: false
+      = f.input :help_type,
+            :collection => [[true, 'I need help'], [false, 'I can help']],
+            :label_method => :last,
+            :value_method => :first,
+            :as => :radio_buttons,
+            :label => false,
+            :checked => true
+
+
     = f.input :title, :label => "Subject", :placeholder => "I need help in..."
     / = f.input :location, :label => "Where", :placeholder => "E.g 5534 Brooklyn Ave, NE"
-
-    = f.input :location, :label => "Location", :input_html => { :id => "gmaps-input-address", :style => "width:350px;", :placeholder => "Start typing an address or location" }
-    = f.input :date
+    .row
+      .col-lg-5
+        = f.input :location, :label => "Location", :input_html => { :id => "gmaps-input-address", :placeholder => "Start typing an address or location" }
+        = f.input :date, :as => :datetime_picker
+    .clearfix
     / = f.input :requiredby
     / = f.input :description
     = f.hidden_field :user_id, :value => current_user.id
     = f.input :description, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'mini'}}
     / = f.input :cover
   .form-actions
-    = f.button :submit
+    .pull-right
+      = link_to 'Cancel', helps_path
+      == "&nbsp;&nbsp;&nbsp;&nbsp;"
+      = f.button :submit, :value => "Post", :class => 'btn btn-primary'
