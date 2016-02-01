@@ -1,50 +1,5 @@
-h2
-  | Edit 
-  = resource_name.to_s.humanize
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :cover_image
-    br
-    = f.file_field :cover_image
-  .field
-    = f.label :picture
-    br
-    = f.file_field :picture
-  .field
-    = f.label :first_name
-    br
-    = f.text_field :first_name, autofocus: true
-  .field
-    = f.label :last_name
-    br
-    = f.text_field :last_name
-  .field
-    = f.label :email
-    br
-    = f.email_field :email
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    div
-      | Currently waiting confirmation for: 
-      = resource.unconfirmed_email
-  .field
-    = f.label :password
-    i
-      | (leave blank if you don't want to change it)
-    br
-    = f.password_field :password, autocomplete: "off"
-  .field
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .field
-    = f.label :description
-    br
-    = f.text_field :description
-  .field
-    = f.label :phone
-    br
-    = f.text_field :phone
-  .actions
-    = f.submit "Update"
-= link_to "Back", :back
+.page.edit
+  .row
+    .col-lg-12
+      .edit-form
+        = render 'form'

@@ -1,0 +1,38 @@
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true, class: 'form-vertical' }) do |f|
+  = devise_error_messages!
+  .guide-new-header.cover-upload class="is_edit" data-upload-url="#{media.pictures_path}"
+    .cu-status
+      .btn.btn-default.btn-file.cover-upload-button
+        = "Browse"
+        input type="file" name='upload'
+      .loader
+        = image_tag "loader.svg"
+      .files
+
+  = f.file_field :cover_image
+  = f.file_field :picture
+
+  = f.label "Name"
+  br
+  = f.input :first_name, placeholder: 'First', autofocus: true, input_html: { :autocomplete => "off" }, wrapper_html: { class: 'quarter-width inline-block' }, label: false
+  = f.input :last_name, placeholder: 'Last', input_html: { :autocomplete => "off" }, wrapper_html: { class: 'quarter-width inline-block' }, label: false
+  = f.input :display_name, placeholder: 'Preferred name (Nikcname)', input_html: { :autocomplete => "off" }, wrapper_html: { class: 'half-width' }
+  = f.input :description, as: :text, placeholder: 'Write a short description about yourself!', label: "About Me"
+  = f.input :email, input_html: {:type => "email"}, disabled: true, wrapper_html: { class: 'half-width inline-block' }, label: "Contacts"
+  = f.input :show_email, wrapper_html: { class: 'half-width inline-block' }, label: "Display UW Email"
+  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+    div
+      | Currently waiting confirmation for:
+      = resource.unconfirmed_email
+
+  =f.label "Social Media"
+  = f.input :social_media_1, placeholder: 'Facebook, Twitter, Instagram…', input_html: { :autocomplete => "off"}, wrapper_html: { class: 'half-width' }, label: false
+  = f.input :social_media_2, placeholder: 'Facebook, Twitter, Instagram…', input_html: { :autocomplete => "off"}, wrapper_html: { class: 'half-width' }, label: false
+  = f.input :social_media_3, placeholder: 'Facebook, Twitter, Instagram…', input_html: { :autocomplete => "off"}, wrapper_html: { class: 'half-width' }, label: false
+  = f.input :social_media_4, placeholder: 'Facebook, Twitter, Instagram…', input_html: { :autocomplete => "off"}, wrapper_html: { class: 'half-width' }, label: false
+
+  .form-actions
+    .pull-right
+      = link_to "Cancel", :back
+      == "&nbsp;&nbsp;&nbsp;&nbsp;"
+      = f.submit "Save", :class => "btn btn-primary"

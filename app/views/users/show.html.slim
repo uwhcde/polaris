@@ -2,60 +2,58 @@
 
 .profile
   .profile-cover
-    .cover-image.container.row
-      = link_to image_tag(@user.cover_image.url(:large)), @user.cover_image.url, :class => 'cover-link'
+    .cover-image
+      = link_to image_tag(@user.cover_image.url(:medium)), @user.cover_image.url, :class => 'cover-link'
     .cover-overlay
-    .profile-details.container.row
+    .profile-details.container
       .profile-image
         = link_to image_tag(@user.picture.url(:medium)), @user.picture.url, :class => 'profile-link'
       .name
         span
           = @user.first_name + " " + @user.last_name
-      - if !@user.description.nil?
-        .description
-          span
-            = @user.description
-      .contact
-        span
-          - if !@user.phone.nil?
-            = @user.email + " | " + @user.phone
-          - else
-            = @user.email
-      = link_to "Edit Profile", edit_user_registration_path(current_user), :class => 'btn btn-primary edit-profile'
+        - if !@user.display_name.blank?
+          span.nickname
+            = ' (' + @user.display_name + ')'
 
-  .post-container
-    .post-type.navbar.navbar-inverse
-      ul.nav.navbar-nav.nav-tabs role='tablist'
-        li.active
-          =link_to "Guide", "#guides", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
-        li
-          =link_to "Help", "#helps", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
-        li
-          =link_to "Events", "#events", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
-        li.back
+      = link_to "EDIT PROFILE", edit_user_registration_path(current_user), :class => 'btn btn-primary edit-profile'
+
+  .profile-page.row.container
+    .info.col-lg-3
+      .panel.panel-white.contact
+        .panel-heading
+          h3.panel-title CONTACT
+        .panel-body
           span
-    .posts.tab-content
-      #guides.tab-pane.fade.in.active
-        .filters.row.container
+            = @user.email
+          .social-network
+            - if !@user.social_media_1.blank?
+              = link_to image_tag(@user.social_media_1), @user.social_media_1, :class => 'social-media-link'
+            - if !@user.social_media_2.blank?
+              = link_to image_tag(@user.social_media_2), @user.social_media_2, :class => 'social-media-link'
+            - if !@user.social_media_3.blank?
+              = link_to image_tag(@user.social_media_3), @user.social_media_3, :class => 'social-media-link'
+            - if !@user.social_media_4.blank?
+              = link_to image_tag(@user.social_media_4), @user.social_media_4, :class => 'social-media-link'
+      - if !@user.description.blank?
+        .panel.panel-white.description
+          .panel-heading
+            h3.panel-title ABOUT ME
+          .panel-body
+            span
+              = @user.description
+    .col-lg-9
+      .post-container
+        .post-type.navbar
+          ul.nav.navbar-nav.nav-tabs role='tablist'
+            - @posts.keys.each_with_index do |postType, index|
+              li class=(index == 0 ? "active" : "")
+                =link_to "#{postType}", "##{postType}", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
           .sort
             form.form-inline
-              = select_tag('guides_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
-        .post-panel
-          - @guides.each do |guide|
-            = render "shared/cards/#{guide.class.name.downcase}_card", :post => guide
-      #helps.tab-pane.fade
-        .filters.row.container
-          .sort
-            form.form-inline
-              = select_tag('helps_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
-        .post-panel
-          - @helps.each do |help|
-            = render "shared/cards/#{help.class.name.downcase}_card", :post => help
-      #events.tab-pane.fade
-        .filters.row.container
-          .sort
-            form.form-inline
-              = select_tag('events_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
-        .post-panel
-          - @events.each do |event|
-            = render "shared/cards/#{event.class.name.downcase}_card", :post => event
+              = select_tag('#{postType}_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
+        .posts.tab-content
+          - @posts.keys.each_with_index do |postType, index|
+            .tab-pane.fade id="#{postType}" class=(index == 0 ? "in active" : "")
+              .post-panel
+                - @posts[postType].each do |post|
+                  = render "shared/cards/#{post.class.name.downcase}_card", :post => post

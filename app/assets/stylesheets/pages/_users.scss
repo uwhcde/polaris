@@ -5,12 +5,12 @@
 .profile{
 
     .profile-cover{
-        position: relative;
+        position: relative
     }
 
     .cover-image{
         display: block;
-        position: relative;
+        position: relative
     }
 
     .cover-image .cover-link{
@@ -18,14 +18,14 @@
         display: block;
         position: relative;
         overflow: hidden;
-        text-decoration: none;
+        text-decoration: none
     }
 
     .cover-image img{
         width: 100%;
         min-width: 100%;
         position: absolute;
-        left: 0;
+        left: 0
     }
 
     .cover-overlay{
@@ -34,54 +34,120 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        top: 0;
+        top: 0
     }
 
     .profile-details{
-        text-align: center;
+        width: 100%;
         position: absolute;
-        top: 0;
-        height: 430px;
-        color: #fff;
+        bottom: -50px;
+        color: #fff
+    }
+
+    .name{
+        display: inline-block;
+        position: absolute;
+        bottom: 47px;
+
+        .nickname{
+            font-size: 20px !important
+        }
     }
 
     .profile-image{
         margin-bottom: 9px;
+        display: inline-block;
+        margin-left: 45px;
+        margin-right: 10px;
     }
 
     .profile-image .profile-link{
         padding: 2px;
         overflow: hidden;
-        text-decoration: none;
+        text-decoration: none
     }
 
     .profile-image img{
-        width: 170px;
-        height: 170px;
+        border: 5px solid #fff;
+        width: 140px;
+        height: 140px;
         border-radius: 80px;
         margin-top: 30px;
+        box-shadow: 2px 2px 12px #888;
+        -webkit-box-shadow: 2px 2px 12px #888;
+        -o-box-shadow: 2px 2px 12px #888;
+        -moz-box-shadow: 2px 2px 12px #888
     }
 
-    .profile-details .name span{
-        margin: 9px 0;
+    .profile-page{
+        margin-top: 57px;
+        margin-bottom: 20px
+    }
+
+    .info {
+        .panel.panel-white{
+            box-shadow: 1px 1px 6px #aaa;
+            -webkit-box-shadow: 1px 1px 6px #aaa;
+            -o-box-shadow: 1px 1px 6px #aaa;
+            -moz-box-shadow: 1px 1px 6px #aaa
+        }
+
+        .panel-white > .panel-heading{
+            background-color: #fff;
+            border-color: #fff;
+            color: #337ab7;
+        }
+        .panel-white > .panel-body{
+            padding-top: 0
+        }
+
+        .social-media-link img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .profile-details span{
+        margin: 9px 0
+    }
+
+    .profile-details input:not([type=submit]){
+        background: transparent;
+        // border: 1px solid #eee;
+        border: 0;
+        outline: none;
+        margin: 9px 2px
+    }
+
+    .profile-details .name span, .profile-details .name input.first-name{
+        text-align: right;
+        margin-right: 5px
+    }
+
+    .profile-details .name span, .profile-details .name input{
         display: inline-block;
         font-size: 35px
     }
 
-    .profile-details .description span{
-        margin: 9px 0;
+    .profile-details .description span, .profile-details .description input{
         display: inline-block;
         width: 40%
     }
 
-    .profile-details .contact span{
-        margin: 9px 0;
-        display: inline-block;
-        width: 40%
+    .profile-details .contact span, .profile-details .contact input{
+        display: inline-block
     }
 
-    .profile-details .edit-profile{
+    .profile-image .profile-link-upload{
+        display:none
+    }
+
+    .profile-details .edit-profile,
+    .profile-details .save-profile{
         margin: 9px 0 18px 0;
+        position: absolute;
+        right: 15px;
+        bottom: 47px
     }
 
     .post-type{
@@ -89,29 +155,36 @@
     }
 
     .post-type ul.navbar-nav{
-        width: 100%;
+
     }
 
     .post-type ul.navbar-nav li{
-        width: 33.33333%;
-        text-align: center;
-        font-size: 26px
+        min-width: 100px;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        &.active {
+            font-weight: bold;
+            color: $gray-base;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: -10px;
+                right: -10px;
+                height: 3px;
+                background: $brand-primary;
+            }
+        }
     }
 
     .post-container{
-        .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
-            background-color: #26A69A;
-            margin: 0 85px 5px 85px
+        .nav-tabs{
+            border: 0
         }
 
-        .navbar-nav .back{
-            border: 0;
-            border-bottom: 5px solid white;
-            bottom: 4px;
-            width: 20%;
-            position: absolute;
-
-            transition: left 0.5s ease;
+        .navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:hover, .navbar .navbar-nav > .active > a:focus{
+            padding-bottom: 10px
         }
 
         .nav-tabs > li > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus,
@@ -138,7 +211,36 @@
 
         .sort{
             float: right;
-            margin: 0 15px
+            margin: 10px 15px
         }
+    }
+}
+
+.page.edit {
+    margin: 40px 0;
+}
+.edit-form {
+    padding: 40px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.18);
+    border-radius: 3px;
+    background: #fff;
+}
+
+.simple_form {
+    .form-group.half-width{
+        width: 50%
+    }
+    .form-group.half-width{
+        width: 49%
+    }
+    .form-group.quarter-width{
+        width: 25%
+    }
+    .form-group.quarter-width{
+        width: 24%
+    }
+    .form-group.inline-block{
+        display: inline-block;
+        margin-right: 10px
     }
 }
