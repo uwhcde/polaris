@@ -3,11 +3,11 @@
 .profile
   .profile-cover
     .cover-image.container.row
-      = link_to image_tag(@user.cover_image.url(:med)), @user.cover_image.url, :class => 'cover-link'
+      = link_to image_tag(@user.cover_image.url(:medium)), @user.cover_image.url, :class => 'cover-link'
     .cover-overlay
     .profile-details.container.row
       .profile-image
-        = link_to image_tag(@user.picture.url(:med)), @user.picture.url, :class => 'profile-link'
+        = link_to image_tag(@user.picture.url(:medium)), @user.picture.url, :class => 'profile-link'
       .name
         span
           = @user.first_name + " " + @user.last_name

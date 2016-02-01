@@ -6,7 +6,6 @@ Polaris.Autocomplete = do ->
   _container = null
   _url = null
 
-
   _init = ->
     $(_selectorClass).select2
       theme: THEME

@@ -13,9 +13,9 @@ class HomeController < ApplicationController
         @helps = Help.tagged_with(category).last(5).reverse
       end
     else
-      @guides = Guide.last(5).reverse
-      @events = Event.last(5).reverse
-      @helps = Help.last(5).reverse
+      @guides = Guide.last(10).reverse
+      @events = Event.last(10).reverse
+      @helps = Help.last(10).reverse
     end
 
 

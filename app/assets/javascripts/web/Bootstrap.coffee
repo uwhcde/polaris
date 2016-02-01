@@ -4,11 +4,6 @@ Polaris.Bootstrap = do ->
     _initPageTransitions()
 
 
-  initTimeAgo = ->
-    $("abbr.timeago").timeago()
-
-
-
   _initPageTransitions = ->
     document.addEventListener 'page:change', ->
       document.querySelector('main').className = 'animated half fadeIn'

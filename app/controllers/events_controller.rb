@@ -10,6 +10,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @comments = @event.root_comments
   end
 
   # GET /events/new
@@ -24,7 +25,21 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
+
+
+    eventparams = event_params
+
+    if params['event']['picture_id'].present?
+      attachment = Ckeditor::Picture.find(params['event'][:picture_id])
+      eventparams['picture'] = attachment
+    end
+
+    if params['event']['tag_list'].present?
+      tags = params['event']['tag_list'].join(',')
+      eventparams['tag_list'] = tags
+    end
+
+    @event = Event.new(eventparams)
 
     respond_to do |format|
       if @event.save
@@ -69,6 +84,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name, :from, :to, :user_id, :location, :longitude, :latitude, :hostedby, :description, :intereted, :going, :invited, :cover)
+      params.require(:event).permit(:title, :from, :to, :user_id, :picture_id, :tag_list, :location, :longitude, :latitude, :hostedby, :description, :intereted, :going, :invited, :cover)
     end
 end

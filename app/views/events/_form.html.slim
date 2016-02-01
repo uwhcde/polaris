@@ -1,12 +1,34 @@
 = simple_form_for(@event) do |f|
+  .guide-new-header.cover-upload class="#{'is_edit' if !@event.new_record?}" data-upload-url="#{media.pictures_path}"
+    .cu-status
+      .btn.btn-default.btn-file.cover-upload-button
+        = "#{if !@event.new_record? then 'Change' else 'Browse' end}"
+        input type="file" name='upload'
+      .loader
+        = image_tag "loader.svg"
+      .files
   = f.error_notification
-  .form-inputs
-    = f.input :title
-    = f.input :from
-    = f.input :to
-    = f.input :location
-    = f.input :hostedby
-    = f.input :description
-    = f.input :cover
+  = f.input :title
+  input.cover_id name="event[picture_id]" type="hidden"
+  = f.hidden_field :user_id, :value => current_user.id
+  .row
+    .col-lg-6
+      = f.input :from, :as => :datetime_picker
+    .col-lg-6
+      = f.input :to, :as => :datetime_picker
+  / = f.input :location
+  .row
+    .col-lg-6
+      = f.input :location, :label => "Location", :input_html => { :id => "gmaps-input-address", :placeholder => "Start typing an address or location" }
+
+  = f.input :hostedby
+  = f.input :description, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'mini'}}
+  = f.input :tag_list, placeholder: 'Select a category', label: 'Category', input_html: { class: 'js-auto-complete', multiple: true }, collection: Polaris::Constants::Categories::DEFAULT, as: :select
+  / = f.input :cover
   .form-actions
-    = f.button :submit
+    .pull-right
+      = link_to 'Cancel', guides_path
+      == "&nbsp;&nbsp;&nbsp;&nbsp;"
+      = f.button :submit, :class => "btn btn-primary"
+
+

@@ -18,6 +18,7 @@
 //= require bootstrap-manifest
 
 //= require ckeditor/init
+//= require ckeditor/config
 
 //= require cocoon
 
@@ -39,7 +40,10 @@
 //= require ./templates/Templates
 //= require web/Polaris
 
+
+
 //= require turbolinks
 //= require_tree ./web
+
 
 

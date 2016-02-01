@@ -5,7 +5,6 @@ Polaris.Votes = do ->
     $('.js-votes').on('click', '.js-poll-vote', _handleVoteUp)
 
   _handleVoteUp = (event) ->
-    console.log "Here.."
     event.preventDefault()
     _this = $(this)
     url = _this.attr('href')

@@ -5,7 +5,6 @@ Polaris.Forms = do ->
     $('.help-type').on('change', '[name="help[help_type]"]', _handleChange)
 
   _handleChange = ->
-    console.log $(this).val()
     if $(this).val() is 'true'
       $('.new-card').attr('class', 'new-card help-request')
     else
