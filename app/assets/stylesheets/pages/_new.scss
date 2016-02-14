@@ -28,16 +28,16 @@
   border-radius: 3px 3px 0 0;
   position: relative;
   .cu-status {
-    &:before {
-      content: "";
-      display: block;
-      top: 20px;
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
-      border: dashed 2px #C7C4C4;
-      position: absolute;
-    }
+    // &:before {
+    //   content: "";
+    //   display: block;
+    //   top: 20px;
+    //   left: 20px;
+    //   right: 20px;
+    //   bottom: 20px;
+    //   border: dashed 2px #C7C4C4;
+    //   position: absolute;
+    // }
     .loader {
       position: absolute;
       left: 50%;

@@ -1,5 +1,5 @@
 = simple_form_for(@guide, html: { class: 'form-vertical', multipart: true }) do |f|
-  .guide-new-header.cover-upload class="#{'is_edit' if !@guide.new_record?}" data-upload-url="#{media.pictures_path}"
+  .guide-new-header.cover-upload class="#{'is_edit' if !@guide.new_record?}" data-upload-url="#{media.pictures_path}"  style="#{'background-image: url(@guide.picture.try(:url))' if !@guide.new_record?}"
     .cu-status
       .btn.btn-default.btn-file.cover-upload-button
         = "#{if !@guide.new_record? then 'Change' else 'Browse' end}"

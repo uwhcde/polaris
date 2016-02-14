@@ -1,17 +1,42 @@
 p#notice
   = notice
 
-.row
-  - @guides.each do |guide|
-    .col-md-4.img-portfolio
-      a href="portfolio-item.html"
-        img.img-responsive.img-hover alt="" src=""
-      h3
-        = guide.title
-      p = guide.short_description
-      div.actions
-        = link_to 'Show', guide
-        '
-        = link_to 'Edit', edit_guide_path(guide)
-        '
-        = link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' }
+/ .row
+/   - @guides.each do |guide|
+/     .col-md-4.img-portfolio
+/       a href="portfolio-item.html"
+/         img.img-responsive.img-hover alt="" src=""
+/       h3
+/         = guide.title
+/       p = guide.short_description
+/       div.actions
+/         = link_to 'Show', guide
+/         '
+/         = link_to 'Edit', edit_guide_path(guide)
+/         '
+/         = link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' }
+
+
+.page
+  / #sorting
+  /   .row
+  /     .sort
+  /       form.form-inline
+  /         select.form-control
+  /           option Sort by
+  /           option Newest
+  /           option Rating
+
+  /         select.form-control
+  /           option Filter by
+  /           option Guide
+  /           option Help
+  /           option All
+
+  .row
+    - @guides.each do |guide|
+      .col-lg-3.col-md-4.col-sm-6.col-xs-12
+        .card.card-default
+          = render "shared/cards/guide_card", :post => guide
+
+
