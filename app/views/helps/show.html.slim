@@ -14,10 +14,8 @@
                   - @help.tag_list.each do |tag|
                     span
                       = tag.capitalize
-            .col-lg-3
-              - if can? :update, @help
-                .pull-right
-                    = link_to 'Edit', edit_help_path(@help), :class => 'btn btn-primary btn-sm'
+            = render "shared/modules/dropdown", :post => @help, :post_path => edit_help_path(@help)
+
           br
           .row
             .col-lg-6

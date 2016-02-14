@@ -1,3 +1,29 @@
+.small {
+  .card {
+    @include card-shadow();
+    &:hover {
+      .card-footer {
+      }
+    }
+    .post-stats .votes i {
+      height: 15px;
+      width: 15px;
+    }
+    .card-body {
+      height: 150px;
+    }
+    .card-footer {
+      padding: 2px 15px;
+    }
+    .card-title h4 {
+      font-size: 14px;
+        white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    }
+  }
+}
+
 .card {
   @include card-shadow();
   overflow: hidden;

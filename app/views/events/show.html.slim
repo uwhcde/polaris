@@ -14,10 +14,9 @@
                 - @event.tag_list.each do |tag|
                   span
                     = tag.capitalize
-          .col-lg-3
-            - if can? :update, @event
-              .pull-right
-                  = link_to 'Edit', edit_event_path(@event), :class => 'btn btn-primary btn-sm'
+
+          = render "shared/modules/dropdown", :post => @event, :post_path => edit_event_path(@event)
+
         .clearfix
         div.post-content
           == @event.description

@@ -1,0 +1,9 @@
+.row
+  .col-lg-12
+    h5.text-muted
+      = "RECENTLY VIEWED"
+.row.small
+  - @posts.take(6).each do |post|
+    .col-lg-2.col-md-4.col-sm-6.col-xs-12
+      .card.card-default
+        = render "shared/cards/#{post[:value].class.name.downcase}_card", :post => post[:value], :small => true

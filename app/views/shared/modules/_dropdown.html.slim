@@ -1,0 +1,17 @@
+.col-lg-3
+  - if can? :update, post
+    .pull-right
+        = link_to 'Edit', post_path, :class => 'btn btn-primary btn-sm'
+        == "&nbsp;&nbsp;&nbsp;"
+
+        .dropdown.pull-right
+          button#dropdownMenu1.btn.btn-default.btn-sm.dropdown-toggle aria-expanded="true" aria-haspopup="true" data-toggle="dropdown" type="button"
+            sapn.i-chevron-thin-down
+          ul.dropdown-menu aria-labelledby="dropdownMenu1"
+            li
+              = link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+            li
+              a href="#"  Unpublish
+            li.divider role="separator"
+            li
+              a href="#"  Report Abuse
