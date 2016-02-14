@@ -13,6 +13,9 @@ class Ability
       post.try(:user) == user
     end
 
+    can :destroy, :all do |post|
+      post.try(:user) == user
+    end
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.

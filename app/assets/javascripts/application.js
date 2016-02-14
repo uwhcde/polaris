@@ -41,7 +41,6 @@
 //= require web/Polaris
 
 
-
 //= require turbolinks
 //= require_tree ./web
 

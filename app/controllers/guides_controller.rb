@@ -87,7 +87,7 @@ class GuidesController < ApplicationController
   def destroy
     @guide.destroy
     respond_to do |format|
-      format.html { redirect_to guides_url, notice: 'Guide was successfully destroyed.' }
+      format.html { redirect_to home_index_path, notice: 'Guide was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
