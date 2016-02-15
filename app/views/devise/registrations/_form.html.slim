@@ -1,16 +1,19 @@
 = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true, class: 'form-vertical' }) do |f|
   = devise_error_messages!
-  .guide-new-header.cover-upload class="#{'is_edit' if !@users.new_record?}" data-upload-url="#{users_edit_path}"  style="#{'background-image: url(@users.picture.try(:url))' if !@users.new_record?}"
-    .cu-status
-      .btn.btn-default.btn-file.cover-upload-button
-        = "#{if !@users.new_record? then 'Change' else 'Browse' end}"
-        input type="file" name='upload'
-      .loader
-        = image_tag "loader.svg"
-      .files
+  .cover
+    .user-profile-cover data-upload-url="#{edit_user_registration_path}"  style="background-image: url(#{current_user.cover_image.try(:url)})"
+      .cu-status
+        .btn.btn-default.btn-file.cover-upload-button
+          = 'Update Cover'
+          = f.file_field :cover_image
+        .files
 
-  = f.file_field :cover_image
-  = f.file_field :picture
+    .user-profile-picture data-upload-url="#{edit_user_registration_path}"  style="background-image: url(#{current_user.picture.try(:url)})"
+      .cu-status
+        .btn.btn-default.btn-file.cover-upload-button
+          = 'Browse'
+          = f.file_field :picture
+        .files
 
   = f.label "Name"
   br

@@ -27,13 +27,17 @@
             = @user.email
           .social-network
             - if !@user.social_media_1.blank?
-              = link_to image_tag(@user.social_media_1), @user.social_media_1, :class => 'social-media-link'
+              = link_to @user.social_media_1, :class => "social-media-link"
+                i class="i-#{URI.parse(@user.social_media_1).host[/\..+\./].gsub(/^\./, '').gsub(/\.$/, '')}"
             - if !@user.social_media_2.blank?
-              = link_to image_tag(@user.social_media_2), @user.social_media_2, :class => 'social-media-link'
+              = link_to @user.social_media_2, :class => "social-media-link"
+                i class="i-#{URI.parse(@user.social_media_2).host[/\..+\./].gsub(/^\./, '').gsub(/\.$/, '')}2"
             - if !@user.social_media_3.blank?
-              = link_to image_tag(@user.social_media_3), @user.social_media_3, :class => 'social-media-link'
+              = link_to @user.social_media_3, :class => "social-media-link"
+                i class="i-#{URI.parse(@user.social_media_3).host[/\.?.+\./].gsub(/^\./, '').gsub(/\.$/, '')}"
             - if !@user.social_media_4.blank?
-              = link_to image_tag(@user.social_media_4), @user.social_media_4, :class => 'social-media-link'
+              = link_to @user.social_media_4, :class => "social-media-link"
+                i class="i-#{URI.parse(@user.social_media_4).host[/\.?.+\./].gsub(/^\./, '').gsub(/\.$/, '')}"
       - if !@user.description.blank?
         .panel.panel-white.description
           .panel-heading
