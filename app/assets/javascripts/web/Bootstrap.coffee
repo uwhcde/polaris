@@ -3,7 +3,6 @@ Polaris.Bootstrap = do ->
   _init = ->
     _initPageTransitions()
 
-
   _initPageTransitions = ->
     document.addEventListener 'page:change', ->
       document.querySelector('main').className = 'animated half fadeIn'

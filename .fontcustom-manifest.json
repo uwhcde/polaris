@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "afd4448150a8f5e4dd43dd09fbc0526a6cac0fe110f1d567b3f033862552e3c4",
-    "current": "afd4448150a8f5e4dd43dd09fbc0526a6cac0fe110f1d567b3f033862552e3c4"
+    "previous": "f6ed47fffff59b0993f92396a3cbab8c605d3f021fdb5b76f6245b49000b1481",
+    "current": "f6ed47fffff59b0993f92396a3cbab8c605d3f021fdb5b76f6245b49000b1481"
   },
   "fonts": [
     "app/assets/fonts/icons.ttf",
@@ -10,6 +10,10 @@
     "app/assets/fonts/icons.eot"
   ],
   "glyphs": {
+    "500px": {
+      "codepoint": 62121,
+      "source": "app/assets/icons/500px.svg"
+    },
     "accessibility": {
       "codepoint": 61696,
       "source": "app/assets/icons/accessibility.svg"
@@ -126,6 +130,14 @@
       "codepoint": 61725,
       "source": "app/assets/icons/barcode.svg"
     },
+    "behance": {
+      "codepoint": 62122,
+      "source": "app/assets/icons/behance.svg"
+    },
+    "behance2": {
+      "codepoint": 62123,
+      "source": "app/assets/icons/behance2.svg"
+    },
     "bell": {
       "codepoint": 61726,
       "source": "app/assets/icons/bell.svg"
@@ -149,6 +161,14 @@
     "blog": {
       "codepoint": 61731,
       "source": "app/assets/icons/blog.svg"
+    },
+    "blogger": {
+      "codepoint": 62124,
+      "source": "app/assets/icons/blogger.svg"
+    },
+    "blogger2": {
+      "codepoint": 62125,
+      "source": "app/assets/icons/blogger2.svg"
     },
     "bold": {
       "codepoint": 61732,
@@ -462,6 +482,14 @@
       "codepoint": 61793,
       "source": "app/assets/icons/database.svg"
     },
+    "delicious": {
+      "codepoint": 62126,
+      "source": "app/assets/icons/delicious.svg"
+    },
+    "deviantart": {
+      "codepoint": 62127,
+      "source": "app/assets/icons/deviantart.svg"
+    },
     "diamonds": {
       "codepoint": 61794,
       "source": "app/assets/icons/diamonds.svg"
@@ -514,6 +542,10 @@
       "codepoint": 61801,
       "source": "app/assets/icons/drawer2.svg"
     },
+    "dribbble": {
+      "codepoint": 62128,
+      "source": "app/assets/icons/dribbble.svg"
+    },
     "drive": {
       "codepoint": 61802,
       "source": "app/assets/icons/drive.svg"
@@ -529,6 +561,10 @@
     "eject": {
       "codepoint": 61805,
       "source": "app/assets/icons/eject.svg"
+    },
+    "ello": {
+      "codepoint": 62129,
+      "source": "app/assets/icons/ello.svg"
     },
     "embed": {
       "codepoint": 61806,
@@ -593,6 +629,14 @@
     "eyedropper": {
       "codepoint": 61821,
       "source": "app/assets/icons/eyedropper.svg"
+    },
+    "facebook": {
+      "codepoint": 62130,
+      "source": "app/assets/icons/facebook.svg"
+    },
+    "facebook2": {
+      "codepoint": 62131,
+      "source": "app/assets/icons/facebook2.svg"
     },
     "feed": {
       "codepoint": 61822,
@@ -670,6 +714,26 @@
       "codepoint": 61840,
       "source": "app/assets/icons/flag.svg"
     },
+    "flattr": {
+      "codepoint": 62132,
+      "source": "app/assets/icons/flattr.svg"
+    },
+    "flickr": {
+      "codepoint": 62133,
+      "source": "app/assets/icons/flickr.svg"
+    },
+    "flickr2": {
+      "codepoint": 62134,
+      "source": "app/assets/icons/flickr2.svg"
+    },
+    "flickr3": {
+      "codepoint": 62135,
+      "source": "app/assets/icons/flickr3.svg"
+    },
+    "flickr4": {
+      "codepoint": 62136,
+      "source": "app/assets/icons/flickr4.svg"
+    },
     "floppy-disk": {
       "codepoint": 61841,
       "source": "app/assets/icons/floppy-disk.svg"
@@ -718,6 +782,10 @@
       "codepoint": 61852,
       "source": "app/assets/icons/forward3.svg"
     },
+    "foursquare": {
+      "codepoint": 62137,
+      "source": "app/assets/icons/foursquare.svg"
+    },
     "frustrated": {
       "codepoint": 61853,
       "source": "app/assets/icons/frustrated.svg"
@@ -730,6 +798,10 @@
       "codepoint": 61855,
       "source": "app/assets/icons/gift.svg"
     },
+    "github": {
+      "codepoint": 62138,
+      "source": "app/assets/icons/github.svg"
+    },
     "glass": {
       "codepoint": 61856,
       "source": "app/assets/icons/glass.svg"
@@ -737,6 +809,18 @@
     "glass2": {
       "codepoint": 61857,
       "source": "app/assets/icons/glass2.svg"
+    },
+    "google-plus": {
+      "codepoint": 62139,
+      "source": "app/assets/icons/google-plus.svg"
+    },
+    "google-plus2": {
+      "codepoint": 62140,
+      "source": "app/assets/icons/google-plus2.svg"
+    },
+    "google-plus3": {
+      "codepoint": 62141,
+      "source": "app/assets/icons/google-plus3.svg"
     },
     "grin": {
       "codepoint": 61858,
@@ -746,6 +830,10 @@
       "codepoint": 61859,
       "source": "app/assets/icons/grin2.svg"
     },
+    "hackernews": {
+      "codepoint": 62142,
+      "source": "app/assets/icons/hackernews.svg"
+    },
     "hammer": {
       "codepoint": 61860,
       "source": "app/assets/icons/hammer.svg"
@@ -753,6 +841,10 @@
     "hammer2": {
       "codepoint": 61861,
       "source": "app/assets/icons/hammer2.svg"
+    },
+    "hangouts": {
+      "codepoint": 62143,
+      "source": "app/assets/icons/hangouts.svg"
     },
     "happy": {
       "codepoint": 61862,
@@ -830,6 +922,10 @@
       "codepoint": 61880,
       "source": "app/assets/icons/insert-template.svg"
     },
+    "instagram": {
+      "codepoint": 62144,
+      "source": "app/assets/icons/instagram.svg"
+    },
     "italic": {
       "codepoint": 61881,
       "source": "app/assets/icons/italic.svg"
@@ -858,6 +954,14 @@
       "codepoint": 61887,
       "source": "app/assets/icons/last.svg"
     },
+    "lastfm": {
+      "codepoint": 62145,
+      "source": "app/assets/icons/lastfm.svg"
+    },
+    "lastfm2": {
+      "codepoint": 62146,
+      "source": "app/assets/icons/lastfm2.svg"
+    },
     "leaf": {
       "codepoint": 61888,
       "source": "app/assets/icons/leaf.svg"
@@ -885,6 +989,14 @@
     "link": {
       "codepoint": 61894,
       "source": "app/assets/icons/link.svg"
+    },
+    "linkedin": {
+      "codepoint": 62147,
+      "source": "app/assets/icons/linkedin.svg"
+    },
+    "linkedin2": {
+      "codepoint": 62148,
+      "source": "app/assets/icons/linkedin2.svg"
     },
     "list": {
       "codepoint": 61895,
@@ -1134,6 +1246,14 @@
       "codepoint": 61956,
       "source": "app/assets/icons/pilcrow.svg"
     },
+    "pinterest": {
+      "codepoint": 62149,
+      "source": "app/assets/icons/pinterest.svg"
+    },
+    "pinterest2": {
+      "codepoint": 62150,
+      "source": "app/assets/icons/pinterest2.svg"
+    },
     "play": {
       "codepoint": 61957,
       "source": "app/assets/icons/play.svg"
@@ -1238,6 +1358,10 @@
       "codepoint": 61982,
       "source": "app/assets/icons/radio-unchecked.svg"
     },
+    "reddit": {
+      "codepoint": 62151,
+      "source": "app/assets/icons/reddit.svg"
+    },
     "redo": {
       "codepoint": 61983,
       "source": "app/assets/icons/redo.svg"
@@ -1245,6 +1369,10 @@
     "redo2": {
       "codepoint": 61984,
       "source": "app/assets/icons/redo2.svg"
+    },
+    "renren": {
+      "codepoint": 62152,
+      "source": "app/assets/icons/renren.svg"
     },
     "reply": {
       "codepoint": 61985,
@@ -1257,6 +1385,14 @@
     "rocket": {
       "codepoint": 61987,
       "source": "app/assets/icons/rocket.svg"
+    },
+    "rss": {
+      "codepoint": 62153,
+      "source": "app/assets/icons/rss.svg"
+    },
+    "rss2": {
+      "codepoint": 62154,
+      "source": "app/assets/icons/rss2.svg"
     },
     "rtl": {
       "codepoint": 61988,
@@ -1322,6 +1458,14 @@
       "codepoint": 62003,
       "source": "app/assets/icons/sigma.svg"
     },
+    "sina-weibo": {
+      "codepoint": 62155,
+      "source": "app/assets/icons/sina-weibo.svg"
+    },
+    "skype": {
+      "codepoint": 62156,
+      "source": "app/assets/icons/skype.svg"
+    },
     "sleepy": {
       "codepoint": 62004,
       "source": "app/assets/icons/sleepy.svg"
@@ -1361,6 +1505,14 @@
     "sort-numeric-asc": {
       "codepoint": 62013,
       "source": "app/assets/icons/sort-numeric-asc.svg"
+    },
+    "soundcloud": {
+      "codepoint": 62157,
+      "source": "app/assets/icons/soundcloud.svg"
+    },
+    "soundcloud2": {
+      "codepoint": 62158,
+      "source": "app/assets/icons/soundcloud2.svg"
     },
     "spades": {
       "codepoint": 62014,
@@ -1422,9 +1574,17 @@
       "codepoint": 62028,
       "source": "app/assets/icons/spoon-knife.svg"
     },
+    "spotify": {
+      "codepoint": 62159,
+      "source": "app/assets/icons/spotify.svg"
+    },
     "stack": {
       "codepoint": 62029,
       "source": "app/assets/icons/stack.svg"
+    },
+    "stackoverflow": {
+      "codepoint": 62160,
+      "source": "app/assets/icons/stackoverflow.svg"
     },
     "star-empty": {
       "codepoint": 62030,
@@ -1450,6 +1610,14 @@
       "codepoint": 62035,
       "source": "app/assets/icons/stats-dots.svg"
     },
+    "steam": {
+      "codepoint": 62161,
+      "source": "app/assets/icons/steam.svg"
+    },
+    "steam2": {
+      "codepoint": 62162,
+      "source": "app/assets/icons/steam2.svg"
+    },
     "stop": {
       "codepoint": 62036,
       "source": "app/assets/icons/stop.svg"
@@ -1465,6 +1633,14 @@
     "strikethrough": {
       "codepoint": 62039,
       "source": "app/assets/icons/strikethrough.svg"
+    },
+    "stumbleupon": {
+      "codepoint": 62163,
+      "source": "app/assets/icons/stumbleupon.svg"
+    },
+    "stumbleupon2": {
+      "codepoint": 62164,
+      "source": "app/assets/icons/stumbleupon2.svg"
     },
     "subscript": {
       "codepoint": 62040,
@@ -1509,6 +1685,10 @@
     "target": {
       "codepoint": 62050,
       "source": "app/assets/icons/target.svg"
+    },
+    "telegram": {
+      "codepoint": 62165,
+      "source": "app/assets/icons/telegram.svg"
     },
     "terminal": {
       "codepoint": 62051,
@@ -1574,9 +1754,25 @@
       "codepoint": 62060,
       "source": "app/assets/icons/truck.svg"
     },
+    "tumblr": {
+      "codepoint": 62166,
+      "source": "app/assets/icons/tumblr.svg"
+    },
+    "tumblr2": {
+      "codepoint": 62167,
+      "source": "app/assets/icons/tumblr2.svg"
+    },
     "tv": {
       "codepoint": 62061,
       "source": "app/assets/icons/tv.svg"
+    },
+    "twitch": {
+      "codepoint": 62168,
+      "source": "app/assets/icons/twitch.svg"
+    },
+    "twitter": {
+      "codepoint": 62169,
+      "source": "app/assets/icons/twitter.svg"
     },
     "underline": {
       "codepoint": 62062,
@@ -1638,6 +1834,22 @@
       "codepoint": 62076,
       "source": "app/assets/icons/video-camera.svg"
     },
+    "vimeo": {
+      "codepoint": 62170,
+      "source": "app/assets/icons/vimeo.svg"
+    },
+    "vimeo2": {
+      "codepoint": 62171,
+      "source": "app/assets/icons/vimeo2.svg"
+    },
+    "vine": {
+      "codepoint": 62172,
+      "source": "app/assets/icons/vine.svg"
+    },
+    "vk": {
+      "codepoint": 62173,
+      "source": "app/assets/icons/vk.svg"
+    },
     "volume-decrease": {
       "codepoint": 62077,
       "source": "app/assets/icons/volume-decrease.svg"
@@ -1670,6 +1882,10 @@
       "codepoint": 62084,
       "source": "app/assets/icons/warning.svg"
     },
+    "whatsapp": {
+      "codepoint": 62174,
+      "source": "app/assets/icons/whatsapp.svg"
+    },
     "wink": {
       "codepoint": 62085,
       "source": "app/assets/icons/wink.svg"
@@ -1690,9 +1906,37 @@
       "codepoint": 62089,
       "source": "app/assets/icons/wondering2.svg"
     },
+    "wordpress": {
+      "codepoint": 62175,
+      "source": "app/assets/icons/wordpress.svg"
+    },
     "wrench": {
       "codepoint": 62090,
       "source": "app/assets/icons/wrench.svg"
+    },
+    "xing": {
+      "codepoint": 62176,
+      "source": "app/assets/icons/xing.svg"
+    },
+    "xing2": {
+      "codepoint": 62177,
+      "source": "app/assets/icons/xing2.svg"
+    },
+    "yahoo": {
+      "codepoint": 62178,
+      "source": "app/assets/icons/yahoo.svg"
+    },
+    "yelp": {
+      "codepoint": 62179,
+      "source": "app/assets/icons/yelp.svg"
+    },
+    "youtube": {
+      "codepoint": 62180,
+      "source": "app/assets/icons/youtube.svg"
+    },
+    "youtube2": {
+      "codepoint": 62181,
+      "source": "app/assets/icons/youtube2.svg"
     },
     "zoom-in": {
       "codepoint": 62091,

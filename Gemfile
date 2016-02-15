@@ -37,6 +37,9 @@ gem 'paperclip'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'acts_as_votable'
 
+#bookmarks
+gem 'activerecord-reputation-system'
+
 #comments
 gem 'awesome_nested_set', '~> 3.0.2'
 gem 'acts_as_commentable_with_threading', '~> 2.0.1'
