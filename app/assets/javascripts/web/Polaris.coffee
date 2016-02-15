@@ -18,6 +18,7 @@ window.Polaris = do ->
     Polaris.Bookmarks.init()
     Polaris.Forms.init()
     Polaris.Comments.init()
+    Polaris.Users.init()
 
     return true
 
