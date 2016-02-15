@@ -24,7 +24,6 @@
   = f.input :hostedby
   = f.input :description, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'mini'}}
   = f.input :tag_list, placeholder: 'Select a category', label: 'Category', input_html: { class: 'js-auto-complete', multiple: true }, collection: Polaris::Constants::Categories::DEFAULT, as: :select
-  / = f.input :cover
   .form-actions
     .pull-right
       = link_to 'Cancel', guides_path

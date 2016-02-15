@@ -1,16 +1,26 @@
 Rails.application.routes.draw do
 
-  resources :helps
-  resources :events
   mount Ckeditor::Engine => '/media', as: "media"
   get 'home/index'
 
-  get 'my_cards' => 'my_cards#index'
+  get 'mycards' => 'mycards#index'
 
   resources :guides do
     resources :sections
     member {
       post :vote
+      post :bookmark
+    }
+  end
+
+  resources :helps do
+    member {
+      post :bookmark
+    }
+  end
+
+  resources :events do
+    member {
       post :bookmark
     }
   end

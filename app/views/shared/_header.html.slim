@@ -36,9 +36,8 @@ nav.navbar.navbar-default.navbar-fixed-top role="navigation"
                   = " Help"
 
           li.dropdown
-            a.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#"
-              i.i-user
-              = current_user.first_name
+            a.dropdown-toggle.header-profile-pic aria-expanded="false" data-toggle="dropdown" href="#"
+              = image_tag current_user.picture.url(:medium)
               b.caret
             ul.dropdown-menu
               li
@@ -47,9 +46,9 @@ nav.navbar.navbar-default.navbar-fixed-top role="navigation"
                   | Profile
                 end
               li
-                a href="#"
+                = link_to mycards_path do
                   i.fa.fa-fw.fa-envelope
-                  | My Cards
+                  = "My Cards"
               li.divider
               li
                 = link_to destroy_user_session_path, method: :delete do
