@@ -46,9 +46,9 @@ nav.navbar.navbar-default.navbar-fixed-top role="navigation"
                   | Profile
                 end
               li
-                a href="#"
+                = link_to mycards_path do
                   i.fa.fa-fw.fa-envelope
-                  | My Cards
+                  = "My Cards"
               li.divider
               li
                 = link_to destroy_user_session_path, method: :delete do

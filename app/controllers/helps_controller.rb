@@ -28,7 +28,20 @@ class HelpsController < ApplicationController
   # POST /helps
   # POST /helps.json
   def create
-    @help = Help.new(help_params)
+
+    helpparams = help_params
+
+    if params['help']['picture_id'].present?
+      attachment = Ckeditor::Picture.find(params['help'][:picture_id])
+      helpparams['picture'] = attachment
+    end
+
+    if params['help']['tag_list'].present?
+      tags = params['help']['tag_list'].join(',')
+      helpparams['tag_list'] = tags
+    end
+
+    @help = Help.new(helpparams)
 
     respond_to do |format|
       if @help.save
@@ -60,7 +73,7 @@ class HelpsController < ApplicationController
   def destroy
     @help.destroy
     respond_to do |format|
-      format.html { redirect_to helps_url, notice: 'Help was successfully destroyed.' }
+      format.html { redirect_to home_index_path, notice: 'Help was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -73,6 +86,6 @@ class HelpsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def help_params
-      params.require(:help).permit(:title, :user_id, :location, :longitude, :latitude, :requiredby, :description, :cover, :date)
+      params.require(:help).permit(:title, :user_id, :location, :longitude, :latitude, :requiredby, :description, :picture_id, :date)
     end
 end

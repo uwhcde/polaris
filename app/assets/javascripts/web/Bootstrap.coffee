@@ -22,7 +22,8 @@ Polaris.Bootstrap = do ->
     $('#gmaps-input-address').geocomplete()
 
   initTimePicker: ->
-    $('.datetimepicker').datetimepicker();
+    $('.datetimepicker').datetimepicker
+      allowInputToggle: true
 
   init: ->
     _init()
