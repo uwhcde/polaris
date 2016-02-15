@@ -36,7 +36,6 @@
   &:hover {
     transition: all 0.33s ease-in;
     .card-type {
-      opacity: 1;
       -webkit-transition: all 0.33s ease-in;
     }
   }
@@ -44,16 +43,31 @@
 
 .card-type {
   position: absolute;
-  background: rgba(255, 255, 255, 0.85);
   padding: 2px 8px;
-  color: #555;
+  color: $white;
   z-index: 200;
   border-radius: 3px;
   top: 15px;
   left: 25px;
   font-size: 12px;
-  opacity: 0;
   transition: all 0.33s ease-in;
+
+  &.guide {
+    background: #821177;
+  }
+
+  &.help {
+    background: #689f38;
+    &.required {
+
+    }
+    &.needed {
+
+    }
+  }
+  &.event {
+    background: #039be5;
+  }
 }
 
 .card-body {
