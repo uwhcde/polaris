@@ -2,19 +2,9 @@
   .row
     .col-lg-9
       .post-show
-        .post-header style="background-image: url(#{@event.picture.try(:url)})"
-          .post-title
-            h1 == @event.title
+        = render "shared/modules/postheader", :post => @event, :path => bookmark_event_path(@event, format: :json)
         .post-meta.row
-          .col-lg-9
-            - if @event.tag_list.present?
-              .tags
-                bdi.text-muted
-                  == "Posted under  &nbsp;&nbsp;"
-                - @event.tag_list.each do |tag|
-                  span
-                    = tag.capitalize
-
+          = render "shared/modules/meta", :post => @event
           = render "shared/modules/dropdown", :post => @event, :post_path => edit_event_path(@event)
 
         .clearfix

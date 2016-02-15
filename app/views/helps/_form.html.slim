@@ -1,8 +1,19 @@
 = simple_form_for(@help) do |f|
+  .guide-new-header.cover-upload class="#{'is_edit' if !@help.new_record?}" data-upload-url="#{media.pictures_path}"
+    .cu-status
+      .btn.btn-default.btn-file.cover-upload-button
+        = "#{if !@help.new_record? then 'Change' else 'Browse' end}"
+        input type="file" name='upload'
+      .loader
+        = image_tag "loader.svg"
+      .files
+
   = f.error_notification
   .form-inputs
     .help-type
       / = f.input :help_type, as: :radio_buttons, checked_value: true, unchecked_value: false
+      input.cover_id name="help[picture_id]" type="hidden"
+      = f.hidden_field :user_id, :value => current_user.id
       = f.input :help_type,
             :collection => [[true, 'I need help'], [false, 'I can help']],
             :label_method => :last,
@@ -22,9 +33,10 @@
     / = f.input :description
     = f.hidden_field :user_id, :value => current_user.id
     = f.input :description, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'mini'}}
-    / = f.input :cover
+    = f.input :tag_list, placeholder: 'Select a category', label: 'Category', input_html: { class: 'js-auto-complete', multiple: true }, collection: Polaris::Constants::Categories::DEFAULT, as: :select
   .form-actions
     .pull-right
-      = link_to 'Cancel', helps_path
+      = link_to 'Cancel', guides_path
       == "&nbsp;&nbsp;&nbsp;&nbsp;"
-      = f.button :submit, :value => "Post", :class => 'btn btn-primary'
+      = f.button :submit, 'Post', :class => "btn btn-primary"
+

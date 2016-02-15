@@ -1,5 +1,14 @@
 .navbar-default {
-    position: fixed;
-    border-color: $border-color;
-    background: $white;
+  position: fixed;
+  border-color: $border-color;
+  background: $white;
+}
+
+.navbar-nav > li > a.header-profile-pic {
+  padding: 15px;
+  img {
+    height: 30px;
+    display: inline-block;
+    border-radius: 100%;
+  }
 }
