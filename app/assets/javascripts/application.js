@@ -41,5 +41,17 @@
 
 //= require turbolinks
 //= require_tree ./web
+$(document).ready(function(){
+     $(".carousel").carousel({
+     	interval: false
+     });
+});
 
+$(".overlay").hover(function(){
+	$(this).siblings("img").css("transform","scale(1.3)");
+	console.log("hover");
+},function(){
+	$(this).siblings("img").css("transform","scale(1)");
+	console.log("hover");
+});
 

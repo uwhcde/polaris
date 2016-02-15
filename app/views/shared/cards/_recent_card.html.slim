@@ -1,0 +1,19 @@
+.col-lg-2.col-sm-3.col-xs-4.recent.item.active
+  .card.card-default
+    = link_to post do
+      span.bookmark.hide
+        i.i-bookmark
+      span.card-type
+        = "guide"
+      .card-body
+        .card-title
+          p = post.title
+
+    .card-footer
+      .post-stats.pull-right
+        span.votes.up
+          / i.i-arrow-up2
+          / = post.get_upvotes.size
+        span.votes.down
+          / i.i-arrow-down2
+          / = post.get_downvotes.size

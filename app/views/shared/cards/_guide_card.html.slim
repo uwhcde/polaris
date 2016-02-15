@@ -1,12 +1,15 @@
 .col-lg-3.col-md-4.col-sm-6.col-xs-12
   .card.card-default
     = link_to post do
-      span.card-type
+      span.bookmark.hide
+        i.i-bookmark
+      span.card-type.type-guide
         = "guide"
-      .card-body style="background-image: url(#{post.picture.try(:url)})"
-        i.fa.fa-star.fa-lg.unbookmarked.hide
+      .card-body 
+        img src="#{post.picture.try(:url)}"
+        .overlay
         .card-title
-          h4 = post.title
+          h4 = truncate(post.title, :length => 40)
 
     .card-footer
       / .user-acted.pull-left
@@ -21,8 +24,8 @@
       /     = "& 2 others voted"
       .post-stats.pull-right
         span.votes.up
-          i.i-arrow-up2
+          i.i-arrow-up
           = post.get_upvotes.size
         span.votes.down
-          i.i-arrow-down2
+          i.i-arrow-down
           = post.get_downvotes.size

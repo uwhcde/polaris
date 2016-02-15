@@ -1,0 +1,31 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.time {
+	margin: 10px 0;
+
+	i {
+		margin-right: 20px;
+	}
+
+	p {
+		display: inline;
+	}
+}
+
+.location {
+	margin: 10px 0 20px 0;
+
+	i {
+		margin-right: 20px;
+	}
+
+	p {
+		display: inline;
+	}
+}
+
+.post-show {
+	padding-bottom: 30px;
+}

@@ -1,19 +1,18 @@
 .col-lg-3.col-md-4.col-sm-6.col-xs-12
   .card.card-default
     = link_to post do
-      span.card-type
+      span.bookmark.hide
+        i.i-bookmark
+      span.card-type.type-help
         = "help"
       .card-body
-        i.fa.fa-star.fa-lg.unbookmarked.hide
         .card-title
-          h4 = post.title
+          h4 = truncate(post.title, :length => 40)
 
     .card-footer
-      .user-acted.pull-left
+      .event-date.pull-left
+        p = post.date.to_formatted_s(:short)
       .post-stats.pull-right
-        span.votes.up
-          i.i-arrow-up2
-
         span.votes.down
-          i.i-arrow-down2
+          i.i-bubbles
 

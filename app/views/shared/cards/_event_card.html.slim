@@ -1,17 +1,19 @@
 .col-lg-3.col-md-4.col-sm-6.col-xs-12
-  .panel.panel-default
-    .panel-body
-      i.fa.fa-star.fa-lg.unbookmarked.hide
-      h4 = truncate(post.title, :length => 25)
-      a href="/events/#{post.id}"
-        .overlay
-    .panel-footer
-      .guideType
-        = "Event"
-      / .rating
-      /   span.upVotes
-      /     i.fa.fa-thumbs-up
-      /     = post.upVotes
-      /   .downVotes
-      /     i.fa.fa-thumbs-down
-      /     = post.downVotes
+  .card.card-default
+    = link_to post do
+      span.bookmark.hide
+        i.i-bookmark
+      span.card-type.type-event
+        = "event"
+      .card-body
+        .card-title
+          h4 = truncate(post.title, :length => 40)
+
+    .card-footer
+      .event-date.pull-left
+        p = post.from.to_formatted_s(:short)
+      .post-stats.pull-right
+        span.votes.up
+          i.i-users
+        span.votes.down
+          i.i-bubbles

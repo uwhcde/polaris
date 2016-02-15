@@ -1,0 +1,30 @@
+.recent {
+  .card {
+    height: 150px; 
+    width: 180px;
+    float: left;
+    display: inline-block;
+    margin: 0 5px 0 5px;
+    position: relative;
+  }
+
+  .card-type {
+    top: 5px;
+    left: 5px;
+  }
+
+  .card-title {
+    font-weight: 300;
+    padding: 0 5px;
+    bottom: 0;
+  }
+
+  .card-body {
+    height: 120px;
+  }
+  
+  .card-footer {
+    height: 30px;
+    padding: 2px;
+  }
+}

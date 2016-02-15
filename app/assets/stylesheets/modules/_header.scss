@@ -3,3 +3,32 @@
     border-color: $border-color;
     background: $white;
 }
+
+.dropdown {
+	img {
+		width: 20px;
+		margin-right: 5px;
+	}
+}
+
+.notifications {
+	width: 300px;
+	overflow-y: auto;
+
+	max-height: 300px;
+	li {
+		height: 50px;
+		display: inline-block;
+		i {
+			font-size: 24px;
+			width: 15%;
+		}
+		p {
+			padding:0 5px;
+			font-size: 12px;
+			width: 80%;
+			display: inline-block;
+			white-space: initial;
+		}
+	}
+}

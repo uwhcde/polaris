@@ -1,5 +1,199 @@
-
 .page
+  - if user_signed_in?
+    h3  Recently Viewed
+    .row 
+      #this-carousel-id.carousel.slide
+        .carousel-inner.recent
+          .item.active
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+          .item
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+          .item
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+            .card.card-default
+              span.bookmark.hide
+                i.i-bookmark
+              span.card-type
+                = "guide"
+              .card-body 
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                .card-title
+                  p = "Title"
+              .card-footer
+        a.carousel-control.left href="#this-carousel-id" data-slide="prev"
+          | &lsaquo;
+        a.carousel-control.right href="#this-carousel-id" data-slide="next"
+          | &rsaquo;
+  - else
+    .row
+      img src="assets/overlay.png" width="100%"
   = render "shared/filter"
   / #sorting
   /   .row
@@ -16,6 +210,41 @@
   /           option Help
   /           option All
 
-  .row
+  .row style="background: #fff;"
     - @posts.each do |post|
       = render "shared/cards/#{post[:value].class.name.downcase}_card", :post => post[:value]
+
+
+<!--
+- @posts.each do |post|
+          = render "shared/cards/recent_card", :post => post[:value]
+<div id="this-carousel-id" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="http://placehold.it/1200x480" alt="" />
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://placehold.it/1200x480" alt="" />
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://placehold.it/1200x480" alt="" />
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://placehold.it/1200x480" alt="" />
+      <div class="carousel-caption">
+        <p>Caption text here</p>
+      </div>
+    </div>
+  </div>
+    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+</div> -->

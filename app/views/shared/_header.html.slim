@@ -13,12 +13,9 @@ nav.navbar.navbar-default.navbar-fixed-top role="navigation"
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
-          li
-            a.fa.fa-bell.fa-lg href=""
           li.dropdown
-
             a.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#"
-              i.i-pencil
+              | Create
             ul.dropdown-menu
               li
                 a href="/guides/new"
@@ -35,23 +32,20 @@ nav.navbar.navbar-default.navbar-fixed-top role="navigation"
 
           li.dropdown
             a.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#"
-              i.i-user
+              img src=current_user.picture
               = current_user.first_name
               b.caret
             ul.dropdown-menu
               li
                 = link_to current_user do
-                  i.fa.fa-fw.fa-user
                   | Profile
                 end
               li
                 a href="#"
-                  i.fa.fa-fw.fa-envelope
                   | My Cards
               li.divider
               li
                 = link_to destroy_user_session_path, method: :delete do
-                  i.fa.fa-fw.fa-power-off
                   | Log Out
                 end
         - else
