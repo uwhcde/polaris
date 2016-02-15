@@ -1,10 +1,28 @@
-.page.show-page
+.page.show-page.bookmarks-page
   .row
-    -if @posts.nil?
-      = "No bookmarks"
-    - else
-      - @posts.each do |post|
-        - post
-        .col-lg-3.col-md-4.col-sm-6.col-xs-12
-          .card.card-default
-            = render "shared/cards/#{post.class.name.downcase}_card", :post => post
+    .col-lg-12
+      .filters
+        h4.pull-left.page-title
+          = "MY CARDS"
+        ul.filter-menu
+          li
+            a.filter-menu-item.active
+              = "All"
+          li
+            a.filter-menu-item
+              = "Bookmarks"
+          li
+            a.filter-menu-item
+              = "Drafts"
+          li
+            a.filter-menu-item
+              = "RSVP"
+        .clearfix
+      -if @posts.empty?
+        span.text-muted
+          = "No bookmarks"
+      - else
+        - @posts.each do |post|
+          .col-lg-3.col-md-4.col-sm-6.col-xs-12
+            .card.card-default
+              = render "shared/cards/#{post.class.name.downcase}_card", :post => post

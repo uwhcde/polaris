@@ -19,8 +19,8 @@
           = f.hidden_field :post_id, :value => post.id
           = f.hidden_field :post_type, :value => post.class
           = f.input :body, :label => false, :placeholder => "Join the discussion...", input_html: { class: 'js-comment-textarea new-comment-textarea' }
-
-        = f.submit class: 'btn btn-primary', :value => "Post"
+        .pull-right
+          = f.submit class: 'btn btn-primary', :value => "Post"
     br
 - else
   br

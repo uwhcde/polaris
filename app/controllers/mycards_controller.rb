@@ -4,9 +4,12 @@ class MycardsController < ApplicationController
 
 
   def index
-    @posts = Guide.evaluated_by(:bookmark, current_user)
-    @posts.push(Event.evaluated_by(:bookmark, current_user))
-    @posts.push(Help.evaluated_by(:bookmark, current_user))
+    @guides = Guide.evaluated_by(:bookmark, current_user)
+    @events = Event.evaluated_by(:bookmark, current_user)
+    @helps = Help.evaluated_by(:bookmark, current_user)
+
+    @posts = @guides + @events + @helps
+
   end
 
 end
