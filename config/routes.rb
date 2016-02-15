@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/media', as: "media"
   get 'home/index'
 
+  get 'my_cards' => 'my_cards#index'
+
   resources :guides do
     resources :sections
     member {
