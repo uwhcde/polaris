@@ -1,0 +1,13 @@
+.post-header style="background-image: url(#{post.picture.try(:url)})"
+  .post-actions
+    span.post-type
+      = post.class.name
+    .bookmark
+      - if post.evaluators_for(:bookmark).include?(current_user)
+        = link_to path, class: 'js-bookmark', type: 'no'
+          span.i-star-full
+      - else
+        = link_to path, class: 'js-bookmark', type: 'yes'
+          span.i-star-empty
+  .post-title
+    h1 == post.title

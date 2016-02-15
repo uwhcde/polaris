@@ -9,4 +9,7 @@ class Help < ActiveRecord::Base
   acts_as_votable
   acts_as_commentable
 
+  has_reputation :bookmark,
+    :source => :user
+
 end

@@ -1,5 +1,8 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+
+  skip_authorize_resource :only => [:bookmark]
+
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :bookmark]
 
   # GET /events
   # GET /events.json
@@ -75,6 +78,24 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def bookmark
+    value = params[:type] == "yes" ? 1 : -1
+
+    if value == 1
+      @event.add_evaluation(:bookmark, 1, current_user)
+    else
+      @event.delete_evaluation!(:bookmark, current_user)
+    end
+
+    respond_to do |format|
+      format.json { render :bookmark, status: :ok, location: @event }
+      format.html { redirect_to :back, notice: "Thank you for voting" }
+    end
+
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

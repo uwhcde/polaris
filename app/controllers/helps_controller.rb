@@ -1,8 +1,9 @@
 class HelpsController < ApplicationController
 
   load_and_authorize_resource
+  skip_authorize_resource :only => [:bookmark]
 
-  before_action :set_help, only: [:show, :edit, :update, :destroy]
+  before_action :set_help, only: [:show, :edit, :update, :destroy, :bookmark]
 
   # GET /helps
   # GET /helps.json
@@ -76,6 +77,22 @@ class HelpsController < ApplicationController
       format.html { redirect_to home_index_path, notice: 'Help was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def bookmark
+    value = params[:type] == "yes" ? 1 : -1
+
+    if value == 1
+      @help.add_evaluation(:bookmark, 1, current_user)
+    else
+      @help.delete_evaluation!(:bookmark, current_user)
+    end
+
+    respond_to do |format|
+      format.json { render :bookmark, status: :ok, location: @help }
+      format.html { redirect_to :back, notice: "Thank you for voting" }
+    end
+
   end
 
   private

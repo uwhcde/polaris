@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :helps
-  resources :events
   mount Ckeditor::Engine => '/media', as: "media"
   get 'home/index'
 
@@ -11,6 +9,18 @@ Rails.application.routes.draw do
     resources :sections
     member {
       post :vote
+      post :bookmark
+    }
+  end
+
+  resources :helps do
+    member {
+      post :bookmark
+    }
+  end
+
+  resources :events do
+    member {
       post :bookmark
     }
   end
