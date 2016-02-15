@@ -17,7 +17,7 @@
 
       = link_to "EDIT PROFILE", edit_user_registration_path(current_user), :class => 'btn btn-primary edit-profile'
 
-  .profile-page.row.container
+  .profile-page
     .info.col-lg-3
       .panel.panel-white.contact
         .panel-heading
@@ -56,4 +56,6 @@
             .tab-pane.fade id="#{postType}" class=(index == 0 ? "in active" : "")
               .post-panel
                 - @posts[postType].each do |post|
-                  = render "shared/cards/#{post.class.name.downcase}_card", :post => post
+                  .col-lg-4.col-md-4.col-sm-6.col-xs-12
+                    .card.card-default
+                      = render "shared/cards/#{post.class.name.downcase}_card", :post => post
