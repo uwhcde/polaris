@@ -3,18 +3,23 @@
     .col-lg-9
       .post-show
         .post-header style="background-image: url(#{@guide.picture.try(:url)})"
+          .post-actions
+            span.post-type
+              = "Guide"
+            .bookmark
+              - if @guide.evaluators_for(:bookmark).include?(current_user)
+                = link_to bookmark_guide_path(@guide, format: :json), class: 'js-bookmark', type: 'no'
+                  span.i-star-full
+              - else
+                = link_to bookmark_guide_path(@guide, format: :json), class: 'js-bookmark', type: 'yes'
+                  span.i-star-empty
+
+
+
           .post-title
             h1 == @guide.title
         .post-meta.row
-          .col-lg-9
-            - if @guide.tag_list.present?
-              .tags
-                bdi.text-muted
-                  == "Posted under  &nbsp;&nbsp;"
-                - @guide.tag_list.each do |tag|
-                  span
-                    = tag.capitalize
-
+          = render "shared/modules/meta", :post => @guide
           = render "shared/modules/dropdown", :post => @guide, :post_path => edit_guide_path(@guide)
 
         .clearfix

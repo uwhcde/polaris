@@ -16,6 +16,9 @@ class Guide < ActiveRecord::Base
   validates :title, presence: true
   validates :short_description, presence: true
 
+  has_reputation :bookmark,
+      :source => :user
+
   private
 
 end

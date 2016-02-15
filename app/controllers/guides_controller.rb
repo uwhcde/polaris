@@ -1,9 +1,9 @@
 class GuidesController < ApplicationController
 
   load_and_authorize_resource
-  skip_authorize_resource :only => :vote
+  skip_authorize_resource :only => [:vote, :bookmark]
 
-  before_action :set_guide, only: [:show, :edit, :update, :destroy, :vote]
+  before_action :set_guide, only: [:show, :edit, :update, :destroy, :vote, :bookmark]
   before_filter :authenticate_user!, :except => [:index, :show]
 
   # GET /guides
@@ -102,6 +102,23 @@ class GuidesController < ApplicationController
     end
 
   end
+
+  def bookmark
+    value = params[:type] == "yes" ? 1 : -1
+
+    if value == 1
+      @guide.add_evaluation(:bookmark, 1, current_user)
+    else
+      @guide.delete_evaluation!(:bookmark, current_user)
+    end
+
+    respond_to do |format|
+      format.json { render :bookmark, status: :ok, location: @guide }
+      format.html { redirect_to :back, notice: "Thank you for voting" }
+    end
+
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -9,12 +9,14 @@ Rails.application.routes.draw do
     resources :sections
     member {
       post :vote
+      post :bookmark
     }
   end
 
   resources :comments do
     member {
       post :vote
+      post :bookmark
     }
   end
 

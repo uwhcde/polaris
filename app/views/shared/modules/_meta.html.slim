@@ -1,0 +1,9 @@
+.col-lg-9
+  - if post.tag_list.present?
+    .tags
+      bdi.text-muted
+        = post.class
+        == " posted under  &nbsp;&nbsp;"
+      - post.tag_list.each do |tag|
+        span
+          = tag.capitalize
