@@ -6,21 +6,8 @@
   .cover-image {
     display: block;
     position: relative;
-  }
-
-  .cover-image .cover-link {
     height: 300px;
-    display: block;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-  }
-
-  .cover-image img {
-    width: 100%;
-    min-width: 100%;
-    position: absolute;
-    left: 0;
+    background: url() no-repeat center center;
   }
 
   .cover-overlay {
@@ -58,15 +45,9 @@
     display: inline-block;
     margin-left: 45px;
     margin-right: 10px;
-  }
 
-  .profile-image .profile-link {
-    padding: 2px;
-    overflow: hidden;
-    text-decoration: none;
-  }
+    background: url() no-repeat center center;
 
-  .profile-image img {
     border: 5px solid #fff;
     width: 140px;
     height: 140px;
@@ -226,7 +207,7 @@
   }
 }
 
-.page.edit {
+.page.edit, .page.profile {
   margin: 40px 0;
 }
 

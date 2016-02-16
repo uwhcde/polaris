@@ -1,13 +1,11 @@
 - title "Profile"
 
-.profile
+.page.profile
   .profile-cover
-    .cover-image
-      = link_to image_tag(@user.cover_image.url(:medium)), @user.cover_image.url, :class => 'cover-link'
+    .cover-image{ style = "background-image:url(#{@user.cover_image.url});background-size: cover;" }
     .cover-overlay
     .profile-details.container
-      .profile-image
-        = link_to image_tag(@user.picture.url(:medium)), @user.picture.url, :class => 'profile-link'
+      .profile-image{ style = "background-image:url(#{@user.picture.url});background-size: cover;" }
       .name
         span
           = @user.first_name + " " + @user.last_name
@@ -23,8 +21,9 @@
         .panel-heading
           h3.panel-title CONTACT
         .panel-body
-          span
-            = @user.email
+          - if @user.show_email
+            span
+              = @user.email
           .social-network
             - if !@user.social_media_1.blank?
               = link_to @user.social_media_1, :class => "social-media-link"
@@ -53,8 +52,8 @@
               li class=(index == 0 ? "active" : "")
                 =link_to "#{postType}", "##{postType}", :class => "a.fa.fa-pencil.fa-lg", :role => "tab", data: {toggle: "tab"}
           .sort
-            form.form-inline
-              = select_tag('#{postType}_sorting', options_for_select([['Sort by', 0], ['Newest', 1], ['Rating', 2]], 0), class: 'form-control')
+            = form_tag '', :method => :get, :remote => true, :class => 'form-inline' do |f|
+              = select_tag('sort', options_for_select([['Sort by', 0], ['Recent', 1], ['Popularity', 2]], 0), class: 'form-control', :onchange => 'this.form.submit()')
         .posts.tab-content
           - @posts.keys.each_with_index do |postType, index|
             .tab-pane.fade id="#{postType}" class=(index == 0 ? "in active" : "")
