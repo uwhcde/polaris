@@ -21,4 +21,4 @@
     - @posts.each do |post|
       .col-lg-3.col-md-4.col-sm-6.col-xs-12
         .card.card-default
-          = render "shared/cards/#{post[:value].class.name.downcase}_card", :post => post[:value]
+          = render "shared/cards/#{post.class.name.downcase}_card", :post => post
