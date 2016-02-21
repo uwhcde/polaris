@@ -6,6 +6,8 @@ class GuidesController < ApplicationController
   before_action :set_guide, only: [:show, :edit, :update, :destroy, :vote, :bookmark]
   before_filter :authenticate_user!, :except => [:index, :show]
 
+  impressionist :actions=>[:show], :unique => [:impressionable_type, :impressionable_id, :session_hash]
+
   # GET /guides
   # GET /guides.json
   def index

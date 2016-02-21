@@ -19,6 +19,8 @@ class Guide < ActiveRecord::Base
   has_reputation :bookmark,
       :source => :user
 
+  is_impressionable :counter_cache => true, :column_name => :view_count, :unique => :request_hash
+
   private
 
 end

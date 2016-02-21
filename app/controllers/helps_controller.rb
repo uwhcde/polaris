@@ -5,6 +5,8 @@ class HelpsController < ApplicationController
 
   before_action :set_help, only: [:show, :edit, :update, :destroy, :bookmark]
 
+  impressionist :actions=>[:show], :unique => [:impressionable_type, :impressionable_id, :session_hash]
+
   # GET /helps
   # GET /helps.json
   def index

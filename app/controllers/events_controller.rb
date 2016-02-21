@@ -4,6 +4,8 @@ class EventsController < ApplicationController
 
   before_action :set_event, only: [:show, :edit, :update, :destroy, :bookmark]
 
+  impressionist :actions=>[:show], :unique => [:impressionable_type, :impressionable_id, :session_hash]
+
   # GET /events
   # GET /events.json
   def index
