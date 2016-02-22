@@ -29,6 +29,7 @@ gem 'slim_assets'
 
 gem 'devise'
 gem "cancancan"
+gem 'rolify'
 
 #UI
 gem 'simple_form'

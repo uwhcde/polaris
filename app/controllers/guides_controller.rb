@@ -1,7 +1,6 @@
 class GuidesController < ApplicationController
 
-  load_and_authorize_resource
-  skip_authorize_resource :only => [:vote, :bookmark]
+  load_and_authorize_resource only: [:edit, :update]
 
   before_action :set_guide, only: [:show, :edit, :update, :destroy, :vote, :bookmark]
   before_filter :authenticate_user!, :except => [:index, :show]

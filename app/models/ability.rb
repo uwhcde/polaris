@@ -6,16 +6,16 @@ class Ability
     #
     user ||= User.new # guest user (not logged in)
 
-    can :read, :all
-    can :create, :all
-
-    can :update, :all do |post|
-      post.try(:user) == user
+    if user.has_role? :admin
+      can :manage, :all
+    else
+      can :read, :all
+      can :manage, :all do |post|
+        post.try(:user) == user
+      end
     end
 
-    can :destroy, :all do |post|
-      post.try(:user) == user
-    end
+
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.

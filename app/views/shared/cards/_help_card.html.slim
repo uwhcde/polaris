@@ -4,7 +4,7 @@
   .card-body
     i.fa.fa-star.fa-lg.unbookmarked.hide
     .card-title
-      h4 = post.title
+      h4 = truncate(post.title, length:100)
 
 .card-footer
   .user-acted.pull-left
