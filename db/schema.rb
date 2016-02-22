@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 20160220233402) do
     t.integer  "going"
     t.integer  "invited"
     t.string   "cover"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "picture_id"
     t.integer  "view_count",  default: 0
   end
@@ -93,8 +93,8 @@ ActiveRecord::Schema.define(version: 20160220233402) do
     t.text     "description"
     t.string   "cover"
     t.date     "date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "help_type"
     t.integer  "picture_id"
     t.integer  "view_count",  default: 0
