@@ -30,3 +30,9 @@ body {
     display: block;
   }
 }
+
+.sort select {
+  border: 0;
+  background: $brand-primary;
+  color: white;
+}

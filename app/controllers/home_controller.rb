@@ -5,31 +5,21 @@ class HomeController < ApplicationController
     @events = []
     @helps = []
 
+    sort = :created_at
+
     category = params[:c].try(:downcase)
     if category.present?
       if Polaris::Constants::Categories::DEFAULT.include?(category)
-        @guides = Guide.tagged_with(category).last(5).reverse
-        @events = Event.tagged_with(category).last(5).reverse
-        @helps = Help.tagged_with(category).last(5).reverse
+        @posts = Guide.tagged_with(category).order(sort => :asc).last(5).reverse +
+          Event.tagged_with(category).order(sort => :asc).last(5).reverse +
+          Help.tagged_with(category).order(sort => :asc).last(5).reverse
       end
     else
-      @guides = Guide.last(10).reverse
-      @events = Event.last(10).reverse
-      @helps = Help.last(10).reverse
+      @posts = Guide.order(sort => :asc).last(10).reverse +
+        Event.order(sort => :asc).last(10).reverse +
+        Help.order(sort => :asc).last(10).reverse
     end
 
-
-    @guides.each_with_index do |guide, index|
-      @posts.push({date: guide.created_at, value: guide})
-    end
-    @events.each_with_index do |event, index|
-      @posts.push({date: event.created_at, value: event})
-    end
-    @helps.each_with_index do |help, index|
-      @posts.push({date: help.created_at, value: help})
-    end
-
-    @posts.sort_by{|e| e[:date]}
-
+    @posts = @posts.sort_by{|e| e[sort]}.reverse
   end
 end
