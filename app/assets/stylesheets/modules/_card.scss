@@ -8,6 +8,9 @@
     .post-stats .votes i {
       height: 15px;
       width: 15px;
+      line-height: 17px;
+      margin: 6px 3px;
+      font-size: 9px;
     }
     .card-body {
       height: 150px;
@@ -17,9 +20,9 @@
     }
     .card-title h4 {
       font-size: 14px;
-        white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
@@ -95,6 +98,7 @@
   position: absolute;
   bottom: 10px;
   padding: 0 15px;
+  width: 100%;
 
   h4 {
     font-size: 19px;
