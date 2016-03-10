@@ -40,6 +40,9 @@ gem 'acts_as_votable'
 #bookmarks
 gem 'activerecord-reputation-system'
 
+#search
+gem 'sunspot_rails'
+
 #comments
 gem 'awesome_nested_set', '~> 3.0.2'
 gem 'acts_as_commentable_with_threading', '~> 2.0.1'
@@ -85,6 +88,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano3-puma'
+  gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
