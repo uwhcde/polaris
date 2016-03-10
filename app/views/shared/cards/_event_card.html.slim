@@ -20,6 +20,7 @@
   .post-stats.pull-right
     span.votes
       i.i-users
+      = post.reputation_for(:rsvp).to_int
 
     span.votes
       i.i-bubbles

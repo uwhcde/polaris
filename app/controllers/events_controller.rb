@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 
   skip_authorize_resource :only => [:bookmark]
 
-  before_action :set_event, only: [:show, :edit, :update, :destroy, :bookmark]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :bookmark, :rsvp]
 
   impressionist :actions=>[:show], :unique => [:impressionable_type, :impressionable_id, :session_hash]
 
@@ -97,6 +97,23 @@ class EventsController < ApplicationController
     end
 
   end
+
+  def rsvp
+    value = params[:type] == "yes" ? 1 : -1
+
+    if value == 1
+      @event.add_evaluation(:rsvp, 1, current_user)
+    else
+      @event.delete_evaluation!(:rsvp, current_user)
+    end
+
+    respond_to do |format|
+      format.json { render :rsvp, status: :ok, location: @event }
+      format.html { redirect_to :back, notice: "You are going to the event." }
+    end
+
+  end
+
 
 
   private

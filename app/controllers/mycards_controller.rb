@@ -9,7 +9,6 @@ class MycardsController < ApplicationController
     @helps = Help.evaluated_by(:bookmark, current_user)
 
     @posts = @guides + @events + @helps
-
   end
 
 end

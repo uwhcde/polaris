@@ -1,9 +1,10 @@
 .page.show-page.bookmarks-page
   .row
-    .col-lg-12
-      .filters
-        h4.pull-left.page-title
+    .col-lg-2
+      h4.page-title
           = "MY CARDS"
+    .col-lg-10
+      .filters
         ul.filter-menu
           li
             a.filter-menu-item.active
@@ -17,7 +18,8 @@
           li
             a.filter-menu-item
               = "RSVP"
-        .clearfix
+  .row
+    .col-lg-12
       -if @posts.empty?
         span.text-muted
           = "No bookmarks"

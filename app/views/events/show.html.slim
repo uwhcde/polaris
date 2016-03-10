@@ -26,10 +26,28 @@
 
     .col-lg-3
       = render "shared/modules/author", :post => @event
-      / .card
-      /   .side-card.stats-card.js-votes
-      /     h2.side-card-title Votes
+      .card
+        .side-card.stats-card
+          h2.side-card-title RSVP
+          - if current_user
+            .rsvp
+              - if @event.evaluators_for(:rsvp).include?(current_user)
+                = link_to rsvp_event_path(@event, format: :json), class: 'btn btn-default js-rsvp', type: 'no'
+                  = "You are going"
+              - else
+                = link_to rsvp_event_path(@event, format: :json), class: 'btn btn-primary js-rsvp', type: 'yes'
+                  = "RSVP"
 
+          - else
+            span.text-muted
+              = "Please "
+              = link_to new_user_session_path do
+                = "Sign-in"
+              = " to RSVP"
+          br
+          strong.js-rsvp-count
+            = @event.reputation_for(:rsvp).to_int
+          = " people going"
       .card
         .side-card
           h2.side-card-title = "Similar events"
