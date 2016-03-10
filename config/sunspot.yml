@@ -1,9 +1,9 @@
 production:
   solr:
     hostname: 45.55.80.58
-    port: 8080
+    port: 8983
     log_level: WARNING
-    path: /solr
+    path: /solr/prod
     # read_timeout: 2
     # open_timeout: 0.5
 
@@ -20,4 +20,6 @@ test:
     port: 8981
     log_level: WARNING
     path: /solr/test
+
+
 
