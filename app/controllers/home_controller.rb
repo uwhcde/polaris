@@ -1,25 +1,67 @@
 class HomeController < ApplicationController
   def index
-    @posts = []
-    @guides = []
-    @events = []
-    @helps = []
+    typeParam = params[:posttype].try(:downcase)
+    if !typeParam.present?
+        typeParam = 'all'
+    end
 
-    sort = :created_at
+    sortParam = params[:sort].try(:downcase)
+    if !sortParam.present?
+        sortParam = 'recent'
+    end
+
+    sort = :updated_at
+    case sortParam
+    when 'recent'
+        sort = :updated_at
+    when 'popularity'
+        sort = :view_count
+    end
 
     category = params[:c].try(:downcase)
     if category.present?
-      if Polaris::Constants::Categories::DEFAULT.include?(category)
-        @posts = Guide.tagged_with(category).order(sort => :asc).last(5).reverse +
-          Event.tagged_with(category).order(sort => :asc).last(5).reverse +
-          Help.tagged_with(category).order(sort => :asc).last(5).reverse
+      case typeParam
+      when 'all'
+          @posts = Guide.tagged_with(category).order(sort => :asc).reverse +
+              Event.tagged_with(category).order(sort => :asc).reverse +
+              Help.tagged_with(category).order(sort => :asc).reverse
+          @posts = @posts.sort_by{|e| e[sort]}.reverse
+      when 'guides'
+          @posts = Guide.tagged_with(category).order(sort => :asc).reverse
+      when 'events'
+          @posts = Event.tagged_with(category).order(sort => :asc).reverse
+      when 'helps'
+          @posts = Help.tagged_with(category).order(sort => :asc).reverse
       end
     else
-      @posts = Guide.order(sort => :asc).last(10).reverse +
-        Event.order(sort => :asc).last(10).reverse +
-        Help.order(sort => :asc).last(10).reverse
+      case typeParam
+      when 'all'
+          @posts = Guide.order(sort => :asc).reverse +
+              Event.order(sort => :asc).reverse +
+              Help.order(sort => :asc).reverse
+          @posts = @posts.sort_by{|e| e[sort]}.reverse
+      when 'guides'
+          @posts = Guide.order(sort => :asc).reverse
+      when 'events'
+          @posts = Event.order(sort => :asc).reverse
+      when 'helps'
+          @posts = Help.order(sort => :asc).reverse
+      end
     end
 
-    @posts = @posts.sort_by{|e| e[sort]}.reverse
+    @params = {"posttype" => params[:posttype],
+    "sort" => params[:sort],
+    "c" => params[:c]}
+
+    if !@posts.nil?
+      @posts = @posts.paginate(:page => params[:page], :per_page => 8)
+    end
+
+    @recentPosts = Guide.order(sort => :asc).reverse +
+              Event.order(sort => :asc).reverse +
+              Help.order(sort => :asc).reverse
+
+    # @recentPosts = @recentPosts.sort_by{|e| e.impressions[:created_at]}.reverse
+    @recentPosts = @recentPosts.first(6)
   end
 end

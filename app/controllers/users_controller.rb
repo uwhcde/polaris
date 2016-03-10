@@ -1,44 +1,46 @@
+require 'will_paginate/array'
+
 class UsersController < ApplicationController
   def show
-    typeParam = params[:type].try(:downcase)
+    typeParam = params[:posttype].try(:downcase)
     if !typeParam.present?
         typeParam = 'all'
     end
 
     sortParam = params[:sort].try(:downcase)
     if !sortParam.present?
-        sortParam = :created_at
+        sortParam = 'recent'
     end
 
     sort = :created_at
     case sortParam
-    when '1'
+    when 'recent'
         sort = :created_at
-    when '2'
+    when 'popularity'
         sort = :view_count
     end
 
     case typeParam
     when 'all'
-        posts = Guide.where(:user_id => current_user.id).order(sort => :asc).last(5).reverse +
-            Event.where(:user_id => current_user.id).order(sort => :asc).last(5).reverse +
-            Help.where(:user_id => current_user.id).order(sort => :asc).last(5).reverse
-        posts = posts.sort_by{|e| e[sort]}.reverse.first(5)
+        @posts = Guide.where(:user_id => current_user.id).order(sort => :asc).reverse +
+            Event.where(:user_id => current_user.id).order(sort => :asc).reverse +
+            Help.where(:user_id => current_user.id).order(sort => :asc).reverse
+        @posts = @posts.sort_by{|e| e[sort]}.reverse
     when 'guides'
-        posts = Guide.where(:user_id => current_user.id).order(sort => :asc).last(5).reverse
+        @posts = Guide.where(:user_id => current_user.id).order(sort => :asc).reverse
     when 'events'
-        posts = Event.where(:user_id => current_user.id).order(sort => :asc).last(5).reverse
+        @posts = Event.where(:user_id => current_user.id).order(sort => :asc).reverse
     when 'helps'
-        posts = Help.where(:user_id => current_user.id).order(sort => :asc).last(5).reverse
+        @posts = Help.where(:user_id => current_user.id).order(sort => :asc).reverse
     end
 
     @user = User.find(params[:id])
 
-    @posts = {
-        "all" => posts,
-        "guides" => posts,
-        "events" => posts,
-        "helps" => posts
-    }
+    @params = {"posttype" => params[:posttype],
+    "sort" => params[:sort]}
+
+    if !@posts.nil?
+      @posts = @posts.paginate(:page => params[:page], :per_page => 3)
+    end
   end
 end

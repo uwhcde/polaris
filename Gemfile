@@ -54,6 +54,7 @@ gem "select2-rails"
 gem 'jquery-turbolinks'
 
 gem 'impressionist'
+gem 'will_paginate', '~> 3.0.7'
 
 # UI
 gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
@@ -91,3 +92,4 @@ end
 
 gem 'puma'
 
+gem 'tzinfo-data'

@@ -5,6 +5,7 @@ class Guide < ActiveRecord::Base
   belongs_to :user
   belongs_to :picture, class_name: "Ckeditor::Picture"
 
+  has_many :impressions
 
   accepts_nested_attributes_for :sections, reject_if: :all_blank, allow_destroy: true
   acts_as_taggable

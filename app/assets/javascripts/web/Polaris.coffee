@@ -19,6 +19,7 @@ window.Polaris = do ->
     Polaris.Forms.init()
     Polaris.Comments.init()
     Polaris.Users.init()
+    Polaris.Home.init()
 
     return true
 

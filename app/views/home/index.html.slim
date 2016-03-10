@@ -1,24 +1,13 @@
 
-.page
+.page.js-home
   = render "home/recent"
   = render "shared/filter", posts: @posts
-  / #sorting
-  /   .row
-  /     .sort
-  /       form.form-inline
-  /         select.form-control
-  /           option Sort by
-  /           option Newest
-  /           option Rating
 
-  /         select.form-control
-  /           option Filter by
-  /           option Guide
-  /           option Help
-  /           option All
-
-  .row
-    - @posts.each do |post|
-      .col-lg-3.col-md-4.col-sm-6.col-xs-12
-        .card.card-default
-          = render "shared/cards/#{post.class.name.downcase}_card", :post => post
+  .row.post-panel
+    - if !@posts.nil?
+      - @posts.each do |post|
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12
+          .card.card-default
+            = render "shared/cards/#{post.class.name.downcase}_card", :post => post
+  - if !@posts.nil?
+    = will_paginate @posts
