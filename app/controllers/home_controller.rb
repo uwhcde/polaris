@@ -49,7 +49,13 @@ class HomeController < ApplicationController
       end
     end
 
-    @posts = @posts.paginate(:page => params[:page], :per_page => 8)
+    @params = {"posttype" => params[:posttype],
+    "sort" => params[:sort],
+    "c" => params[:c]}
+
+    if !@posts.nil?
+      @posts = @posts.paginate(:page => params[:page], :per_page => 8)
+    end
 
     @recentPosts = Guide.order(sort => :asc).reverse +
               Event.order(sort => :asc).reverse +
