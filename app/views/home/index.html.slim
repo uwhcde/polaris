@@ -1,6 +1,9 @@
 
 .page.js-home
-  = render "home/recent"
+  - if current_user
+    = render "home/recent"
+  - else
+    = render "home/banner"
   = render "shared/filter", posts: @posts
 
   .row.post-panel

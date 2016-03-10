@@ -10,6 +10,7 @@ class Ability
       can :manage, :all
     else
       can :read, :all
+      can :create, :all
       can :manage, :all do |post|
         post.try(:user) == user
       end

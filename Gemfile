@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
@@ -54,7 +53,7 @@ gem "select2-rails"
 gem 'jquery-turbolinks'
 
 gem 'impressionist'
-gem 'will_paginate', '~> 3.0.7'
+gem 'will_paginate', '~> 3.0.6'
 
 # UI
 gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
@@ -91,5 +90,3 @@ group :development do
 end
 
 gem 'puma'
-
-gem 'tzinfo-data'
