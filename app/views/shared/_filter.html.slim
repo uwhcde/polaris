@@ -13,4 +13,11 @@
               span.icon
                 i.fa.fa-home.fa-lg
               = cat
+      .sort
+        = form_tag '', :method => :get, :remote => true, :class => 'form-inline' do |f|
+          = select_tag('sort', options_for_select([['Sort by', 0], ['Recent', 'recent'], ['Popularity', 'popularity']],if params[:sort] == nil then 0 else params[:sort] end), class: 'form-control', :onchange => 'this.form.submit()')
+
+      .sort
+        = form_tag '', :method => :get, :remote => true, :class => 'form-inline' do |f|
+          = select_tag('posttype', options_for_select([['Filter By', 0], ['All', 'all'], ['Events', 'events'], ['Guides', 'guides'], ['Help', 'help']],if params[:sort] == nil then 0 else params[:sort] end), class: 'form-control', :onchange => 'this.form.submit()')
 

@@ -12,7 +12,7 @@
 
 .filter-menu {
   list-style-type: none;
-  float: right;
+  float: left;
   padding: 20px 0;
   margin: 0;
   &.left {
@@ -27,6 +27,10 @@
       margin-right: 20px;
     }
   }
+}
+.sort {
+  float: right;
+  margin: 10px 15px;
 }
 
 .filter-menu-item {
