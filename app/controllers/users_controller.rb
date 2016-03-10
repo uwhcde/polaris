@@ -36,7 +36,11 @@ class UsersController < ApplicationController
 
     @user = User.find(params[:id])
 
-    @posts = @posts.paginate(:page => params[:page], :per_page => 3)
+    @params = {"posttype" => params[:posttype],
+    "sort" => params[:sort]}
 
+    if !@posts.nil?
+      @posts = @posts.paginate(:page => params[:page], :per_page => 3)
+    end
   end
 end
