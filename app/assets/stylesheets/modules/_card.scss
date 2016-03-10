@@ -1,6 +1,10 @@
 .small {
+  max-height: 195px;
+  overflow: hidden;
+  margin-bottom: 30px;
   .card {
     @include card-shadow();
+    margin-bottom: 20px;
     &:hover {
       .card-footer {
       }

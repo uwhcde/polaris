@@ -13,6 +13,11 @@ Polaris.Bootstrap = do ->
   highlight: (element) ->
     element.effect( "highlight", "slow" );
 
+  slideShow: (element) ->
+    $('.js-recent').slick
+      slidesToShow: 6
+      slidesToScroll: 6
+
   initTimeAgo: ->
     $("abbr.timeago").timeago()
 
@@ -30,3 +35,4 @@ Polaris.Bootstrap = do ->
     Polaris.Bootstrap.initTimeAgo()
     Polaris.Bootstrap.initPlaceComplete()
     Polaris.Bootstrap.initTimePicker()
+    Polaris.Bootstrap.slideShow()

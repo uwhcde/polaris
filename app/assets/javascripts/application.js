@@ -35,6 +35,8 @@
 //= require bootstrap-datetimepicker
 //= require pickers
 
+//= require slick.min
+
 //= require_tree ./templates/attachments
 //= require_tree ./templates/comments
 //= require ./templates/Templates
