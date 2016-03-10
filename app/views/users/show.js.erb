@@ -1,0 +1,8 @@
+
+$('.post-panel').append('<%= escape_javascript(render partial: "shared/cards/users_posts_card", :locals => { :posts => @posts }) %>');
+
+<% if @posts.next_page %>
+$('.pagination').replaceWith('<%= escape_javascript will_paginate(@posts) %>');
+<% else %>
+$('.pagination').remove();
+<% end %>

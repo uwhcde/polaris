@@ -1,7 +1,7 @@
 = link_to post do
   span.card-type.help
     = "help"
-  .card-body
+  .card-body style="background-image: url(#{post.picture.try(:url)})"
     i.fa.fa-star.fa-lg.unbookmarked.hide
     .card-title
       h4 = truncate(post.title, length:100)
