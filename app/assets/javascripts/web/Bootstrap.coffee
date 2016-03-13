@@ -17,7 +17,7 @@ Polaris.Bootstrap = do ->
     $('.js-recent').slick
       slidesToShow: 6
       slidesToScroll: 6
-
+      infinite: false
   initTimeAgo: ->
     $("abbr.timeago").timeago()
 

@@ -15,14 +15,14 @@
       input.cover_id name="help[picture_id]" type="hidden"
       = f.hidden_field :user_id, :value => current_user.id
       = f.input :help_type,
-            :collection => [[true, 'I need help'], [false, 'I can help']],
+            :collection => [['Help needed', 'I need help'], ['Help offered', 'I can help']],
             :label_method => :last,
             :value_method => :first,
             :as => :radio_buttons,
             :label => false,
             :checked => true
 
-    = f.input :title, :label => "Subject", :placeholder => "I need help in..."
+    = f.input :title, :label => "Subject", :placeholder => "Ask or Offer help.."
     / = f.input :location, :label => "Where", :placeholder => "E.g 5534 Brooklyn Ave, NE"
     .row
       .col-lg-5
