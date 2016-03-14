@@ -57,11 +57,13 @@ class HomeController < ApplicationController
       @posts = @posts.paginate(:page => params[:page], :per_page => 8)
     end
 
-    @recentPosts = Guide.order(sort => :asc).reverse +
-              Event.order(sort => :asc).reverse +
-              Help.order(sort => :asc).reverse
+    if current_user
+      @recentPosts = []
+      @recent_impressions = Impression.where(:user_id => current_user.id).order("created_at DESC").limit(20)
+      @recent_impressions.each do |d|
+        @recentPosts.push d.impressionable_type.classify.constantize.find(d.impressionable_id)
+      end
+    end
 
-    # @recentPosts = @recentPosts.sort_by{|e| e.impressions[:created_at]}.reverse
-    @recentPosts = @recentPosts.first(6)
   end
 end

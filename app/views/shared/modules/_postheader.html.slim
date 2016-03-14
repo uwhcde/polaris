@@ -1,4 +1,4 @@
-.post-header style="background-image: url(#{post.picture.try(:url)})"
+.post-header style=(post.picture ? "background-image: url(#{post.picture.try(:url)})" : "")
   .post-actions
     span.post-type
       = post.class.name

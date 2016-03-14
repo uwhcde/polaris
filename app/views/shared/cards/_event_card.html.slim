@@ -1,7 +1,7 @@
 = link_to post do
   span.card-type.event
     = "event"
-  .card-body style="background-image: url(#{post.picture.try(:url)})"
+  .card-body style=(post.picture ? "background-image: url(#{post.picture.try(:url)})" : "")
     i.fa.fa-star.fa-lg.unbookmarked.hide
     .card-title
       h4 = truncate(post.title, length:100)
@@ -20,6 +20,7 @@
   .post-stats.pull-right
     span.votes
       i.i-users
+      = post.reputation_for(:rsvp).to_int
 
     span.votes
       i.i-bubbles

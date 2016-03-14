@@ -1,0 +1,23 @@
+
+.page.js-home
+  br
+  .row.post-panel
+    .col-lg-12
+      h3
+        strong
+          = @posts.size
+        span.text-muted.text-normal
+          = " results for the keyword "
+        strong
+          = params[:q]
+      br
+    - if !@posts.nil?
+      - @posts.each do |post|
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12
+          .card.card-default
+            = render "shared/cards/#{post.class.name.downcase}_card", :post => post
+    - else
+      h2.text-center.text-muted
+        = "No search results found"
+  - if !@posts.nil?
+    = will_paginate @posts

@@ -16,4 +16,12 @@ class Help < ActiveRecord::Base
 
   is_impressionable :counter_cache => true, :column_name => :view_count, :unique => :request_hash
 
+  searchable do
+    text :title, :description
+
+    string :sort_title do
+      title.downcase.gsub(/^(an?|the)/, '')
+    end
+  end
+
 end

@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
@@ -41,6 +40,9 @@ gem 'acts_as_votable'
 #bookmarks
 gem 'activerecord-reputation-system'
 
+#search
+gem 'sunspot_rails'
+
 #comments
 gem 'awesome_nested_set', '~> 3.0.2'
 gem 'acts_as_commentable_with_threading', '~> 2.0.1'
@@ -54,7 +56,7 @@ gem "select2-rails"
 gem 'jquery-turbolinks'
 
 gem 'impressionist'
-gem 'will_paginate', '~> 3.0.7'
+gem 'will_paginate', '~> 3.0.6'
 
 # UI
 gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
@@ -86,10 +88,9 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano3-puma'
+  gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
 
 gem 'puma'
-
-gem 'tzinfo-data'

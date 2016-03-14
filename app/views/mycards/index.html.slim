@@ -1,28 +1,34 @@
 .page.show-page.bookmarks-page
   .row
-    .col-lg-12
-      .filters
-        h4.pull-left.page-title
+    .col-lg-2
+      h4.page-title
           = "MY CARDS"
+    .col-lg-10
+      .filters
         ul.filter-menu
           li
-            a.filter-menu-item.active
-              = "All"
+            = link_to mycards_path(:c =>  'all', :posttype => @params['posttype'], :sort => @params['sort']), :class => "filter-menu-item #{'active' if 'all' == params[:c]  }"
+                span.icon
+                  i.fa.fa-home.fa-lg
+                = "Bookmarks"
           li
-            a.filter-menu-item
-              = "Bookmarks"
+            = link_to mycards_path(:c =>  'drafts', :posttype => @params['posttype'], :sort => @params['sort']), :class => "filter-menu-item #{'active' if 'drafts' == params[:c]  }"
+                span.icon
+                  i.fa.fa-home.fa-lg
+                = "Drafts"
           li
-            a.filter-menu-item
-              = "Drafts"
-          li
-            a.filter-menu-item
-              = "RSVP"
-        .clearfix
-      -if @posts.empty?
-        span.text-muted
-          = "No bookmarks"
-      - else
+            = link_to mycards_path(:c =>  'rsvp', :posttype => @params['posttype'], :sort => @params['sort']), :class => "filter-menu-item #{'active' if 'rsvp' == params[:c]  }"
+                span.icon
+                  i.fa.fa-home.fa-lg
+                = "RSVP"
+
+  .row
+    .col-lg-12
+      - if @posts
         - @posts.each do |post|
           .col-lg-3.col-md-4.col-sm-6.col-xs-12
             .card.card-default
               = render "shared/cards/#{post.class.name.downcase}_card", :post => post
+      - else
+        span.text-muted
+          = "No bookmarks"

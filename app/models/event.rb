@@ -17,7 +17,18 @@ class Event < ActiveRecord::Base
   has_reputation :bookmark,
     :source => :user
 
+  has_reputation :rsvp,
+    :source => :user
+
   is_impressionable :counter_cache => true, :column_name => :view_count, :unique => :request_hash
+
+  searchable do
+    text :title, :description
+
+    string :sort_title do
+      title.downcase.gsub(/^(an?|the)/, '')
+    end
+  end
 
   private
 

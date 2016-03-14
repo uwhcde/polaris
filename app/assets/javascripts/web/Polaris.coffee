@@ -20,6 +20,7 @@ window.Polaris = do ->
     Polaris.Comments.init()
     Polaris.Users.init()
     Polaris.Home.init()
+    Polaris.Rsvp.init()
 
     return true
 

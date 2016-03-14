@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
   get 'mycards' => 'mycards#index'
+  get 'search' => 'search#index'
 
   resources :guides do
     resources :sections
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
   resources :events do
     member {
       post :bookmark
+      post :rsvp
     }
   end
 
