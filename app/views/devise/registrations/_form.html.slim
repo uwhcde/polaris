@@ -19,7 +19,7 @@
   br
   = f.input :first_name, placeholder: 'First', autofocus: true, input_html: { :autocomplete => "off" }, wrapper_html: { class: 'quarter-width inline-block' }, label: false
   = f.input :last_name, placeholder: 'Last', input_html: { :autocomplete => "off" }, wrapper_html: { class: 'quarter-width inline-block' }, label: false
-  = f.input :display_name, placeholder: 'Preferred name (Nikcname)', input_html: { :autocomplete => "off" }, wrapper_html: { class: 'half-width' }
+  = f.input :display_name, placeholder: 'Preferred name (Nickname)', input_html: { :autocomplete => "off" }, wrapper_html: { class: 'half-width' }
   = f.input :description, as: :text, placeholder: 'Write a short description about yourself!', label: "About Me"
   = f.input :email, input_html: {:type => "email"}, disabled: true, wrapper_html: { class: 'half-width inline-block' }, label: "Contacts"
   = f.input :show_email, wrapper_html: { class: 'half-width inline-block' }, label: "Display UW Email"
