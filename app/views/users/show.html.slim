@@ -26,17 +26,20 @@
               = @user.email
           .social-network
             - if !@user.social_media_1.blank?
+              - regex = /([a-zA-Z0-9]+\.)?.+\./
+              - endRegex = /\.$/
+              - startRegex = /^[a-zA-Z0-9]+\./
               = link_to @user.social_media_1, :class => "social-media-link"
-                i class="i-#{URI.parse(@user.social_media_1).host[/\..+\./].gsub(/^\./, '').gsub(/\.$/, '')}"
+                i class="i-#{URI.parse(@user.social_media_1).host[regex].gsub(endRegex, '').gsub(startRegex, '')}"
             - if !@user.social_media_2.blank?
               = link_to @user.social_media_2, :class => "social-media-link"
-                i class="i-#{URI.parse(@user.social_media_2).host[/\..+\./].gsub(/^\./, '').gsub(/\.$/, '')}2"
+                i class="i-#{URI.parse(@user.social_media_2).host[regex].gsub(endRegex, '').gsub(startRegex, '')}"
             - if !@user.social_media_3.blank?
               = link_to @user.social_media_3, :class => "social-media-link"
-                i class="i-#{URI.parse(@user.social_media_3).host[/\.?.+\./].gsub(/^\./, '').gsub(/\.$/, '')}"
+                i class="i-#{URI.parse(@user.social_media_3).host[regex].gsub(endRegex, '').gsub(startRegex, '')}"
             - if !@user.social_media_4.blank?
               = link_to @user.social_media_4, :class => "social-media-link"
-                i class="i-#{URI.parse(@user.social_media_4).host[/\.?.+\./].gsub(/^\./, '').gsub(/\.$/, '')}"
+                i class="i-#{URI.parse(@user.social_media_4).host[regex].gsub(endRegex, '').gsub(startRegex, '')}"
       - if !@user.description.blank?
         .panel.panel-white.description
           .panel-heading

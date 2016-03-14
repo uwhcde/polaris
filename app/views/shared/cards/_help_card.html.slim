@@ -1,6 +1,6 @@
 = link_to post do
   span.card-type.help
-    = post.help_type
+    = post.help_type || 'Help'
   .card-body style=(post.picture ? "background-image: url(#{post.picture.try(:url)})" : "")
     i.fa.fa-star.fa-lg.unbookmarked.hide
     .card-title
